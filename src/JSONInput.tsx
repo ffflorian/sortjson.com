@@ -1,4 +1,5 @@
 import React, {ChangeEvent, PureComponent} from 'react';
+const jsonAbc = require('jsonabc');
 
 interface JSONInputState {
   value: string;
@@ -22,7 +23,18 @@ export class JSONInput extends PureComponent<JSONInputProps, JSONInputState> {
   }
   handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
     if (this.myoutput) {
-      this.myoutput.value = e.currentTarget.value;
+      if (e.currentTarget.value) {
+        try {
+          const obj = JSON.parse(e.currentTarget.value);
+          const sorted = jsonAbc.sortObj(obj);
+          this.myoutput.value = JSON.stringify(sorted, null, 2);
+        } catch (error) {
+          this.myoutput.value = error.message;
+          console.error(error);
+        }
+      } else {
+        this.myoutput.value = '';
+      }
     }
   }
   render() {
