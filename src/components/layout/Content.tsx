@@ -46,6 +46,8 @@ class Content extends React.Component<Props, State> {
       if (this.state.input) {
         const input = eval(`JSON.stringify(${this.state.input})`);
         this.setState({input}, this.formatJSON);
+      } else {
+        this.setState({output: ''});
       }
     } catch (error) {
       this.formatText();
