@@ -53,7 +53,7 @@
     "build:site": "react-scripts build",
     "build:static": "node bin/static-files.js",
     "clear": "rimraf build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -t -d build -m \"Publish\"",
     "dist": "yarn clear && yarn build",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
