@@ -16,7 +16,9 @@ interface Props extends WithStyles<typeof styles> {}
 
 interface State {
   input: string;
+  inputInfo: string;
   output: string;
+  outputInfo: string;
 }
 
 class Content extends React.Component<Props, State> {
@@ -24,26 +26,43 @@ class Content extends React.Component<Props, State> {
     super(props);
     this.state = {
       input: JSON.stringify({name: 'Sophie', age: 50}, null, 2),
+      inputInfo: 'Please paste your unformatted JSON here.',
       output: '',
+      outputInfo: '',
     };
   }
 
-  handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    this.setState({input: event.currentTarget.value}, this.formatJSON);
+  formatJSON = () => {
+    const object = JSON.parse(this.state.input);
+    const sorted = jsonAbc.sortObj(object);
+    this.setState({
+      output: JSON.stringify(sorted, null, 2),
+      outputInfo: 'Formatted and sorted JSON result.',
+    });
   };
 
-  formatJSON = () => {
+  formatObject = () => {
     try {
-      const object = JSON.parse(this.state.input);
-      const sorted = jsonAbc.sortObj(object);
-      this.setState({
-        output: JSON.stringify(sorted, null, 2),
-      });
+      if (this.state.input) {
+        const input = eval(`JSON.stringify(${this.state.input})`);
+        this.setState({input}, this.formatJSON);
+      }
     } catch (error) {
-      this.setState({
-        output: error.message,
-      });
+      this.formatText();
     }
+  };
+
+  formatText = () => {
+    const output = this.state.input
+      .split('\n')
+      .sort((a, b) => a.localeCompare(b))
+      .filter(Boolean)
+      .join('\n');
+    this.setState({output, outputInfo: `No valid JSON import. Treated input as text when sorting it.`});
+  };
+
+  handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    this.setState({input: event.currentTarget.value}, this.formatObject);
   };
 
   componentDidMount() {
@@ -62,9 +81,7 @@ class Content extends React.Component<Props, State> {
             </Typography>
             <TextField
               fullWidth
-              helperText="Please paste your unformatted JSON here."
-              id="filled-full-width"
-              margin="normal"
+              helperText={this.state.inputInfo}
               multiline={true}
               onChange={this.handleInput}
               placeholder={this.state.input}
@@ -86,9 +103,7 @@ class Content extends React.Component<Props, State> {
             <TextField
               disabled
               fullWidth
-              helperText="Formatted and sorted JSON result."
-              id="filled-full-width"
-              margin="normal"
+              helperText={this.state.outputInfo}
               multiline={true}
               rows={4}
               rowsMax={Infinity}
