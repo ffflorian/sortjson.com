@@ -1,8 +1,8 @@
-workflow "Build, test and publish" {
+workflow "Install, lint and test" {
   on = "push"
   resolves = [
     "Lint",
-    "Publish site",
+    "Test",
   ]
 }
 
@@ -23,25 +23,4 @@ action "Lint" {
   needs = ["Install"]
   runs = "yarn"
   args = "lint"
-}
-
-action "Build site" {
-  uses = "docker://node:10"
-  needs = ["Test", "Lint"]
-  runs = "yarn"
-  args = "dist"
-}
-
-action "master-branch-filter" {
-  needs = "Build site"
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-}
-
-action "Publish site" {
-  uses = "docker://node:10"
-  needs = ["master-branch-filter"]
-  runs = "yarn"
-  secrets = ["GITHUB_TOKEN"]
-  args = ["deploy", "-u", "${GITHUB_ACTOR} <${GITHUB_ACTOR}@users.noreply.github.com>", "-r", "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"]
 }
