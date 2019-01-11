@@ -1,4 +1,4 @@
-import {Grid, Paper, Typography} from '@material-ui/core';
+import {Grid, Paper, TextField, Typography} from '@material-ui/core';
 import * as React from 'react';
 
 const jsonAbc = require('jsonabc');
@@ -22,7 +22,7 @@ class Content extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      input: '{"name": "Sophie", "age": 50}',
+      input: JSON.stringify({name: 'Sophie', age: 50}, null, 2),
       output: '',
     };
   }
@@ -57,7 +57,22 @@ class Content extends React.Component<Props, State> {
             <Typography variant="h5" component="h3">
               Input
             </Typography>
-            <Typography component="textarea" onChange={this.handleInput} defaultValue={this.state.input} />
+            <TextField
+              fullWidth
+              helperText="Please paste your unformatted JSON here."
+              id="filled-full-width"
+              margin="normal"
+              multiline={true}
+              onChange={this.handleInput}
+              placeholder={this.state.input}
+              rows={4}
+              rowsMax={Infinity}
+              style={{margin: 8}}
+              variant="filled"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
           </Paper>
         </Grid>
         <Grid item sm>
@@ -65,7 +80,22 @@ class Content extends React.Component<Props, State> {
             <Typography variant="h5" component="h3">
               Output
             </Typography>
-            <Typography component="pre">{this.state.output}</Typography>
+            <TextField
+              disabled
+              fullWidth
+              helperText="Formatted and sorted JSON result."
+              id="filled-full-width"
+              margin="normal"
+              multiline={true}
+              rows={4}
+              rowsMax={Infinity}
+              style={{margin: 8}}
+              value={this.state.output}
+              variant="filled"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
           </Paper>
         </Grid>
       </Grid>
