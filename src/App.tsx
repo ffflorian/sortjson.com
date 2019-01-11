@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Content, Footer, Header} from './components/layout/';
+import {Footer, Header} from './components/layout/';
+import Content from './components/layout/Content';
 
 class App extends React.Component {
   render() {

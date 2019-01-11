@@ -1,17 +1,18 @@
-import {Grid, Paper, Typography} from '@material-ui/core';
+import {Grid, Paper, TextField, Theme, Typography, WithStyles, createStyles, withStyles} from '@material-ui/core';
 import * as React from 'react';
 
 const jsonAbc = require('jsonabc');
 
-const style = {
-  Pane: {
-    marginBottom: 10,
-    marginTop: 10,
-    padding: 20,
-  },
-};
+const styles = (theme: Theme) =>
+  createStyles({
+    Pane: {
+      marginBottom: 10,
+      marginTop: 10,
+      padding: 20,
+    },
+  });
 
-interface Props {}
+interface Props extends WithStyles<typeof styles> {}
 
 interface State {
   input: string;
@@ -22,7 +23,7 @@ class Content extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      input: '{"name": "Sophie", "age": 50}',
+      input: JSON.stringify({name: 'Sophie', age: 50}, null, 2),
       output: '',
     };
   }
@@ -50,22 +51,54 @@ class Content extends React.Component<Props, State> {
   }
 
   render() {
+    const {classes} = this.props;
+
     return (
-      <Grid container>
-        <Grid item sm>
-          <Paper style={style.Pane}>
+      <Grid container spacing={24}>
+        <Grid item xs={12} sm={6}>
+          <Paper className={classes.Pane}>
             <Typography variant="h5" component="h3">
               Input
             </Typography>
-            <Typography component="textarea" onChange={this.handleInput} defaultValue={this.state.input} />
+            <TextField
+              fullWidth
+              helperText="Please paste your unformatted JSON here."
+              id="filled-full-width"
+              margin="normal"
+              multiline={true}
+              onChange={this.handleInput}
+              placeholder={this.state.input}
+              rows={4}
+              rowsMax={Infinity}
+              style={{margin: 8}}
+              variant="filled"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
           </Paper>
         </Grid>
-        <Grid item sm>
-          <Paper style={style.Pane}>
+        <Grid item xs={12} sm={6}>
+          <Paper className={classes.Pane}>
             <Typography variant="h5" component="h3">
               Output
             </Typography>
-            <Typography component="pre">{this.state.output}</Typography>
+            <TextField
+              disabled
+              fullWidth
+              helperText="Formatted and sorted JSON result."
+              id="filled-full-width"
+              margin="normal"
+              multiline={true}
+              rows={4}
+              rowsMax={Infinity}
+              style={{margin: 8}}
+              value={this.state.output}
+              variant="filled"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
           </Paper>
         </Grid>
       </Grid>
@@ -73,4 +106,4 @@ class Content extends React.Component<Props, State> {
   }
 }
 
-export {Content};
+export default withStyles(styles)(Content);
