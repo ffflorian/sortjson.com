@@ -51,8 +51,8 @@ class Content extends React.Component<Props, State> {
 
   render() {
     return (
-      <Grid container>
-        <Grid item sm>
+      <Grid container spacing={24}>
+        <Grid item xs={12} sm={6}>
           <Paper style={style.Pane}>
             <Typography variant="h5" component="h3">
               Input
@@ -75,7 +75,7 @@ class Content extends React.Component<Props, State> {
             />
           </Paper>
         </Grid>
-        <Grid item sm>
+        <Grid item xs={12} sm={6}>
           <Paper style={style.Pane}>
             <Typography variant="h5" component="h3">
               Output
