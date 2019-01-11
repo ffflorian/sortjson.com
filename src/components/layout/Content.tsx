@@ -1,17 +1,18 @@
-import {Grid, Paper, TextField, Typography} from '@material-ui/core';
+import {Grid, Paper, TextField, Theme, Typography, WithStyles, createStyles, withStyles} from '@material-ui/core';
 import * as React from 'react';
 
 const jsonAbc = require('jsonabc');
 
-const style = {
-  Pane: {
-    marginBottom: 10,
-    marginTop: 10,
-    padding: 20,
-  },
-};
+const styles = (theme: Theme) =>
+  createStyles({
+    Pane: {
+      marginBottom: 10,
+      marginTop: 10,
+      padding: 20,
+    },
+  });
 
-interface Props {}
+interface Props extends WithStyles<typeof styles> {}
 
 interface State {
   input: string;
@@ -50,10 +51,12 @@ class Content extends React.Component<Props, State> {
   }
 
   render() {
+    const {classes} = this.props;
+
     return (
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
-          <Paper style={style.Pane}>
+          <Paper className={classes.Pane}>
             <Typography variant="h5" component="h3">
               Input
             </Typography>
@@ -76,7 +79,7 @@ class Content extends React.Component<Props, State> {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper style={style.Pane}>
+          <Paper className={classes.Pane}>
             <Typography variant="h5" component="h3">
               Output
             </Typography>
@@ -103,4 +106,4 @@ class Content extends React.Component<Props, State> {
   }
 }
 
-export {Content};
+export default withStyles(styles)(Content);
