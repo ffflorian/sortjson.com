@@ -43,5 +43,5 @@ action "Publish site" {
   needs = ["master-branch-filter"]
   runs = "yarn"
   secrets = ["GITHUB_TOKEN"]
-  args = ["deploy", "-u", "github-actions-bot <support+actions@github.com>"]
+  args = ["deploy", "-u", "ffflobot <ffflobot@users.noreply.github.com>"]
 }
