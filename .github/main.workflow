@@ -32,9 +32,15 @@ action "Build site" {
   args = "dist"
 }
 
+action "master-branch-filter" {
+  needs = "Build site"
+  uses = "actions/bin/filter@master"
+  args = "branch master"
+}
+
 action "Publish site" {
   uses = "docker://node:10"
-  needs = ["Build site"]
+  needs = ["master-branch-filter"]
   runs = "yarn"
   secrets = ["GITHUB_TOKEN"]
   args = ["deploy", "-u", "github-actions-bot <support+actions@github.com>"]
