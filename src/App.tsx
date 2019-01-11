@@ -1,19 +1,14 @@
-import React, {Component} from 'react';
+import * as React from 'react';
+import {Content, Footer, Header} from './components/layout/';
 
-import './App.css';
-import {JSONInput} from './JSONInput';
-
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>Sort JSON</p>
-        </header>
-        <div id="area">
-          <JSONInput />
-        </div>
-      </div>
+      <React.Fragment>
+        <Header />
+        <Content />
+        <Footer />
+      </React.Fragment>
     );
   }
 }

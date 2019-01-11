@@ -6,6 +6,8 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@material-ui/core": "3.8.3",
+    "@material-ui/icons": "3.0.2",
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
     "@types/react": "16.7.18",
@@ -47,12 +49,15 @@
   "name": "sortjson.com",
   "private": true,
   "scripts": {
-    "build:static": "node bin/static-files.js",
-    "build:site": "react-scripts build",
     "build": "yarn build:site && yarn build:static",
+    "build:site": "react-scripts build",
+    "build:static": "node bin/static-files.js",
     "clear": "rimraf build",
-    "dist": "yarn clear && yarn build",
     "deploy": "gh-pages -d build",
+    "dist": "yarn clear && yarn build",
+    "fix": "yarn fix:other && yarn fix:ts",
+    "fix:other": "yarn prettier --write",
+    "fix:ts": "yarn lint:ts --fix",
     "lint": "yarn lint:ts && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "tslint --config tslint.json --project tsconfig.json \"**/*.{ts,tsx}\"",
