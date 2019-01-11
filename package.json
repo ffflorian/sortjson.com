@@ -58,7 +58,7 @@
     "lint:ts": "tslint --config tslint.json --project tsconfig.json \"**/*.{ts,tsx}\"",
     "prettier": "prettier --ignore-path .gitignore --write \"src/*.{ts,tsx}\"",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test --watchAll=false"
   },
   "version": "0.1.0"
 }
