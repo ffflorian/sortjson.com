@@ -1,23 +1,41 @@
-workflow "Build, lint and test" {
+workflow "Build, test and publish" {
   on = "push"
-  resolves = ["Test", "Lint"]
+  resolves = [
+    "Lint",
+    "Publish site",
+  ]
 }
 
-action "Build" {
+action "Install" {
   uses = "docker://node:10"
   runs = "yarn"
 }
 
 action "Test" {
   uses = "docker://node:10"
-  needs = ["Build"]
+  needs = ["Install"]
   runs = "yarn"
   args = "test"
 }
 
 action "Lint" {
   uses = "docker://node:10"
-  needs = ["Build"]
+  needs = ["Install"]
   runs = "yarn"
   args = "lint"
+}
+
+action "Build site" {
+  uses = "docker://node:10"
+  needs = ["Test", "Lint"]
+  runs = "yarn"
+  args = "dist"
+}
+
+action "Publish site" {
+  uses = "docker://node:10"
+  needs = ["Build site"]
+  runs = "yarn"
+  secrets = ["GITHUB_TOKEN"]
+  args = ["deploy", "-u", "github-actions-bot <support+actions@github.com>"]
 }
