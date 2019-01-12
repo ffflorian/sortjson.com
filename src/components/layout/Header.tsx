@@ -34,7 +34,7 @@ class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      inDarkMode: false,
+      inDarkMode: window.localStorage.getItem('theme') === 'dark',
     };
   }
 

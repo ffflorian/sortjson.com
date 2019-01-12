@@ -6,7 +6,7 @@ const version = process.env.REACT_APP_VERSION || '';
 class Footer extends React.Component {
   render() {
     return (
-      <Typography style={{margin: 10}} gutterBottom={true} align="left">
+      <Typography align="left" gutterBottom={true} style={{margin: 10}}>
         {`Version ${version}`}
       </Typography>
     );

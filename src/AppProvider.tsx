@@ -27,7 +27,7 @@ class AppProvider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      theme: 'light',
+      theme: window.localStorage.getItem('theme') as PaletteType,
     };
   }
 
@@ -37,9 +37,14 @@ class AppProvider extends React.Component<Props, State> {
         value={{
           action: {
             switchTheme: (name: PaletteType) =>
-              this.setState({
-                theme: name,
-              }),
+              this.setState(
+                {
+                  theme: name,
+                },
+                () => {
+                  window.localStorage.setItem('theme', this.state.theme);
+                }
+              ),
           },
           state: this.state,
         }}
