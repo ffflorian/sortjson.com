@@ -26,6 +26,7 @@ const styles = (theme: Theme) =>
     Title: {
       flexGrow: 1,
       lineHeight: '48px',
+      paddingLeft: '20px',
     },
   });
 
