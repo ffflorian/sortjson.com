@@ -13,7 +13,7 @@ class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      inDarkMode: false,
+      inDarkMode: true,
     };
   }
 
@@ -29,7 +29,6 @@ class App extends React.Component<Props, State> {
           <Content />
           <Footer />
         </Theme>
-        )}
       </AppContext.Provider>
     );
   }
