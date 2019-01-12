@@ -7,11 +7,9 @@ const BUILD_DIR = path.resolve(__dirname, '..', 'build');
 
 const CNAME_FILE = path.join(BUILD_DIR, 'CNAME');
 const ROBOTS_FILE = path.join(BUILD_DIR, 'robots.txt');
-const NO_JEKYLL_FILE = path.join(BUILD_DIR, '.nojekyll');
 
 const CNAME_CONTENT = 'www.sortjson.com';
 const ROBOTS_CONTENT = 'User-agent: *\nAllow: /';
 
 fs.writeFileSync(CNAME_FILE, CNAME_CONTENT, 'utf8');
 fs.writeFileSync(ROBOTS_FILE, ROBOTS_CONTENT, 'utf8');
-fs.writeFileSync(NO_JEKYLL_FILE, '', 'utf8');
