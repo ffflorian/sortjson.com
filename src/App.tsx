@@ -1,16 +1,57 @@
-import {MuiThemeProvider} from '@material-ui/core';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core';
 import * as React from 'react';
 import {Content, Footer, Header} from './components/layout/';
-import {DarkTheme} from './Themes';
 
-class App extends React.Component {
+const AppContext = React.createContext({
+  state: {
+    inDarkMode: false,
+  },
+});
+
+interface Context {
+  state: State;
+}
+
+interface Props {}
+
+interface State {
+  inDarkMode: boolean;
+}
+
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      inDarkMode: true,
+    };
+  }
+
   render() {
     return (
-      <MuiThemeProvider theme={DarkTheme}>
-        <Header />
-        <Content />
-        <Footer />
-      </MuiThemeProvider>
+      <AppContext.Provider
+        value={{
+          state: this.state,
+        }}
+      >
+        <AppContext.Consumer>
+          {(context: Context) => (
+            <MuiThemeProvider
+              theme={createMuiTheme({
+                palette: {
+                  type: context.state.inDarkMode ? 'dark' : 'light',
+                },
+                typography: {
+                  useNextVariants: true,
+                },
+              })}
+            >
+              <Header />
+              <Content />
+              <Footer />
+            </MuiThemeProvider>
+          )}
+        </AppContext.Consumer>
+      </AppContext.Provider>
     );
   }
 }
