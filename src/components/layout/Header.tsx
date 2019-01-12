@@ -1,9 +1,10 @@
 import {
   AppBar,
+  FormControl,
   FormControlLabel,
+  FormGroup,
   Switch,
   Theme,
-  Toolbar,
   Typography,
   WithStyles,
   createStyles,
@@ -13,35 +14,57 @@ import * as React from 'react';
 
 const styles = (theme: Theme) =>
   createStyles({
-    grow: {
+    AppBarWrapper: {
       flexGrow: 1,
     },
-    root: {
+    Title: {
       flexGrow: 1,
+      lineHeight: '48px',
     },
   });
 
 interface Props extends WithStyles<typeof styles> {}
 
-interface State {}
+interface State {
+  inDarkMode: boolean;
+}
 
 class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    this.state = {
+      inDarkMode: false,
+    };
   }
+
+  handleChange = (event: React.ChangeEvent) => {
+    this.setState({inDarkMode: !this.state.inDarkMode});
+  };
 
   render() {
     const {classes} = this.props;
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="h5" color="inherit" className={classes.grow}>
-              Sort JSON
-            </Typography>
-            <FormControlLabel control={<Switch checked={true} value="hidden" color="primary" />} label="Hidden" />
-          </Toolbar>
+      <div className={classes.AppBarWrapper}>
+        <AppBar color="default" position="static">
+          <FormControl>
+            <FormGroup row>
+              <Typography className={classes.Title} color="inherit" variant="h5">
+                Sort JSON
+              </Typography>
+              <FormControlLabel
+                control={
+                  <Switch
+                    color="primary"
+                    checked={this.state.inDarkMode}
+                    onChange={this.handleChange}
+                    value="inDarkMode"
+                  />
+                }
+                label="Dark Mode"
+              />
+            </FormGroup>
+          </FormControl>
         </AppBar>
       </div>
     );
