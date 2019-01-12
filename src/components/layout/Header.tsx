@@ -3,6 +3,7 @@ import {
   FormControl,
   FormControlLabel,
   FormGroup,
+  IconButton,
   Switch,
   Theme,
   Typography,
@@ -10,6 +11,7 @@ import {
   createStyles,
   withStyles,
 } from '@material-ui/core';
+import {GithubCircle} from 'mdi-material-ui';
 import * as React from 'react';
 import {AppContext} from '../../AppProvider';
 
@@ -17,6 +19,9 @@ const styles = (theme: Theme) =>
   createStyles({
     AppBarWrapper: {
       flexGrow: 1,
+    },
+    DarkModeControl: {
+      userSelect: 'none',
     },
     Title: {
       flexGrow: 1,
@@ -52,6 +57,7 @@ class Header extends React.Component<Props, State> {
                     Sort JSON
                   </Typography>
                   <FormControlLabel
+                    className={classes.DarkModeControl}
                     control={
                       <Switch
                         color="primary"
@@ -75,6 +81,9 @@ class Header extends React.Component<Props, State> {
                     }
                     label="Dark Mode"
                   />
+                  <IconButton color="inherit" href="https://github.com/ffflorian/sortjson.com">
+                    <GithubCircle />
+                  </IconButton>
                 </FormGroup>
               </FormControl>
             </AppBar>
