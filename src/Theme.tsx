@@ -1,4 +1,4 @@
-import {MuiThemeProvider, createMuiTheme} from '@material-ui/core';
+import {CssBaseline, MuiThemeProvider, createMuiTheme} from '@material-ui/core';
 import * as React from 'react';
 import {AppContext} from './AppProvider';
 
@@ -17,6 +17,7 @@ class Theme extends React.Component {
               },
             })}
           >
+            <CssBaseline />
             {this.props.children}
           </MuiThemeProvider>
         )}
