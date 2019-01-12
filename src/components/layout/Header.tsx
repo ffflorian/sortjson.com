@@ -26,11 +26,16 @@ const styles = (theme: Theme) =>
 
 interface Props extends WithStyles<typeof styles> {}
 
-interface State {}
+interface State {
+  inDarkMode: boolean;
+}
 
 class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    this.state = {
+      inDarkMode: false,
+    };
   }
 
   render() {
@@ -50,8 +55,21 @@ class Header extends React.Component<Props, State> {
                     control={
                       <Switch
                         color="primary"
-                        checked={context.state.inDarkMode}
-                        onChange={context.action.switchTheme}
+                        checked={this.state.inDarkMode}
+                        onChange={() => {
+                          this.setState(
+                            {
+                              inDarkMode: !this.state.inDarkMode,
+                            },
+                            () => {
+                              if (this.state.inDarkMode) {
+                                context.action.switchTheme('dark');
+                              } else {
+                                context.action.switchTheme('light');
+                              }
+                            }
+                          );
+                        }}
                         value="inDarkMode"
                       />
                     }

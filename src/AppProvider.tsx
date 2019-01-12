@@ -1,34 +1,33 @@
+import {PaletteType} from '@material-ui/core';
 import * as React from 'react';
 
 interface Context {
   action: {
-    switchTheme: () => void;
+    switchTheme: (name: PaletteType) => void;
   };
-  state: {
-    inDarkMode: boolean;
-  };
+  state: State;
 }
 
 const AppContext = React.createContext<Context>({
   action: {
-    switchTheme: () => {},
+    switchTheme: (name: PaletteType) => {},
   },
   state: {
-    inDarkMode: false,
+    theme: 'light',
   },
 });
 
 interface Props {}
 
 interface State {
-  inDarkMode: boolean;
+  theme: PaletteType;
 }
 
 class AppProvider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      inDarkMode: true,
+      theme: 'light',
     };
   }
 
@@ -37,9 +36,9 @@ class AppProvider extends React.Component<Props, State> {
       <AppContext.Provider
         value={{
           action: {
-            switchTheme: () =>
+            switchTheme: (name: PaletteType) =>
               this.setState({
-                inDarkMode: !this.state.inDarkMode,
+                theme: name,
               }),
           },
           state: this.state,

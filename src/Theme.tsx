@@ -10,7 +10,7 @@ class Theme extends React.Component {
           <MuiThemeProvider
             theme={createMuiTheme({
               palette: {
-                type: context.state.inDarkMode ? 'dark' : 'light',
+                type: context.state.theme,
               },
               typography: {
                 useNextVariants: true,
