@@ -1,35 +1,18 @@
 import * as React from 'react';
-import AppContext from './AppContext';
+import {AppProvider} from './AppProvider';
 import {Content, Footer, Header} from './components/layout/';
 import Theme from './Theme';
 
-interface Props {}
-
-interface State {
-  inDarkMode: boolean;
-}
-
-class App extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      inDarkMode: true,
-    };
-  }
-
+class App extends React.Component {
   render() {
     return (
-      <AppContext.Provider
-        value={{
-          state: this.state,
-        }}
-      >
+      <AppProvider>
         <Theme>
           <Header />
           <Content />
           <Footer />
         </Theme>
-      </AppContext.Provider>
+      </AppProvider>
     );
   }
 }

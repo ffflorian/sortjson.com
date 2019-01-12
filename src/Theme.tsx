@@ -1,6 +1,6 @@
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core';
 import * as React from 'react';
-import AppContext from './AppContext';
+import {AppContext} from './AppProvider';
 
 class Theme extends React.Component {
   render() {

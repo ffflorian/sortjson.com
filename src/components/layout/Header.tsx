@@ -11,6 +11,7 @@ import {
   withStyles,
 } from '@material-ui/core';
 import * as React from 'react';
+import {AppContext} from '../../AppProvider';
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -25,48 +26,43 @@ const styles = (theme: Theme) =>
 
 interface Props extends WithStyles<typeof styles> {}
 
-interface State {
-  inDarkMode: boolean;
-}
+interface State {}
 
 class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      inDarkMode: false,
-    };
   }
-
-  handleChange = (event: React.ChangeEvent) => {
-    this.setState({inDarkMode: !this.state.inDarkMode});
-  };
 
   render() {
     const {classes} = this.props;
 
     return (
-      <div className={classes.AppBarWrapper}>
-        <AppBar color="default" position="static">
-          <FormControl>
-            <FormGroup row>
-              <Typography className={classes.Title} color="inherit" variant="h5">
-                Sort JSON
-              </Typography>
-              <FormControlLabel
-                control={
-                  <Switch
-                    color="primary"
-                    checked={this.state.inDarkMode}
-                    onChange={this.handleChange}
-                    value="inDarkMode"
+      <AppContext.Consumer>
+        {context => (
+          <div className={classes.AppBarWrapper}>
+            <AppBar color="default" position="static">
+              <FormControl>
+                <FormGroup row>
+                  <Typography className={classes.Title} color="inherit" variant="h5">
+                    Sort JSON
+                  </Typography>
+                  <FormControlLabel
+                    control={
+                      <Switch
+                        color="primary"
+                        checked={context.state.inDarkMode}
+                        onChange={context.action.switchTheme}
+                        value="inDarkMode"
+                      />
+                    }
+                    label="Dark Mode"
                   />
-                }
-                label="Dark Mode"
-              />
-            </FormGroup>
-          </FormControl>
-        </AppBar>
-      </div>
+                </FormGroup>
+              </FormControl>
+            </AppBar>
+          </div>
+        )}
+      </AppContext.Consumer>
     );
   }
 }
