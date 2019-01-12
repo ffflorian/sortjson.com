@@ -1,18 +1,51 @@
-import {AppBar, Toolbar, Typography} from '@material-ui/core';
+import {
+  AppBar,
+  FormControlLabel,
+  Switch,
+  Theme,
+  Toolbar,
+  Typography,
+  WithStyles,
+  createStyles,
+  withStyles,
+} from '@material-ui/core';
 import * as React from 'react';
 
-class Header extends React.Component {
+const styles = (theme: Theme) =>
+  createStyles({
+    grow: {
+      flexGrow: 1,
+    },
+    root: {
+      flexGrow: 1,
+    },
+  });
+
+interface Props extends WithStyles<typeof styles> {}
+
+interface State {}
+
+class Header extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+  }
+
   render() {
+    const {classes} = this.props;
+
     return (
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="headline" color="inherit">
-            Sort JSON
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h5" color="inherit" className={classes.grow}>
+              Sort JSON
+            </Typography>
+            <FormControlLabel control={<Switch checked={true} value="hidden" color="primary" />} label="Hidden" />
+          </Toolbar>
+        </AppBar>
+      </div>
     );
   }
 }
 
-export {Header};
+export default withStyles(styles)(Header);

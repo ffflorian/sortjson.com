@@ -1,15 +1,16 @@
+import {MuiThemeProvider} from '@material-ui/core';
 import * as React from 'react';
-import {Footer, Header} from './components/layout/';
-import Content from './components/layout/Content';
+import {Content, Footer, Header} from './components/layout/';
+import {DarkTheme} from './Themes';
 
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <MuiThemeProvider theme={DarkTheme}>
         <Header />
         <Content />
         <Footer />
-      </React.Fragment>
+      </MuiThemeProvider>
     );
   }
 }
