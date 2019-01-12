@@ -3,13 +3,13 @@
 const fs = require('fs');
 const path = require('path');
 
+const STATIC_DIR = path.resolve(__dirname, '..', 'static');
 const BUILD_DIR = path.resolve(__dirname, '..', 'build');
 
-const CNAME_ORIGINAL_FILE = path.join(__dirname, '..', 'CNAME');
-const CNAME_DEST_FILE = path.join(BUILD_DIR, 'CNAME');
-const ROBOTS_FILE = path.join(BUILD_DIR, 'robots.txt');
+const STATIC_FILES = fs.readdirSync(STATIC_DIR);
 
-const ROBOTS_CONTENT = 'User-agent: *\nAllow: /';
-
-fs.writeFileSync(ROBOTS_FILE, ROBOTS_CONTENT, 'utf8');
-fs.copyFileSync(CNAME_ORIGINAL_FILE, CNAME_DEST_FILE);
+for (const fileName of STATIC_FILES) {
+  const resolvedFile = path.join(STATIC_DIR, fileName);
+  const destinationFile = path.join(BUILD_DIR, fileName);
+  fs.copyFileSync(resolvedFile, destinationFile);
+}
