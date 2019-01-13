@@ -6,9 +6,8 @@ const jsonAbc = require('jsonabc');
 const styles = (theme: Theme) =>
   createStyles({
     Pane: {
-      marginBottom: 10,
-      marginTop: 10,
-      padding: 20,
+      margin: '20px',
+      padding: theme.spacing.unit * 2,
     },
   });
 
@@ -75,7 +74,7 @@ class Content extends React.Component<Props, State> {
     const {classes} = this.props;
 
     return (
-      <Grid container spacing={24}>
+      <Grid container>
         <Grid item xs={12} sm={6}>
           <Paper className={classes.Pane}>
             <Typography variant="h5" component="h3">

@@ -1,15 +1,18 @@
 import * as React from 'react';
-import {Footer, Header} from './components/layout/';
-import Content from './components/layout/Content';
+import {AppProvider} from './AppProvider';
+import {Content, Footer, Header} from './components/layout/';
+import Theme from './Theme';
 
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Content />
-        <Footer />
-      </React.Fragment>
+      <AppProvider>
+        <Theme>
+          <Header />
+          <Content />
+          <Footer />
+        </Theme>
+      </AppProvider>
     );
   }
 }
