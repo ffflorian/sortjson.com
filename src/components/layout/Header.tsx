@@ -14,6 +14,7 @@ import {
 import {GithubCircle} from 'mdi-material-ui';
 import * as React from 'react';
 import {AppContext} from '../../AppProvider';
+import AppTheme from '../../AppTheme';
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -40,7 +41,7 @@ class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      inDarkMode: window.localStorage.getItem('theme') === 'dark',
+      inDarkMode: AppTheme.getTheme() === 'dark',
     };
   }
 
