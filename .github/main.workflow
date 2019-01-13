@@ -15,6 +15,9 @@ action "Test" {
   uses = "docker://node:10"
   needs = ["Install"]
   runs = "yarn"
+  env = {
+    CI = "true"
+  }
   args = "test"
 }
 

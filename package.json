@@ -65,7 +65,7 @@
     "lint:ts": "tslint --config tslint.json --project tsconfig.json \"**/*.{ts,tsx}\"",
     "prettier": "prettier --ignore-path .gitignore --write \"src/*.{ts,tsx}\"",
     "start": "cross-env REACT_APP_VERSION=$npm_package_version react-scripts start",
-    "test": "react-scripts test --watchAll=false"
+    "test": "react-scripts test"
   },
   "version": "1.0.0"
 }
