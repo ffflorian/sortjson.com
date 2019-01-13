@@ -1,5 +1,6 @@
 import {PaletteType} from '@material-ui/core';
 import * as React from 'react';
+import AppTheme from './AppTheme';
 
 interface Context {
   action: {
@@ -27,7 +28,7 @@ class AppProvider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      theme: window.localStorage.getItem('theme') as PaletteType,
+      theme: AppTheme.getTheme(),
     };
   }
 
@@ -42,7 +43,7 @@ class AppProvider extends React.Component<Props, State> {
                   theme: name,
                 },
                 () => {
-                  window.localStorage.setItem('theme', this.state.theme);
+                  AppTheme.setTheme(this.state.theme);
                 }
               ),
           },
