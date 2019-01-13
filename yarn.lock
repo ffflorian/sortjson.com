@@ -1010,6 +1010,11 @@
     csstype "^2.0.0"
     indefinite-observable "^1.0.1"
 
+"@types/navigator-permissions@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@types/navigator-permissions/-/navigator-permissions-0.1.0.tgz#c22c4a04f0bdae92b042b0bfaf7f72ff152188c2"
+  integrity sha512-qLj3n10Va96m0cjHvDgXBxEh84vxza26iErlTOQMqBQSyMnfO0mSjDFcC/XiY4x7FyWGI2aHjBauic/obfc26g==
+
 "@types/node@10.12.18":
   version "10.12.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
