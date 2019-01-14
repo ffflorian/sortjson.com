@@ -91,6 +91,9 @@ class Content extends React.Component<Props, State> {
       const result = await nav.permissions.query({name: 'clipboard-write'});
       if (result.state == 'granted' || result.state == 'prompt') {
         (navigator as any).clipboard.writeText(this.state.output);
+        this.setState({
+          outputInfo: 'Copied output into clipboard.',
+        });
       }
     }
   };
@@ -104,6 +107,7 @@ class Content extends React.Component<Props, State> {
         this.setState(
           {
             input: pasteText,
+            inputInfo: 'Pasted clipboard content into input.',
           },
           this.formatObject
         );
