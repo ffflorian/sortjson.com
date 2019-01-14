@@ -1,10 +1,23 @@
-import {Grid, Paper, TextField, Theme, Typography, WithStyles, createStyles, withStyles} from '@material-ui/core';
+import {
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Theme,
+  Typography,
+  WithStyles,
+  createStyles,
+  withStyles,
+} from '@material-ui/core';
 import * as React from 'react';
 
 const jsonAbc = require('jsonabc');
 
 const styles = (theme: Theme) =>
   createStyles({
+    Button: {
+      margin: theme.spacing.unit,
+    },
     Pane: {
       margin: '20px',
       padding: theme.spacing.unit * 2,
@@ -66,6 +79,42 @@ class Content extends React.Component<Props, State> {
     this.setState({input: event.currentTarget.value}, this.formatObject);
   };
 
+  get hasClipboardSupport() {
+    const hasClipboardAPI = typeof (navigator as any).clipboard !== 'undefined';
+    const isNotFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
+    return hasClipboardAPI && isNotFirefox;
+  }
+
+  copyToClipboard = async (event: React.MouseEvent<HTMLInputElement>) => {
+    const nav = navigator as NavigatorPermissions.NavigatorPermissions;
+    if (nav.permissions) {
+      const result = await nav.permissions.query({name: 'clipboard-write'});
+      if (result.state == 'granted' || result.state == 'prompt') {
+        (navigator as any).clipboard.writeText(this.state.output);
+        this.setState({
+          outputInfo: 'Copied output into clipboard.',
+        });
+      }
+    }
+  };
+
+  pasteFromClipboard = async (event: React.MouseEvent<HTMLInputElement>) => {
+    const nav = navigator as NavigatorPermissions.NavigatorPermissions;
+    if (nav.permissions) {
+      const result = await nav.permissions.query({name: 'clipboard-read'});
+      if (result.state == 'granted' || result.state == 'prompt') {
+        const pasteText = await (navigator as any).clipboard.readText();
+        this.setState(
+          {
+            input: pasteText,
+            inputInfo: 'Pasted clipboard content into input.',
+          },
+          this.formatObject
+        );
+      }
+    }
+  };
+
   componentDidMount() {
     this.formatJSON();
   }
@@ -83,17 +132,23 @@ class Content extends React.Component<Props, State> {
             <TextField
               fullWidth
               helperText={this.state.inputInfo}
+              id="jsonInput"
               multiline={true}
               onChange={this.handleInput}
-              placeholder={this.state.input}
               rows={4}
               rowsMax={Infinity}
               style={{margin: 8}}
+              value={this.state.input}
               variant="filled"
               InputLabelProps={{
                 shrink: true,
               }}
             />
+            {this.hasClipboardSupport && (
+              <Button className={classes.Button} color="inherit" onClick={this.pasteFromClipboard} variant="contained">
+                Paste
+              </Button>
+            )}
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -105,6 +160,7 @@ class Content extends React.Component<Props, State> {
               disabled
               fullWidth
               helperText={this.state.outputInfo}
+              id="jsonOutput"
               multiline={true}
               rows={4}
               rowsMax={Infinity}
@@ -115,6 +171,11 @@ class Content extends React.Component<Props, State> {
                 shrink: true,
               }}
             />
+            {this.hasClipboardSupport && (
+              <Button className={classes.Button} color="inherit" onClick={this.copyToClipboard} variant="contained">
+                Copy
+              </Button>
+            )}
           </Paper>
         </Grid>
       </Grid>
