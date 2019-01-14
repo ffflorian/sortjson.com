@@ -81,7 +81,7 @@ class Content extends React.Component<Props, State> {
 
   get hasClipboardSupport() {
     const hasClipboardAPI = typeof (navigator as any).clipboard !== 'undefined';
-    const isntFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
+    const isNotFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
     return hasClipboardAPI && isntFirefox;
   }
 
