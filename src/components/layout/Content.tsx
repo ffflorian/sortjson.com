@@ -82,7 +82,7 @@ class Content extends React.Component<Props, State> {
   get hasClipboardSupport() {
     const hasClipboardAPI = typeof (navigator as any).clipboard !== 'undefined';
     const isNotFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
-    return hasClipboardAPI && isntFirefox;
+    return hasClipboardAPI && isNotFirefox;
   }
 
   copyToClipboard = async (event: React.MouseEvent<HTMLInputElement>) => {
