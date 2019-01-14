@@ -51,12 +51,10 @@
   "name": "sortjson.com",
   "private": true,
   "scripts": {
-    "build": "yarn build:site && yarn build:static",
     "build:site": "cross-env REACT_APP_VERSION=$npm_package_version react-scripts build",
-    "build:static": "node bin/static-files.js",
     "clear": "rimraf build",
     "deploy": "gh-pages -t -d build -m \"Publish\"",
-    "dist": "yarn clear && yarn build",
+    "dist": "yarn clear && yarn build:site",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
     "fix:ts": "yarn lint:ts --fix",
