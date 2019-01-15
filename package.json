@@ -66,5 +66,5 @@
     "start": "cross-env REACT_APP_VERSION=$npm_package_version react-scripts start",
     "test": "react-scripts test"
   },
-  "version": "1.2.0"
+  "version": "1.2.1"
 }

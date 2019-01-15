@@ -1,3 +1,9 @@
+#### 1.2.1 (2019-01-15)
+
+##### Bug Fixes
+
+- Revert object and text sorting (#16) (2dab5939)
+
 # Changelog
 
 ## 1.2.0 (2019-01-14)
