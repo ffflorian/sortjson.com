@@ -55,7 +55,7 @@ class Content extends React.Component<Props, State> {
     } catch (error) {
       this.setState({
         output: '',
-        outputInfo: `Input is not in valid JSON.`,
+        outputInfo: 'Input is not valid JSON.',
       });
     }
   };
