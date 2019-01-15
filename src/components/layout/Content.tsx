@@ -45,38 +45,23 @@ class Content extends React.Component<Props, State> {
   }
 
   formatJSON = () => {
-    const object = JSON.parse(this.state.input);
-    const sorted = jsonAbc.sortObj(object);
-    this.setState({
-      output: JSON.stringify(sorted, null, 2),
-      outputInfo: 'Formatted and sorted JSON result.',
-    });
-  };
-
-  formatObject = () => {
     try {
-      if (this.state.input) {
-        const input = eval(`JSON.stringify(${this.state.input})`);
-        this.setState({input}, this.formatJSON);
-      } else {
-        this.setState({output: ''});
-      }
+      const object = JSON.parse(this.state.input);
+      const sorted = jsonAbc.sortObj(object);
+      this.setState({
+        output: JSON.stringify(sorted, null, 2),
+        outputInfo: 'Formatted and sorted JSON result.',
+      });
     } catch (error) {
-      this.formatText();
+      this.setState({
+        output: '',
+        outputInfo: 'Input is not valid JSON.',
+      });
     }
   };
 
-  formatText = () => {
-    const output = this.state.input
-      .split('\n')
-      .sort((a, b) => a.localeCompare(b))
-      .filter(Boolean)
-      .join('\n');
-    this.setState({output, outputInfo: `No valid JSON import. Treated input as text when sorting it.`});
-  };
-
   handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    this.setState({input: event.currentTarget.value}, this.formatObject);
+    this.setState({input: event.currentTarget.value}, this.formatJSON);
   };
 
   get hasClipboardSupport() {
@@ -109,7 +94,7 @@ class Content extends React.Component<Props, State> {
             input: pasteText,
             inputInfo: 'Pasted clipboard content into input.',
           },
-          this.formatObject
+          this.formatJSON
         );
       }
     }
@@ -135,10 +120,10 @@ class Content extends React.Component<Props, State> {
               id="jsonInput"
               multiline={true}
               onChange={this.handleInput}
+              placeholder={this.state.input}
               rows={4}
               rowsMax={Infinity}
               style={{margin: 8}}
-              value={this.state.input}
               variant="filled"
               InputLabelProps={{
                 shrink: true,
