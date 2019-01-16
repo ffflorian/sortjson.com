@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {AppProvider} from './AppProvider';
 import AppTheme from './AppTheme';
 import {Content, Footer, Header} from './components/layout/';

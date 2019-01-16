@@ -12,7 +12,7 @@ import {
   withStyles,
 } from '@material-ui/core';
 import {GithubCircle} from 'mdi-material-ui';
-import * as React from 'react';
+import React from 'react';
 import {AppContext} from '../../AppProvider';
 import AppTheme from '../../AppTheme';
 

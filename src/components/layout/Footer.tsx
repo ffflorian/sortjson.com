@@ -1,5 +1,5 @@
 import {Theme, Typography, WithStyles, createStyles, withStyles} from '@material-ui/core';
-import * as React from 'react';
+import React from 'react';
 
 const version = process.env.REACT_APP_VERSION || '';
 

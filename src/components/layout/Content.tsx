@@ -9,9 +9,9 @@ import {
   createStyles,
   withStyles,
 } from '@material-ui/core';
-import * as React from 'react';
+import React from 'react';
 
-const jsonAbc = require('jsonabc');
+import jsonAbc from 'jsonabc';
 
 const styles = (theme: Theme) =>
   createStyles({
