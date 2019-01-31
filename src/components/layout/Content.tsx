@@ -9,6 +9,7 @@ import {
   createStyles,
   withStyles,
 } from '@material-ui/core';
+import json5 from 'json5';
 import React from 'react';
 
 import jsonAbc from 'jsonabc';
@@ -46,7 +47,7 @@ class Content extends React.Component<Props, State> {
 
   formatJSON = () => {
     try {
-      const object = JSON.parse(this.state.input);
+      const object = json5.parse(this.state.input);
       const sorted = jsonAbc.sortObj(object, true);
       this.setState({
         output: JSON.stringify(sorted, null, 2),
