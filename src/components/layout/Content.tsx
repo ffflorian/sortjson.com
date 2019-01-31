@@ -47,7 +47,7 @@ class Content extends React.Component<Props, State> {
   formatJSON = () => {
     try {
       const object = JSON.parse(this.state.input);
-      const sorted = jsonAbc.sortObj(object);
+      const sorted = jsonAbc.sortObj(object, true);
       this.setState({
         output: JSON.stringify(sorted, null, 2),
         outputInfo: 'Formatted and sorted JSON result.',
