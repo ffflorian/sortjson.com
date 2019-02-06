@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppProvider} from './AppProvider';
-import AppTheme from './AppTheme';
+import {AppTheme} from './AppTheme';
 import {Content, Footer, Header} from './components/layout/';
 
 class App extends React.Component {
