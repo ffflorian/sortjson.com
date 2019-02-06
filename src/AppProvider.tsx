@@ -1,5 +1,5 @@
 import {PaletteType} from '@material-ui/core';
-import React from 'react';
+import React, {ContextType, useState} from 'react';
 import AppTheme from './AppTheme';
 
 interface Context {
@@ -18,42 +18,27 @@ const AppContext = React.createContext<Context>({
   },
 });
 
-interface Props {}
-
 interface State {
   theme: PaletteType;
 }
 
-class AppProvider extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      theme: AppTheme.getTheme(),
-    };
-  }
-
-  render() {
-    return (
-      <AppContext.Provider
-        value={{
-          action: {
-            switchTheme: (name: PaletteType) =>
-              this.setState(
-                {
-                  theme: name,
-                },
-                () => {
-                  AppTheme.setTheme(this.state.theme);
-                }
-              ),
+const AppProvider = ({children}: React.Props<Context>) => {
+  const [theme, setTheme] = useState(AppTheme.getTheme());
+  return (
+    <AppContext.Provider
+      value={{
+        action: {
+          switchTheme: (name: PaletteType) => {
+            setTheme(name);
+            AppTheme.setTheme(name);
           },
-          state: this.state,
-        }}
-      >
-        {this.props.children}
-      </AppContext.Provider>
-    );
-  }
-}
+        },
+        state: {theme},
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
+};
 
 export {AppContext, AppProvider};

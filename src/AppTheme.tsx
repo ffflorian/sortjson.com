@@ -24,9 +24,22 @@ class AppTheme extends React.Component {
         {context => (
           <MuiThemeProvider
             theme={createMuiTheme({
+              overrides: {
+                MuiInput: {
+                  root: {
+                    borderRadius: 4,
+                  },
+                  underline: {
+                    '&:after, &:before': {
+                      display: 'none',
+                    },
+                  },
+                },
+              },
               palette: {
                 type: context.state.theme,
               },
+              spacing: {unit: 16},
               typography: {
                 useNextVariants: true,
               },

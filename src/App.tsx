@@ -9,12 +9,13 @@ class App extends React.Component {
       <AppProvider>
         <AppTheme>
           <Header />
-          <Content />
-          <Footer />
+          <Content classes={gridClasses} />
         </AppTheme>
       </AppProvider>
     );
   }
 }
+
+const gridClasses = {};
 
 export default App;

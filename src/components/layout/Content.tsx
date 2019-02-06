@@ -13,16 +13,22 @@ import React from 'react';
 
 import jsonAbc from 'jsonabc';
 
-const styles = (theme: Theme) =>
-  createStyles({
-    Button: {
-      margin: theme.spacing.unit,
+const styles = (theme: Theme) => {
+  return createStyles({
+    button: {
+      //margin: theme.spacing.unit,
     },
-    Pane: {
-      margin: '20px',
-      padding: theme.spacing.unit * 2,
+    grid: {padding: theme.spacing.unit},
+    gridItem: {},
+
+    paper: {
+      padding: theme.spacing.unit,
+    },
+    textField: {
+      margin: `${theme.spacing.unit}px 0`,
     },
   });
+};
 
 interface Props extends WithStyles<typeof styles> {}
 
@@ -31,16 +37,18 @@ interface State {
   inputInfo: string;
   output: string;
   outputInfo: string;
+  showPlaceholder: boolean;
 }
 
 class Content extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      input: JSON.stringify({name: 'Sophie', age: 50}, null, 2),
+      input: '',
       inputInfo: 'Please paste your unformatted JSON here.',
       output: '',
       outputInfo: '',
+      showPlaceholder: true,
     };
   }
 
@@ -106,58 +114,58 @@ class Content extends React.Component<Props, State> {
 
   render() {
     const {classes} = this.props;
+    const placeholder = this.state.showPlaceholder ? JSON.stringify({name: 'Sophie', age: 50}, null, 2) : '';
 
     return (
-      <Grid container>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.Pane}>
+      <Grid container spacing={16} className={classes.grid}>
+        <Grid item xs={12} sm={6} className={classes.gridItem}>
+          <Paper className={classes.paper}>
             <Typography variant="h5" component="h3">
               Input
             </Typography>
             <TextField
               fullWidth
-              helperText={this.state.inputInfo}
               id="jsonInput"
               multiline={true}
               onChange={this.handleInput}
-              placeholder={this.state.input}
+              placeholder={placeholder}
               rows={4}
+              onFocus={() => this.setState({showPlaceholder: false})}
+              onBlur={() => this.setState({showPlaceholder: true})}
+              margin="none"
               rowsMax={Infinity}
-              style={{margin: 8}}
-              variant="filled"
-              InputLabelProps={{
-                shrink: true,
-              }}
+              variant="outlined"
+              className={classes.textField}
             />
             {this.hasClipboardSupport && (
-              <Button className={classes.Button} color="inherit" onClick={this.pasteFromClipboard} variant="contained">
+              <Button className={classes.button} color="inherit" onClick={this.pasteFromClipboard} variant="contained">
                 Paste
               </Button>
             )}
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.Pane}>
+          <Paper className={classes.paper}>
             <Typography variant="h5" component="h3">
               Output
             </Typography>
             <TextField
               disabled
               fullWidth
-              helperText={this.state.outputInfo}
               id="jsonOutput"
               multiline={true}
               rows={4}
               rowsMax={Infinity}
-              style={{margin: 8}}
               value={this.state.output}
-              variant="filled"
+              variant="outlined"
+              margin="none"
               InputLabelProps={{
                 shrink: true,
               }}
+              className={classes.textField}
             />
             {this.hasClipboardSupport && (
-              <Button className={classes.Button} color="inherit" onClick={this.copyToClipboard} variant="contained">
+              <Button className={classes.button} color="inherit" onClick={this.copyToClipboard} variant="contained">
                 Copy
               </Button>
             )}
