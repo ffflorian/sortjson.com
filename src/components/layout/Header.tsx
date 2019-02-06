@@ -5,18 +5,16 @@ import {
   FormGroup,
   IconButton,
   Switch,
-  Theme,
   Typography,
   WithStyles,
   createStyles,
   withStyles,
 } from '@material-ui/core';
 import {GithubCircle} from 'mdi-material-ui';
-import React from 'react';
+import React, {useContext} from 'react';
 import {AppContext} from '../../AppProvider';
-import AppTheme from '../../AppTheme';
 
-const styles = (theme: Theme) =>
+const styles = () =>
   createStyles({
     AppBarWrapper: {
       flexGrow: 1,
@@ -33,67 +31,37 @@ const styles = (theme: Theme) =>
 
 interface Props extends WithStyles<typeof styles> {}
 
-interface State {
-  inDarkMode: boolean;
-}
+const Header = ({classes}: Props) => {
+  const {state, action} = useContext(AppContext);
+  const inDarkMode = state.theme === 'dark';
 
-class Header extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      inDarkMode: AppTheme.getTheme() === 'dark',
-    };
-  }
-
-  render() {
-    const {classes} = this.props;
-
-    return (
-      <AppContext.Consumer>
-        {context => (
-          <div className={classes.AppBarWrapper}>
-            <AppBar color="default" position="static">
-              <FormControl>
-                <FormGroup row>
-                  <Typography className={classes.Title} color="inherit" variant="h5">
-                    Sort JSON
-                  </Typography>
-                  <FormControlLabel
-                    className={classes.DarkModeControl}
-                    control={
-                      <Switch
-                        color="primary"
-                        checked={this.state.inDarkMode}
-                        onChange={() => {
-                          this.setState(
-                            {
-                              inDarkMode: !this.state.inDarkMode,
-                            },
-                            () => {
-                              if (this.state.inDarkMode) {
-                                context.action.switchTheme('dark');
-                              } else {
-                                context.action.switchTheme('light');
-                              }
-                            }
-                          );
-                        }}
-                        value="inDarkMode"
-                      />
-                    }
-                    label="Dark Mode"
-                  />
-                  <IconButton color="inherit" href="https://github.com/ffflorian/sortjson.com">
-                    <GithubCircle />
-                  </IconButton>
-                </FormGroup>
-              </FormControl>
-            </AppBar>
-          </div>
-        )}
-      </AppContext.Consumer>
-    );
-  }
-}
+  return (
+    <div className={classes.AppBarWrapper}>
+      <AppBar color="default" position="static">
+        <FormControl>
+          <FormGroup row>
+            <Typography className={classes.Title} color="inherit" variant="h5">
+              Sort JSON
+            </Typography>
+            <FormControlLabel
+              className={classes.DarkModeControl}
+              control={
+                <Switch
+                  color="primary"
+                  checked={inDarkMode}
+                  onChange={() => action.switchTheme(inDarkMode ? 'light' : 'dark')}
+                />
+              }
+              label="Dark Mode"
+            />
+            <IconButton color="inherit" href="https://github.com/ffflorian/sortjson.com">
+              <GithubCircle />
+            </IconButton>
+          </FormGroup>
+        </FormControl>
+      </AppBar>
+    </div>
+  );
+};
 
 export default withStyles(styles)(Header);
