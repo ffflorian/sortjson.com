@@ -45,13 +45,7 @@ const Header = ({classes}: Props) => {
             </Typography>
             <FormControlLabel
               className={classes.DarkModeControl}
-              control={
-                <Switch
-                  color="primary"
-                  checked={inDarkMode}
-                  onChange={() => action.switchTheme(inDarkMode ? 'light' : 'dark')}
-                />
-              }
+              control={<Switch color="primary" checked={inDarkMode} onChange={action.switchTheme} />}
               label="Dark Mode"
             />
             <IconButton color="inherit" href="https://github.com/ffflorian/sortjson.com">

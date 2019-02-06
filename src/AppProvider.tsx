@@ -7,14 +7,14 @@ interface State {
 }
 interface Context {
   action: {
-    switchTheme: (name: PaletteType) => void;
+    switchTheme: () => void;
   };
   state: State;
 }
 
 const AppContext = React.createContext<Context>({
   action: {
-    switchTheme: (name: PaletteType) => {},
+    switchTheme: () => {},
   },
   state: {
     theme: 'light',
@@ -27,9 +27,10 @@ const AppProvider = ({children}: React.Props<Context>) => {
     <AppContext.Provider
       value={{
         action: {
-          switchTheme: (name: PaletteType) => {
-            setTheme(name);
-            saveTheme(name);
+          switchTheme: () => {
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+            saveTheme(newTheme);
           },
         },
         state: {theme},
