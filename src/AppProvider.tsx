@@ -1,59 +1,44 @@
 import {PaletteType} from '@material-ui/core';
-import React from 'react';
-import AppTheme from './AppTheme';
+import React, {useState} from 'react';
+import {loadTheme, saveTheme} from './AppTheme';
 
+interface State {
+  theme: PaletteType;
+}
 interface Context {
   action: {
-    switchTheme: (name: PaletteType) => void;
+    switchTheme: () => void;
   };
   state: State;
 }
 
 const AppContext = React.createContext<Context>({
   action: {
-    switchTheme: (name: PaletteType) => {},
+    switchTheme: () => {},
   },
   state: {
     theme: 'light',
   },
 });
 
-interface Props {}
-
-interface State {
-  theme: PaletteType;
-}
-
-class AppProvider extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      theme: AppTheme.getTheme(),
-    };
-  }
-
-  render() {
-    return (
-      <AppContext.Provider
-        value={{
-          action: {
-            switchTheme: (name: PaletteType) =>
-              this.setState(
-                {
-                  theme: name,
-                },
-                () => {
-                  AppTheme.setTheme(this.state.theme);
-                }
-              ),
+const AppProvider = ({children}: React.Props<Context>) => {
+  const [theme, setTheme] = useState(loadTheme());
+  return (
+    <AppContext.Provider
+      value={{
+        action: {
+          switchTheme: () => {
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+            saveTheme(newTheme);
           },
-          state: this.state,
-        }}
-      >
-        {this.props.children}
-      </AppContext.Provider>
-    );
-  }
-}
+        },
+        state: {theme},
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
+};
 
 export {AppContext, AppProvider};
