@@ -12,16 +12,13 @@ const ThemeContext = React.createContext<Context>({switchTheme: () => {}, theme:
 const ThemeProvider = ({children}: React.Props<Context>) => {
   const [theme, setTheme] = useState(loadTheme());
 
-  const value = {
-    switchTheme: () => {
-      const newTheme = theme === 'dark' ? 'light' : 'dark';
-      setTheme(newTheme);
-      saveTheme(newTheme);
-    },
-    theme,
+  const switchTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    saveTheme(newTheme);
   };
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={{switchTheme, theme}}>{children}</ThemeContext.Provider>;
 };
 
 export {ThemeContext, ThemeProvider};
