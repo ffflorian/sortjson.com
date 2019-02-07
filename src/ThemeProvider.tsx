@@ -1,11 +1,23 @@
 import {PaletteType} from '@material-ui/core';
 import React, {useState} from 'react';
-import {loadTheme, saveTheme} from './AppTheme';
 
 interface Context {
   switchTheme: () => void;
   theme: PaletteType;
 }
+
+const hasLocalStorage = () => typeof localStorage !== 'undefined';
+
+const loadTheme = (): PaletteType => {
+  const theme = hasLocalStorage() && localStorage.getItem('theme');
+  return theme === 'dark' ? 'dark' : 'light';
+};
+
+const saveTheme = (name: PaletteType) => {
+  if (hasLocalStorage()) {
+    localStorage.setItem('theme', name);
+  }
+};
 
 const ThemeContext = React.createContext<Context>({switchTheme: () => {}, theme: 'light'});
 
