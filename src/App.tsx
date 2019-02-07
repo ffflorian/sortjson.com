@@ -1,16 +1,16 @@
 import React from 'react';
-import {AppProvider} from './AppProvider';
 import {AppTheme} from './AppTheme';
 import {Content, Footer, Header} from './components/layout/';
+import {ThemeProvider} from './ThemeProvider';
 
 const App = () => (
-  <AppProvider>
+  <ThemeProvider>
     <AppTheme>
       <Header />
       <Content />
       <Footer />
     </AppTheme>
-  </AppProvider>
+  </ThemeProvider>
 );
 
 export default App;
