@@ -1,28 +1,15 @@
 import {CssBaseline, MuiThemeProvider, PaletteType, createMuiTheme} from '@material-ui/core';
 import {MuiThemeProviderProps} from '@material-ui/core/styles/MuiThemeProvider';
 import React, {useContext} from 'react';
-import {AppContext} from './AppProvider';
-
-const hasLocalStorage = () => typeof localStorage !== 'undefined';
-
-export const loadTheme = (): PaletteType => {
-  const theme = hasLocalStorage() && localStorage.getItem('theme');
-  return theme === 'dark' ? 'dark' : 'light';
-};
-
-export const saveTheme = (name: PaletteType) => {
-  if (hasLocalStorage()) {
-    localStorage.setItem('theme', name);
-  }
-};
+import {ThemeContext} from './ThemeProvider';
 
 export const AppTheme = ({children}: React.Props<MuiThemeProviderProps>) => {
-  const {state} = useContext(AppContext);
+  const {theme} = useContext(ThemeContext);
   return (
     <MuiThemeProvider
       theme={createMuiTheme({
         palette: {
-          type: state.theme,
+          type: theme,
         },
         typography: {
           useNextVariants: true,
