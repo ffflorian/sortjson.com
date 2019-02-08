@@ -45,7 +45,7 @@ const JsonTextField = (props: TextFieldProps) => (
 
 export const Content = ({classes}: WithStyles<typeof styles>) => {
   const [input, setInput] = useState('');
-  const [output, setOutput] = useState(formatJSON(demoJson));
+  const [output, setOutput] = useState('');
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   useEffect(() => setOutput(input ? formatJSON(input) : ''), [input]);
