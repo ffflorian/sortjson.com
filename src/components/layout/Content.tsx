@@ -10,8 +10,10 @@ import {
   withStyles,
 } from '@material-ui/core';
 import json5 from 'json5';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {copyToClipboard, hasClipboardSupport, readFromClipboard} from '../../clipboard';
 
+import {TextFieldProps} from '@material-ui/core/TextField';
 import jsonAbc from 'jsonabc';
 
 const styles = (theme: Theme) =>
@@ -25,148 +27,75 @@ const styles = (theme: Theme) =>
     },
   });
 
-interface Props extends WithStyles<typeof styles> {}
+const demoJson = JSON.stringify({name: 'Sophie', age: 50});
 
-interface State {
-  input: string;
-  inputInfo: string;
-  output: string;
-  outputInfo: string;
-}
-
-class Content extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      input: JSON.stringify({name: 'Sophie', age: 50}, null, 2),
-      inputInfo: 'Please paste your unformatted JSON here.',
-      output: '',
-      outputInfo: '',
-    };
+const formatJSON = (json: string) => {
+  try {
+    const object = json5.parse(json);
+    const sorted = jsonAbc.sortObj(object, true);
+    return JSON.stringify(sorted, null, 2);
+  } catch (error) {
+    return 'Input is not valid JSON.';
   }
+};
 
-  formatJSON = () => {
-    try {
-      const object = json5.parse(this.state.input);
-      const sorted = jsonAbc.sortObj(object, true);
-      this.setState({
-        output: JSON.stringify(sorted, null, 2),
-        outputInfo: 'Formatted and sorted JSON result.',
-      });
-    } catch (error) {
-      this.setState({
-        output: '',
-        outputInfo: 'Input is not valid JSON.',
-      });
-    }
-  };
+const JsonTextField = (props: TextFieldProps) => (
+  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} style={{margin: 8}} variant="filled" />
+);
 
-  handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    this.setState({input: event.currentTarget.value}, this.formatJSON);
-  };
+export const Content = ({classes}: WithStyles<typeof styles>) => {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  const [showPlaceholder, setShowPlaceholder] = useState(true);
 
-  get hasClipboardSupport() {
-    const hasClipboardAPI = typeof (navigator as any).clipboard !== 'undefined';
-    const isNotFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
-    return hasClipboardAPI && isNotFirefox;
-  }
+  useEffect(() => setOutput(input ? formatJSON(input) : ''), [input]);
 
-  copyToClipboard = async (event: React.MouseEvent<HTMLInputElement>) => {
-    const nav = navigator as NavigatorPermissions.NavigatorPermissions;
-    if (nav.permissions) {
-      const result = await nav.permissions.query({name: 'clipboard-write'});
-      if (result.state == 'granted' || result.state == 'prompt') {
-        (navigator as any).clipboard.writeText(this.state.output);
-        this.setState({
-          outputInfo: 'Copied output into clipboard.',
-        });
-      }
-    }
-  };
-
-  pasteFromClipboard = async (event: React.MouseEvent<HTMLInputElement>) => {
-    const nav = navigator as NavigatorPermissions.NavigatorPermissions;
-    if (nav.permissions) {
-      const result = await nav.permissions.query({name: 'clipboard-read'});
-      if (result.state == 'granted' || result.state == 'prompt') {
-        const pasteText = await (navigator as any).clipboard.readText();
-        this.setState(
-          {
-            input: pasteText,
-            inputInfo: 'Pasted clipboard content into input.',
-          },
-          this.formatJSON
-        );
-      }
-    }
-  };
-
-  componentDidMount() {
-    this.formatJSON();
-  }
-
-  render() {
-    const {classes} = this.props;
-
-    return (
-      <Grid container>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.Pane}>
-            <Typography variant="h5" component="h3">
-              Input
-            </Typography>
-            <TextField
-              fullWidth
-              helperText={this.state.inputInfo}
-              id="jsonInput"
-              multiline={true}
-              onChange={this.handleInput}
-              placeholder={this.state.input}
-              rows={4}
-              rowsMax={Infinity}
-              style={{margin: 8}}
-              variant="filled"
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-            {this.hasClipboardSupport && (
-              <Button className={classes.Button} color="inherit" onClick={this.pasteFromClipboard} variant="contained">
-                Paste
-              </Button>
-            )}
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.Pane}>
-            <Typography variant="h5" component="h3">
-              Output
-            </Typography>
-            <TextField
-              disabled
-              fullWidth
-              helperText={this.state.outputInfo}
-              id="jsonOutput"
-              multiline={true}
-              rows={4}
-              rowsMax={Infinity}
-              style={{margin: 8}}
-              value={this.state.output}
-              variant="filled"
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-            {this.hasClipboardSupport && (
-              <Button className={classes.Button} color="inherit" onClick={this.copyToClipboard} variant="contained">
-                Copy
-              </Button>
-            )}
-          </Paper>
-        </Grid>
+  return (
+    <Grid container>
+      <Grid item xs={12} sm={6}>
+        <Paper className={classes.Pane}>
+          <Typography variant="h5" component="h3">
+            Input
+          </Typography>
+          <JsonTextField
+            onChange={({target: {value}}) => setInput(value)}
+            onFocus={() => setShowPlaceholder(false)}
+            onBlur={() => setShowPlaceholder(true)}
+            placeholder={showPlaceholder ? demoJson : ''}
+            value={input}
+          />
+          {hasClipboardSupport() && (
+            <Button
+              onClick={() => readFromClipboard().then(setInput)}
+              className={classes.Button}
+              color="inherit"
+              variant="contained"
+            >
+              Paste
+            </Button>
+          )}
+        </Paper>
       </Grid>
-    );
-  }
-}
+      <Grid item xs={12} sm={6}>
+        <Paper className={classes.Pane}>
+          <Typography variant="h5" component="h3">
+            Output
+          </Typography>
+          <JsonTextField disabled value={output} placeholder={showPlaceholder ? formatJSON(demoJson) : ''} />
+          {hasClipboardSupport() && (
+            <Button
+              onClick={() => copyToClipboard(output)}
+              className={classes.Button}
+              color="inherit"
+              variant="contained"
+            >
+              Copy
+            </Button>
+          )}
+        </Paper>
+      </Grid>
+    </Grid>
+  );
+};
 
 export default withStyles(styles)(Content);
