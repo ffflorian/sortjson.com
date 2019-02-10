@@ -46,7 +46,7 @@ const formatJSON = (json: string) => {
 };
 
 const JsonTextField = (props: TextFieldProps) => (
-  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} style={{margin: 8}} variant="outlined" />
+  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} variant="outlined" />
 );
 
 export const Content = ({classes}: WithStyles<typeof styles>) => {
