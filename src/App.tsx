@@ -1,20 +1,16 @@
 import React from 'react';
-import {AppProvider} from './AppProvider';
-import AppTheme from './AppTheme';
-import {Content, Footer, Header} from './components/layout/';
+import {AppTheme} from './AppTheme';
+import {Content, Header} from './components/layout/';
+import {ThemeProvider} from './ThemeProvider';
 
-class App extends React.Component {
-  render() {
-    return (
-      <AppProvider>
-        <AppTheme>
-          <Header />
-          <Content classes={gridClasses} />
-        </AppTheme>
-      </AppProvider>
-    );
-  }
-}
+const App = () => (
+  <ThemeProvider>
+    <AppTheme>
+      <Header />
+      <Content />
+    </AppTheme>
+  </ThemeProvider>
+);
 
 const gridClasses = {};
 

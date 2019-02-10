@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core';
 import {GithubCircle} from 'mdi-material-ui';
 import React, {useContext} from 'react';
-import {AppContext} from '../../AppProvider';
+import {ThemeContext} from '../../ThemeProvider';
 
 const styles = () =>
   createStyles({
@@ -39,8 +39,9 @@ interface Props extends WithStyles<typeof styles> {}
 
 const version = process.env.REACT_APP_VERSION || '';
 const Header = ({classes}: Props) => {
-  const {state, action} = useContext(AppContext);
-  const isDarkMode = state.theme === 'dark';
+  const {theme, switchTheme} = useContext(ThemeContext);
+  const inDarkMode = theme === 'dark';
+
   return (
     <div className={classes.AppBarWrapper}>
       <AppBar color="default" position="static">
@@ -51,16 +52,10 @@ const Header = ({classes}: Props) => {
             </Typography>
             <Typography className={classes.version} align="left" gutterBottom={true}>
               {version}
-            </Typography>
+            </Typography>{' '}
             <FormControlLabel
               className={classes.DarkModeControl}
-              control={
-                <Switch
-                  color="primary"
-                  checked={isDarkMode}
-                  onChange={() => action.switchTheme(isDarkMode ? 'light' : 'dark')}
-                />
-              }
+              control={<Switch color="primary" checked={inDarkMode} onChange={switchTheme} />}
               label="Dark Mode"
             />
             <IconButton color="inherit" href="https://github.com/ffflorian/sortjson.com">
