@@ -16,16 +16,22 @@ import {copyToClipboard, hasClipboardSupport, readFromClipboard} from '../../cli
 import {TextFieldProps} from '@material-ui/core/TextField';
 import jsonAbc from 'jsonabc';
 
-const styles = (theme: Theme) =>
-  createStyles({
-    Button: {
-      margin: theme.spacing.unit,
+const styles = (theme: Theme) => {
+  return createStyles({
+    button: {
+      //margin: theme.spacing.unit,
     },
-    Pane: {
-      margin: '20px',
-      padding: theme.spacing.unit * 2,
+    grid: {padding: theme.spacing.unit},
+    gridItem: {},
+
+    paper: {
+      padding: theme.spacing.unit,
+    },
+    textField: {
+      margin: `${theme.spacing.unit}px 0`,
     },
   });
+};
 
 const demoJson = JSON.stringify({name: 'Sophie', age: 50});
 
@@ -40,7 +46,7 @@ const formatJSON = (json: string) => {
 };
 
 const JsonTextField = (props: TextFieldProps) => (
-  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} style={{margin: 8}} variant="filled" />
+  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} variant="outlined" />
 );
 
 export const Content = ({classes}: WithStyles<typeof styles>) => {
@@ -51,9 +57,9 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
   useEffect(() => setOutput(input ? formatJSON(input) : ''), [input]);
 
   return (
-    <Grid container>
-      <Grid item xs={12} sm={6}>
-        <Paper className={classes.Pane}>
+    <Grid container spacing={16} className={classes.grid}>
+      <Grid item xs={12} sm={6} className={classes.gridItem}>
+        <Paper className={classes.paper}>
           <Typography variant="h5" component="h3">
             Input
           </Typography>
@@ -63,11 +69,12 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
             onBlur={() => setShowPlaceholder(true)}
             placeholder={showPlaceholder ? demoJson : ''}
             value={input}
+            className={classes.textField}
           />
           {hasClipboardSupport() && (
             <Button
               onClick={() => readFromClipboard().then(setInput)}
-              className={classes.Button}
+              className={classes.button}
               color="inherit"
               variant="contained"
             >
@@ -77,15 +84,20 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6}>
-        <Paper className={classes.Pane}>
+        <Paper className={classes.paper}>
           <Typography variant="h5" component="h3">
             Output
           </Typography>
-          <JsonTextField disabled value={output} placeholder={showPlaceholder ? formatJSON(demoJson) : ''} />
+          <JsonTextField
+            disabled
+            value={output}
+            placeholder={showPlaceholder ? formatJSON(demoJson) : ''}
+            className={classes.textField}
+          />
           {hasClipboardSupport() && (
             <Button
               onClick={() => copyToClipboard(output)}
-              className={classes.Button}
+              className={classes.button}
               color="inherit"
               variant="contained"
             >

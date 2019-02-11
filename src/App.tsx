@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppTheme} from './AppTheme';
-import {Content, Footer, Header} from './components/layout/';
+import {Content, Header} from './components/layout/';
 import {ThemeProvider} from './ThemeProvider';
 
 const App = () => (
@@ -8,9 +8,10 @@ const App = () => (
     <AppTheme>
       <Header />
       <Content />
-      <Footer />
     </AppTheme>
   </ThemeProvider>
 );
+
+const gridClasses = {};
 
 export default App;

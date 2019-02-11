@@ -8,9 +8,22 @@ export const AppTheme = ({children}: React.Props<MuiThemeProviderProps>) => {
   return (
     <MuiThemeProvider
       theme={createMuiTheme({
+        overrides: {
+          MuiInput: {
+            root: {
+              borderRadius: 4,
+            },
+            underline: {
+              '&:after, &:before': {
+                display: 'none',
+              },
+            },
+          },
+        },
         palette: {
           type: theme,
         },
+        spacing: {unit: 16},
         typography: {
           useNextVariants: true,
         },
