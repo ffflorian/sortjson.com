@@ -21,7 +21,11 @@ const styles = (theme: Theme) => {
     button: {
       //margin: theme.spacing.unit,
     },
-    grid: {padding: theme.spacing.unit},
+    grid: {
+      margin: 0,
+      padding: theme.spacing.unit / 2,
+      width: '100%',
+    },
     gridItem: {},
 
     paper: {
