@@ -33,7 +33,7 @@ export const Logo = ({size}: Props) => (
         color-interpolation-filters="sRGB"
         filterUnits="userSpaceOnUse"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
         <feOffset dx="2" dy="8" />
         <feGaussianBlur stdDeviation="1" />
@@ -50,7 +50,7 @@ export const Logo = ({size}: Props) => (
         color-interpolation-filters="sRGB"
         filterUnits="userSpaceOnUse"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
         <feOffset dx="2" dy="8" />
         <feGaussianBlur stdDeviation="1" />
