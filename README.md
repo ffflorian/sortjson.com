@@ -6,6 +6,12 @@
 yarn
 ```
 
+## Start
+
+```
+yarn start
+```
+
 ## Build
 
 ```
