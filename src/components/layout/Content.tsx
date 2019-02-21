@@ -50,7 +50,20 @@ const formatJSON = (json: string) => {
 };
 
 const JsonTextField = (props: TextFieldProps) => (
-  <TextField {...props} fullWidth multiline rows={4} rowsMax={Infinity} variant="outlined" />
+  <TextField
+    {...props}
+    fullWidth
+    multiline
+    rows={4}
+    rowsMax={Infinity}
+    variant="outlined"
+    inputProps={{
+      style: {
+        fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+        fontSize: '14px',
+      },
+    }}
+  />
 );
 
 export const Content = ({classes}: WithStyles<typeof styles>) => {
