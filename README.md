@@ -2,24 +2,30 @@
 
 ## Install
 
-```
+```bash
 yarn
+```
+
+## Start
+
+```bash
+yarn start
 ```
 
 ## Build
 
-```
+```bash
 yarn dist
 ```
 
 ## Test
 
-```
+```bash
 yarn test
 ```
 
 ## Deploy
 
-```
+```bash
 yarn deploy
 ```
