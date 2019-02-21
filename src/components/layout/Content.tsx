@@ -18,20 +18,18 @@ import jsonAbc from 'jsonabc';
 
 const styles = (theme: Theme) => {
   return createStyles({
-    button: {
-      //margin: theme.spacing.unit,
-    },
     grid: {
       margin: 0,
       padding: theme.spacing.unit / 2,
       width: '100%',
     },
     gridItem: {},
-
     paper: {
       padding: theme.spacing.unit,
     },
     textField: {
+      fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+      fontSize: '14px',
       margin: `${theme.spacing.unit}px 0`,
     },
   });
@@ -49,22 +47,23 @@ const formatJSON = (json: string) => {
   }
 };
 
-const JsonTextField = (props: TextFieldProps) => (
-  <TextField
-    {...props}
-    fullWidth
-    multiline
-    rows={4}
-    rowsMax={Infinity}
-    variant="outlined"
-    inputProps={{
-      style: {
-        fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-        fontSize: '14px',
-      },
-    }}
-  />
-);
+const JsonTextField = withStyles(styles)((props: TextFieldProps & WithStyles<typeof styles>) => {
+  const {classes} = props;
+
+  return (
+    <TextField
+      {...props}
+      fullWidth
+      multiline
+      rows={4}
+      rowsMax={Infinity}
+      variant="outlined"
+      InputProps={{
+        className: classes.textField,
+      }}
+    />
+  );
+});
 
 export const Content = ({classes}: WithStyles<typeof styles>) => {
   const [input, setInput] = useState('');
