@@ -14,7 +14,7 @@
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-scripts": "2.1.5",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3333"
   },
   "devDependencies": {
     "@types/jest": "24.0.6",
