@@ -45,7 +45,8 @@ const formatJSON = (json: string) => {
     const sorted = jsonAbc.sortObj(object, true);
     return JSON.stringify(sorted, null, 2);
   } catch (error) {
-    return 'Input is not valid JSON.';
+    const errorMessage = error.message.replace('JSON5: ', '');
+    return `Input is not valid JSON (${errorMessage}).`;
   }
 };
 
