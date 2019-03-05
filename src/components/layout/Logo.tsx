@@ -30,7 +30,7 @@ export const Logo = ({size}: Props) => (
         height="151"
         x="35"
         y="41"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
         filterUnits="userSpaceOnUse"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
@@ -47,7 +47,7 @@ export const Logo = ({size}: Props) => (
         height="150"
         x="131"
         y="77"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
         filterUnits="userSpaceOnUse"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
