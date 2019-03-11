@@ -12,6 +12,4 @@ const App = () => (
   </ThemeProvider>
 );
 
-const gridClasses = {};
-
 export default App;
