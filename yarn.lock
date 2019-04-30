@@ -974,10 +974,10 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.30.tgz#44cb52f32a809734ca562e685c6473b5754a7818"
   integrity sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==
 
-"@types/jsonabc@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@types/jsonabc/-/jsonabc-2.3.0.tgz#e4d92d5d5383008769a6464619172841493b82cc"
-  integrity sha512-DfHAOVkaIoFYuoPlsFa8ilwjVOEyjWJi2BFfxhVJKW6uxq3TXTqKSW1PW4qlP8HJOgDkNIk5lMPZiHUalIk+bA==
+"@types/jsonabc@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/jsonabc/-/jsonabc-2.3.1.tgz#3aa5d3f938331ef2472d3ea56c6b4c805bef6198"
+  integrity sha512-SOR8DMQQVUmk3JnNp7FU75U+vp/VcFcghvS68mUQEuq4FKDANIQ9dxDA5qEQMDahBCd5Vyhk81ywn0JbcLpZZw==
 
 "@types/jss@^9.5.6":
   version "9.5.7"
