@@ -24,7 +24,7 @@
     "@types/react-dom": "16.8.4",
     "gh-pages": "2.0.1",
     "husky": "2.2.0",
-    "lint-staged": "8.1.5",
+    "lint-staged": "8.1.6",
     "prettier": "1.17.0",
     "react-scripts": "2.1.8",
     "rimraf": "2.6.3",
