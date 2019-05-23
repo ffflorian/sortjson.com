@@ -9,7 +9,7 @@ workflow "Build, lint and test" {
 }
 
 action "Don't skip CI" {
-  uses = "ffflorian/actions/skip-ci-check@master"
+  uses = "ffflorian/actions/skip-ci-check@v1.0.0"
 }
 
 action "Install dependencies" {
@@ -53,7 +53,7 @@ action "Check for master branch" {
 }
 
 action "Publish project" {
-  uses = "ffflorian/actions/gh-pages@master"
+  uses = "ffflorian/actions/gh-pages@v1.0.0"
   needs = "Check for master branch"
   env = {
     GH_USER = "ffflobot"
