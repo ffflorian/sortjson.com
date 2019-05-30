@@ -7,12 +7,12 @@ export const hasClipboardSupport = (): boolean => {
 export const readFromClipboard = async (): Promise<string> => {
   let clipboardText = '';
 
-  const nav = navigator as NavigatorPermissions.NavigatorPermissions;
+  const nav = navigator as any;
   if (nav.permissions) {
     const result = await nav.permissions.query({name: 'clipboard-read'});
     if (result.state === 'granted' || result.state === 'prompt') {
       try {
-        clipboardText = (navigator as any).clipboard.readText();
+        clipboardText = nav.clipboard.readText();
       } catch (error) {
         console.error(error);
       }
@@ -25,12 +25,12 @@ export const readFromClipboard = async (): Promise<string> => {
 export const copyToClipboard = async (text: string): Promise<boolean> => {
   let hasPermissions = false;
 
-  const nav = navigator as NavigatorPermissions.NavigatorPermissions;
+  const nav = navigator as any;
   if (nav.permissions) {
     const result = await nav.permissions.query({name: 'clipboard-write'});
     if (result.state === 'granted' || result.state === 'prompt') {
       try {
-        (navigator as any).clipboard.writeText(text);
+        nav.clipboard.writeText(text);
         hasPermissions = true;
       } catch (error) {
         console.error(error);
