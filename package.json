@@ -28,7 +28,7 @@
     "husky": "2.7.0",
     "lint-staged": "8.2.1",
     "prettier": "1.18.2",
-    "react-scripts": "2.1.8",
+    "react-scripts": "3.0.1",
     "rimraf": "2.6.3",
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
