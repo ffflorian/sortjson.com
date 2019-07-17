@@ -19,7 +19,7 @@
     "skipLibCheck": true,
     "strict": true,
     "strictFunctionTypes": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": ["src"]
 }
