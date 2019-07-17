@@ -35,6 +35,9 @@
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.5.3"
   },
+  "engines": {
+    "node": ">= 10.9"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
