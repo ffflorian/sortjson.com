@@ -18,10 +18,10 @@ jobs:
           yarn lint
           yarn test
           yarn dist
-          yarn deploy
+          REPO_URL="$(git remote get-url origin | sed -n "s/https:\/\/github.com\//https:\/\/${GIT_AUTHOR_NAME}:${GH_TOKEN}@github.com\//p")"
+          yarn deploy -u "ffflobot <ffflobot@users.noreply.github.com>" -r "${REPO_URL}"
         env:
           CI: true
-          GH_USER: ffflobot
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         if: |
           contains(github.event.commits[0].message, '[skip ci]') == false &&
