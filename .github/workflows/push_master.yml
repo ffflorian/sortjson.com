@@ -22,6 +22,7 @@ jobs:
           yarn deploy -u "ffflobot <ffflobot@users.noreply.github.com>" -r "${REPO_URL}"
         env:
           CI: true
+          GH_USER: ffflorian
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         if: |
           contains(github.event.commits[0].message, '[skip ci]') == false &&
