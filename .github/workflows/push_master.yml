@@ -19,6 +19,7 @@ jobs:
           yarn test
           yarn dist
         env:
+          CI: true
           GIT_AUTHOR_NAME: ffflobot
           GIT_AUTHOR_EMAIL: ffflobot@users.noreply.github.com
           GIT_COMMITTER_NAME: ffflobot
