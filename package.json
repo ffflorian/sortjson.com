@@ -12,7 +12,7 @@
     "json5": "2.1.0",
     "jsonabc": "2.3.1",
     "mdi-material-ui": "5.18.0",
-    "react": "16.9.0",
+    "react": "16.10.1",
     "react-dom": "16.9.0"
   },
   "devDependencies": {
