@@ -46,6 +46,7 @@
       "pre-commit": "lint-staged"
     }
   },
+  "license": "GPL-3.0",
   "lint-staged": {
     "*.{json,md,css}": [
       "prettier --write",
