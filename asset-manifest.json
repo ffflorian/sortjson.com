@@ -5,16 +5,16 @@
     "main.js.map": "https://sortjson.com/static/js/main.456aab52.chunk.js.map",
     "runtime-main.js": "https://sortjson.com/static/js/runtime-main.86551a72.js",
     "runtime-main.js.map": "https://sortjson.com/static/js/runtime-main.86551a72.js.map",
-    "static/js/2.3d703c12.chunk.js": "https://sortjson.com/static/js/2.3d703c12.chunk.js",
-    "static/js/2.3d703c12.chunk.js.map": "https://sortjson.com/static/js/2.3d703c12.chunk.js.map",
+    "static/js/2.3006486d.chunk.js": "https://sortjson.com/static/js/2.3006486d.chunk.js",
+    "static/js/2.3006486d.chunk.js.map": "https://sortjson.com/static/js/2.3006486d.chunk.js.map",
     "index.html": "https://sortjson.com/index.html",
-    "precache-manifest.c4cc794b83a038b0fa581798f13dfad2.js": "https://sortjson.com/precache-manifest.c4cc794b83a038b0fa581798f13dfad2.js",
+    "precache-manifest.73a003408ff866eee809f9178b8ba709.js": "https://sortjson.com/precache-manifest.73a003408ff866eee809f9178b8ba709.js",
     "service-worker.js": "https://sortjson.com/service-worker.js",
     "static/css/main.26a98e67.chunk.css.map": "https://sortjson.com/static/css/main.26a98e67.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.86551a72.js",
-    "static/js/2.3d703c12.chunk.js",
+    "static/js/2.3006486d.chunk.js",
     "static/css/main.26a98e67.chunk.css",
     "static/js/main.456aab52.chunk.js"
   ]
