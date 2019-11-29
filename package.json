@@ -7,7 +7,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "3.9.4",
     "@material-ui/icons": "3.0.2",
     "json5": "2.1.1",
     "jsonabc": "2.3.1",
