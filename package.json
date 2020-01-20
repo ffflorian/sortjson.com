@@ -11,7 +11,7 @@
     "@material-ui/icons": "3.0.2",
     "json5": "2.1.1",
     "jsonabc": "2.3.1",
-    "mdi-material-ui": "5.21.0",
+    "mdi-material-ui": "5.22.0",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
