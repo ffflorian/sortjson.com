@@ -49,12 +49,10 @@
   "license": "GPL-3.0",
   "lint-staged": {
     "*.{json,md,css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{ts,tsx}": [
-      "tslint --config tslint.json --project tsconfig.json --fix",
-      "git add"
+      "tslint --config tslint.json --project tsconfig.json --fix"
     ]
   },
   "name": "sortjson.com",
