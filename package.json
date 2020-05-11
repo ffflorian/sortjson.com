@@ -23,7 +23,7 @@
     "@types/jsonabc": "2.3.1",
     "@types/node": "~12",
     "@types/react": "16.9.35",
-    "@types/react-dom": "16.9.7",
+    "@types/react-dom": "16.9.8",
     "gh-pages": "2.2.0",
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
