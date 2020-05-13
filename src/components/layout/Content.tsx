@@ -37,7 +37,7 @@ const styles = (theme: Theme) => {
   });
 };
 
-const demoJson = JSON.stringify({name: 'Sophie', age: 50});
+const demoJson = JSON.stringify({age: 50, name: 'Sophie'});
 
 const formatJSON = (json: string) => {
   try {
