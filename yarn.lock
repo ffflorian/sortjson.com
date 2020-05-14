@@ -1706,10 +1706,10 @@
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@ffflorian/eslint-config@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.npmjs.org/@ffflorian/eslint-config/-/eslint-config-0.3.3.tgz#280d588061a44e59ed5eba42588c858fd9e5642f"
-  integrity sha512-hc/NgERzBx2IdtK1iPtAVO7nUhWcii7Qv5TliUxsskjQfRxishGlsYnI2GrQZ+mPZd1cFGFs+g5HXK1sUss+Kg==
+"@ffflorian/eslint-config@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.npmjs.org/@ffflorian/eslint-config/-/eslint-config-0.4.1.tgz#049f7cd69cb00d75689c3e47f506cede3e5d1264"
+  integrity sha512-Us80+PIypcCjoDrieWcW9lXnjEG6Cj6rnBzqH9buvz5qgLqdwB4Ew09U8PCdSH7lWh33d31fbShmq5Q1gsrhdQ==
 
 "@ffflorian/prettier-config@0.0.6":
   version "0.0.6"
