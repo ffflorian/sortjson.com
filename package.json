@@ -16,7 +16,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@ffflorian/eslint-config": "0.3.3",
+    "@ffflorian/eslint-config": "0.4.0",
     "@ffflorian/prettier-config": "0.0.6",
     "@types/jest": "25.2.1",
     "@types/json5": "0.0.30",
