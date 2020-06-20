@@ -40,7 +40,7 @@
     "eslint-plugin-typescript-sort-keys": "1.2.0",
     "gh-pages": "3.0.0",
     "husky": "4.2.5",
-    "lint-staged": "10.2.10",
+    "lint-staged": "10.2.11",
     "prettier": "2.0.5",
     "react-scripts": "3.4.1",
     "rimraf": "3.0.2",
