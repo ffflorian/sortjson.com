@@ -36,7 +36,7 @@ jobs:
       - name: Deploy
         run: |
           REPO_URL="$(git remote get-url origin | sed -n "s/https:\/\/github.com\//https:\/\/${GIT_AUTHOR_NAME}:${GH_TOKEN}@github.com\//p")"
-          yarn deploy -u "${GIT_AUTHOR_NAME} <${GIT_AUTHOR_NAME}@${GIT_AUTHOR_EMAIL}>" -r "${REPO_URL}"
+          yarn deploy -u "${GIT_AUTHOR_NAME} <${GIT_AUTHOR_EMAIL}>" -r "${REPO_URL}"
         env:
           CI: true
           GIT_AUTHOR_NAME: ffflobot
