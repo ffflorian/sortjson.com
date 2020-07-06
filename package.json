@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@ffflorian/eslint-config": "0.6.0",
-    "@ffflorian/prettier-config": "0.0.6",
+    "@ffflorian/prettier-config": "0.1.0",
     "@types/jest": "26.0.3",
     "@types/json5": "0.0.30",
     "@types/jsonabc": "2.3.1",
