@@ -1,4 +1,4 @@
-# sortjson.com [![Build Status](https://github.com/ffflorian/sortjson.com/workflows/Build/badge.svg)](https://github.com/ffflorian/sortjson.com/actions/) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/sortjson.com)](https://dependabot.com)
+# sortjson.com [![Build Status](https://github.com/ffflorian/sortjson.com/workflows/Build/badge.svg)](https://github.com/ffflorian/sortjson.com/actions/)
 
 ## Install
 
