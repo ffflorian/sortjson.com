@@ -41,7 +41,7 @@ const demoJson = JSON.stringify({age: 50, name: 'Sophie'});
 
 const formatJSON = (json: string) => {
   try {
-    const object = json5.parse(json.replace(/(\r\n|\n|\r)/gm, ''));
+    const object = json5.parse(json.replace(/[\r\n]/gm, ''));
     const sorted = jsonAbc.sortObj(object, true);
     return JSON.stringify(sorted, null, 2);
   } catch (error) {
