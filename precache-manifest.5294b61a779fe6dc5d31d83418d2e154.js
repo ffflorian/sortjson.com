@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e2cad7961a8539544d8c68038dceb5b",
+    "revision": "4e8ad98af756ccb13a27360d9138a7e7",
     "url": "https://sortjson.com/index.html"
   },
   {
@@ -8,12 +8,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://sortjson.com/static/css/main.6acd7ade.chunk.css"
   },
   {
-    "revision": "ac3afff0ba39480a6855",
-    "url": "https://sortjson.com/static/js/2.e5cc871c.chunk.js"
+    "revision": "2fd856321fc3ff7eb831",
+    "url": "https://sortjson.com/static/js/2.82c0e35f.chunk.js"
   },
   {
-    "revision": "830a48a70ae712b864346517f50e1297",
-    "url": "https://sortjson.com/static/js/2.e5cc871c.chunk.js.LICENSE.txt"
+    "revision": "f080f4d01b1ba4abd915132dc6eddbe4",
+    "url": "https://sortjson.com/static/js/2.82c0e35f.chunk.js.LICENSE.txt"
   },
   {
     "revision": "f89d66c0169452e0199d",
