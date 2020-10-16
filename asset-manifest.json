@@ -5,17 +5,17 @@
     "main.js.map": "https://sortjson.com/static/js/main.8afbc8ce.chunk.js.map",
     "runtime-main.js": "https://sortjson.com/static/js/runtime-main.8d11c0d5.js",
     "runtime-main.js.map": "https://sortjson.com/static/js/runtime-main.8d11c0d5.js.map",
-    "static/js/2.82c0e35f.chunk.js": "https://sortjson.com/static/js/2.82c0e35f.chunk.js",
-    "static/js/2.82c0e35f.chunk.js.map": "https://sortjson.com/static/js/2.82c0e35f.chunk.js.map",
+    "static/js/2.31fbf5fc.chunk.js": "https://sortjson.com/static/js/2.31fbf5fc.chunk.js",
+    "static/js/2.31fbf5fc.chunk.js.map": "https://sortjson.com/static/js/2.31fbf5fc.chunk.js.map",
     "index.html": "https://sortjson.com/index.html",
-    "precache-manifest.5294b61a779fe6dc5d31d83418d2e154.js": "https://sortjson.com/precache-manifest.5294b61a779fe6dc5d31d83418d2e154.js",
+    "precache-manifest.b54b67ceb57cd548336a1fe3bba93e1a.js": "https://sortjson.com/precache-manifest.b54b67ceb57cd548336a1fe3bba93e1a.js",
     "service-worker.js": "https://sortjson.com/service-worker.js",
     "static/css/main.6acd7ade.chunk.css.map": "https://sortjson.com/static/css/main.6acd7ade.chunk.css.map",
-    "static/js/2.82c0e35f.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.82c0e35f.chunk.js.LICENSE.txt"
+    "static/js/2.31fbf5fc.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.31fbf5fc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8d11c0d5.js",
-    "static/js/2.82c0e35f.chunk.js",
+    "static/js/2.31fbf5fc.chunk.js",
     "static/css/main.6acd7ade.chunk.css",
     "static/js/main.8afbc8ce.chunk.js"
   ]
