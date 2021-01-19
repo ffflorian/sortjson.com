@@ -6,10 +6,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -19,7 +19,8 @@
     "skipLibCheck": true,
     "strict": true,
     "strictFunctionTypes": true,
-    "target": "es6"
+    "target": "ES6",
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
 }

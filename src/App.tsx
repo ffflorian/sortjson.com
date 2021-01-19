@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {AppTheme} from './AppTheme';
 import {Content, Header} from './components/layout/';
 import {ThemeProvider} from './ThemeProvider';

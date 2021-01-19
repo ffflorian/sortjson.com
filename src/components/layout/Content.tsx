@@ -10,11 +10,12 @@ import {
   withStyles,
 } from '@material-ui/core';
 import json5 from 'json5';
+// @ts-ignore
 import React, {useEffect, useState} from 'react';
-import {copyToClipboard, hasClipboardSupport, readFromClipboard} from '../../clipboard';
-
 import {TextFieldProps} from '@material-ui/core/TextField';
 import jsonAbc from 'jsonabc';
+
+import {copyToClipboard, hasClipboardSupport, readFromClipboard} from '../../clipboard';
 
 const styles = (theme: Theme) => {
   return createStyles({
