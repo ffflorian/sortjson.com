@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import {Github as GithubCircle} from 'mdi-material-ui';
 import React, {useContext} from 'react';
+
 import {ThemeContext} from '../../ThemeProvider';
 import {Logo} from './Logo';
 
