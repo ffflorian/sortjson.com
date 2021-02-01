@@ -9,7 +9,7 @@ import {
   createStyles,
   withStyles,
 } from '@material-ui/core';
-import json5 from 'json5';
+import * as json5 from 'json5';
 // @ts-ignore
 import React, {useEffect, useState} from 'react';
 import {TextFieldProps} from '@material-ui/core/TextField';
