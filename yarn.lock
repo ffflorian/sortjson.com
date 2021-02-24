@@ -4906,14 +4906,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.1:
-  version "3.2.6"
-  resolved "https://registry.npmjs.org/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
-  dependencies:
-    ms "^2.1.1"
-
-debug@^3.2.6:
+debug@^3.1.1, debug@^3.2.6:
   version "3.2.7"
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
@@ -5571,10 +5564,10 @@ eslint-plugin-jest@^24.1.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-jsdoc@32.1.1:
-  version "32.1.1"
-  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-32.1.1.tgz#9eeda91c40ef1e328a4f82be5f5a46307a3426c3"
-  integrity sha512-HiVe7cWfEMkkpj9+SYpRVIEIC80bETpt8dXOmbVtZHkgobOcxxVORiS2iOuH9gj7TO+rwXIni15WuOr2wnrt9w==
+eslint-plugin-jsdoc@32.2.0:
+  version "32.2.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-32.2.0.tgz#d848ea8475a9be63d8d261bd7fa01cf2a2bb32d5"
+  integrity sha512-ikeVeF3JVmzjcmGd04OZK0rXjgiw46TWtNX+OhyF2jQlw3w1CAU1vyAyLv8PZcIjp7WxP4N20Vg1CI9bp/52dw==
   dependencies:
     comment-parser "1.1.2"
     debug "^4.3.1"
