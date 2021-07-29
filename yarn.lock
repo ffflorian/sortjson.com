@@ -1943,12 +1943,12 @@
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@es-joy/jsdoccomment@0.10.6":
-  version "0.10.6"
-  resolved "https://registry.npmjs.org/@es-joy/jsdoccomment/-/jsdoccomment-0.10.6.tgz#3e34a98d1f87a5d881fd90b5bfb153780e3d36b5"
-  integrity sha512-VOY8cTNdLXYQo50o5WaGSkLMHIt+Tpy8CiNM8gjhRf1CFuR+dYMrpxVlRDDWZwJbojyaxtrGy77A55yjeCMCMA==
+"@es-joy/jsdoccomment@0.10.7":
+  version "0.10.7"
+  resolved "https://registry.npmjs.org/@es-joy/jsdoccomment/-/jsdoccomment-0.10.7.tgz#bdb5dfcaa5cff8b5435f0c9f2777b533075a9c52"
+  integrity sha512-aNKZEoMESDzOBjKxCWrFuG50mcpMeKVBnBNko4+IZZ5t9zXYs8GT1KB0ZaOq1YUsKumDRc6YII/TQm309MJ0KQ==
   dependencies:
-    comment-parser "1.2.1"
+    comment-parser "1.2.3"
     esquery "^1.4.0"
     jsdoc-type-pratt-parser "1.1.1"
 
@@ -4284,10 +4284,10 @@ commander@^7.2.0:
   resolved "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-comment-parser@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/comment-parser/-/comment-parser-1.2.1.tgz#38778b5b2af825cc10099fd5923f8ac151274381"
-  integrity sha512-nZKYGIben18JaK3AcokrFUpqdY/aRkEtHNM3nm8zhLRxZl+kNEiTelGhfGHBkzzA4s0KDpNTX8xSdNYX1hH7Mw==
+comment-parser@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/comment-parser/-/comment-parser-1.2.3.tgz#303a7eb99c9b2632efd594e183ccbd32042caf69"
+  integrity sha512-vnqDwBSXSsdAkGS5NjwMIPelE47q+UkEgWKHvCDNhVIIaQSUFY6sNnEYGzdoPGMdpV+7KR3ZkRd7oyWIjtuvJg==
 
 common-tags@^1.8.0:
   version "1.8.0"
@@ -5525,13 +5525,13 @@ eslint-plugin-jest@^24.1.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-jsdoc@36.0.5:
-  version "36.0.5"
-  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-36.0.5.tgz#74aa66101239717ecaa0a35838b21a54d20eb984"
-  integrity sha512-WEWTLDzs0CAZv07dbJ4Ie78ASLlKzbCEH/knoyumBUKC0Pm2ndm65f/mfi0jqseHO6IiMiDRhTx08RPedWXqHA==
+eslint-plugin-jsdoc@36.0.6:
+  version "36.0.6"
+  resolved "https://registry.npmjs.org/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-36.0.6.tgz#b42af59fe92b57f86e789a7dff661b0cb4d41e61"
+  integrity sha512-vOm27rI2SMfi1bOAYmzzGkanMCD/boquKwvN5ECi8EF9ASsXJwlnCzYtiOYpsDpbC2+6JXEHAmWMkqYNA3BWRw==
   dependencies:
-    "@es-joy/jsdoccomment" "0.10.6"
-    comment-parser "1.2.1"
+    "@es-joy/jsdoccomment" "0.10.7"
+    comment-parser "1.2.3"
     debug "^4.3.2"
     esquery "^1.4.0"
     jsdoc-type-pratt-parser "^1.1.1"
