@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "https://sortjson.com/static/css/main.5be6f1ed.chunk.css",
-    "main.js": "https://sortjson.com/static/js/main.0e6afb88.chunk.js",
-    "main.js.map": "https://sortjson.com/static/js/main.0e6afb88.chunk.js.map",
+    "main.js": "https://sortjson.com/static/js/main.3a27163a.chunk.js",
+    "main.js.map": "https://sortjson.com/static/js/main.3a27163a.chunk.js.map",
     "runtime-main.js": "https://sortjson.com/static/js/runtime-main.bb74a226.js",
     "runtime-main.js.map": "https://sortjson.com/static/js/runtime-main.bb74a226.js.map",
-    "static/js/2.7d5fcfa9.chunk.js": "https://sortjson.com/static/js/2.7d5fcfa9.chunk.js",
-    "static/js/2.7d5fcfa9.chunk.js.map": "https://sortjson.com/static/js/2.7d5fcfa9.chunk.js.map",
+    "static/js/2.77aab2cd.chunk.js": "https://sortjson.com/static/js/2.77aab2cd.chunk.js",
+    "static/js/2.77aab2cd.chunk.js.map": "https://sortjson.com/static/js/2.77aab2cd.chunk.js.map",
     "index.html": "https://sortjson.com/index.html",
     "static/css/main.5be6f1ed.chunk.css.map": "https://sortjson.com/static/css/main.5be6f1ed.chunk.css.map",
-    "static/js/2.7d5fcfa9.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.7d5fcfa9.chunk.js.LICENSE.txt"
+    "static/js/2.77aab2cd.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.77aab2cd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb74a226.js",
-    "static/js/2.7d5fcfa9.chunk.js",
+    "static/js/2.77aab2cd.chunk.js",
     "static/css/main.5be6f1ed.chunk.css",
-    "static/js/main.0e6afb88.chunk.js"
+    "static/js/main.3a27163a.chunk.js"
   ]
 }
