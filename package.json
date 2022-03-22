@@ -9,7 +9,7 @@
   "dependencies": {
     "@material-ui/core": "3.9.4",
     "@material-ui/icons": "3.0.2",
-    "json5": "2.2.0",
+    "json5": "2.2.1",
     "jsonabc": "2.3.1",
     "mdi-material-ui": "5.35.0",
     "react": "16.14.0",
