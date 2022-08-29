@@ -8680,10 +8680,10 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdi-material-ui@5.37.0:
-  version "5.37.0"
-  resolved "https://registry.npmjs.org/mdi-material-ui/-/mdi-material-ui-5.37.0.tgz#c20babc654e5727cbf84dd1f4c76d673fe20a82c"
-  integrity sha512-rGQYC6f1dWuIpeQ0Sn38OMaGPil4w3hyARu1yIM2HQggg+RZtCy2AYt+c2vTGVEa41d0AbRVu1LaosYInJMjbg==
+mdi-material-ui@5.38.0:
+  version "5.38.0"
+  resolved "https://registry.npmjs.org/mdi-material-ui/-/mdi-material-ui-5.38.0.tgz#fd5a4c63c33fe24e26568cacfb2f09249b495a37"
+  integrity sha512-5aOQKeyy7aih+wa1zCuaS2tG1R9wRJTafz1sC/h/J4B5H6p8+ZBGuBzOMEikhcyY2vT5kpXqnsYJgI/XLovlCw==
 
 mdn-data@2.0.4:
   version "2.0.4"
