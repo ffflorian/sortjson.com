@@ -66,7 +66,7 @@
     "lint": "yarn lint:ts && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "eslint --ignore-path .gitignore --ext .ts,.tsx src/",
-    "prettier": "prettier --ignore-path .gitignore \"src/*.{ts,tsx}\"",
+    "prettier": "prettier --ignore-path .gitignore \"*.{json,md,yml}\"",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
