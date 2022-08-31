@@ -17,6 +17,3 @@ updates:
       - dependency-name: 'husky'
         versions:
           - '> 4.x'
-      - dependency-name: 'react-scripts'
-        versions:
-          - '> 4.x'
