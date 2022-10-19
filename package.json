@@ -19,7 +19,7 @@
     "@evilmartians/lefthook": "1.1.2",
     "@ffflorian/eslint-config": "0.8.3",
     "@ffflorian/prettier-config": "0.1.4",
-    "@types/jest": "29.1.2",
+    "@types/jest": "29.2.0",
     "@types/jsonabc": "2.3.1",
     "@types/node": "~16",
     "@types/react": "17.0.43",
