@@ -5,15 +5,15 @@
     "main.js.map": "https://sortjson.com/static/js/main.3a27163a.chunk.js.map",
     "runtime-main.js": "https://sortjson.com/static/js/runtime-main.bb74a226.js",
     "runtime-main.js.map": "https://sortjson.com/static/js/runtime-main.bb74a226.js.map",
-    "static/js/2.955fd6d8.chunk.js": "https://sortjson.com/static/js/2.955fd6d8.chunk.js",
-    "static/js/2.955fd6d8.chunk.js.map": "https://sortjson.com/static/js/2.955fd6d8.chunk.js.map",
+    "static/js/2.42ea800c.chunk.js": "https://sortjson.com/static/js/2.42ea800c.chunk.js",
+    "static/js/2.42ea800c.chunk.js.map": "https://sortjson.com/static/js/2.42ea800c.chunk.js.map",
     "index.html": "https://sortjson.com/index.html",
     "static/css/main.5be6f1ed.chunk.css.map": "https://sortjson.com/static/css/main.5be6f1ed.chunk.css.map",
-    "static/js/2.955fd6d8.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.955fd6d8.chunk.js.LICENSE.txt"
+    "static/js/2.42ea800c.chunk.js.LICENSE.txt": "https://sortjson.com/static/js/2.42ea800c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb74a226.js",
-    "static/js/2.955fd6d8.chunk.js",
+    "static/js/2.42ea800c.chunk.js",
     "static/css/main.5be6f1ed.chunk.css",
     "static/js/main.3a27163a.chunk.js"
   ]
