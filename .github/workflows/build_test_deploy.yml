@@ -51,5 +51,5 @@ jobs:
           !startsWith(github.event.head_commit.message, 'chore(deps')
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public
+          folder: build
           branch: gh-pages
