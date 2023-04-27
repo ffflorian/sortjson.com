@@ -14,31 +14,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Skip CI check
-        uses: mstachniuk/ci-skip@v1
-
       - name: Set up Node.js
-        if: env.CI_SKIP == 'false'
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
 
       - name: Set yarn cache directory
-        if: env.CI_SKIP == 'false'
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
 
       - name: Get yarn cache
         uses: actions/cache@v3
-        if: env.CI_SKIP == 'false'
         id: yarn-cache
         with:
-          path: ${{steps.yarn-cache-dir-path.outputs.dir}}
-          key: ${{runner.os}}-yarn-${{hashFiles('**/yarn.lock')}}
-          restore-keys: ${{runner.os}}-yarn-
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Build, lint and test
-        if: env.CI_SKIP == 'false'
         run: |
           yarn
           yarn lint
