@@ -12,15 +12,6 @@
       }
     }
   ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
-  },
-  "plugins": ["@typescript-eslint", "jasmine", "jsdoc", "no-unsanitized", "prettier", "react", "react-hooks", "sort-keys-fix", "typescript-sort-keys"],
   "rules": {
     "valid-jsdoc": "off",
     "react/jsx-uses-vars": "error",
