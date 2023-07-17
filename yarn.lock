@@ -2983,12 +2983,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@evilmartians/lefthook@npm:1.3.10":
-  version: 1.3.10
-  resolution: "@evilmartians/lefthook@npm:1.3.10"
+"@evilmartians/lefthook@npm:1.4.5":
+  version: 1.4.5
+  resolution: "@evilmartians/lefthook@npm:1.4.5"
   bin:
     lefthook: bin/index.js
-  checksum: c1c299e3f3d2ad0332135e726debec7d0dcc19775f3520aabf7459c2a8b03b7dc5ccede34c0d3c391fb859ee457b44d427121ab9056bc41e31243456435523dd
+  checksum: bae5fa7995321888b3d04c8bb8c042d7772a69ca190c4cb4c9681a5fd766b37ab221d9c0152f59f48af3a2560c7e88d8148550cb0d5d54c87237f532f229f669
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=ia32)
   languageName: node
   linkType: hard
@@ -16344,7 +16344,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sortjson.com@workspace:."
   dependencies:
-    "@evilmartians/lefthook": 1.3.10
+    "@evilmartians/lefthook": 1.4.5
     "@ffflorian/eslint-config": 0.8.3
     "@ffflorian/prettier-config": 0.3.1
     "@material-ui/core": 3.9.4
