@@ -1974,10 +1974,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@evilmartians/lefthook@1.3.10":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.3.10.tgz#eae2f2d0194a8590919f98ba492d75c7f59ada45"
-  integrity sha512-Bygxn043ojRDwm/WW0phs+fSjtOBUGsBwskIOaagAqJCZjamjz6bIcTDMTArCAYwrRjLyQigpJe5dUA5GucseQ==
+"@evilmartians/lefthook@1.4.9":
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.4.9.tgz#3166b4cd663874a22d650964dfd512b87da812bd"
+  integrity sha512-ZnROKwxDs8dJ+pmpXX2xHwU+Ui5P1Md5DMCIQsZCZHngtRb2jOwbUf7AaGJeYVoaC6J2Hb7IL2wYvwfwA2Oy3w==
 
 "@ffflorian/eslint-config@0.8.3":
   version "0.8.3"
