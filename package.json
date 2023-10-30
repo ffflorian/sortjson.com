@@ -12,7 +12,7 @@
     "json5": "2.2.3",
     "jsonabc": "2.3.1",
     "mdi-material-ui": "5.41.0",
-    "react": "16.14.0",
+    "react": "18.2.0",
     "react-dom": "16.14.0"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "@types/jest": "29.5.5",
     "@types/jsonabc": "2.3.1",
     "@types/node": "~16",
-    "@types/react": "17.0.43",
+    "@types/react": "18.2.33",
     "@types/react-dom": "17.0.14",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
