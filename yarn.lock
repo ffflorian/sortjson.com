@@ -2726,10 +2726,10 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/jsonabc@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@types/jsonabc/-/jsonabc-2.3.2.tgz#d1049d710a3dcd0f161382184fc85d0d0b1bfa27"
-  integrity sha512-DoXKWGR0y7JRePAJPAwFrv8UEmg3Tt0jq8YN8eXRUoL/03JIheCGwFjmqGQUerJctdnulwEa5yjmNDB2xPqz6A==
+"@types/jsonabc@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/jsonabc/-/jsonabc-2.3.3.tgz#a5d6cbb31d6843955c5087a93140035e9260b6b6"
+  integrity sha512-TnsXd4l4X65GsPakQjGLMQ4SqVXrVsvfzpO+0WqNxF8HLiiKA32aFD6Mas+9zjB3TScRIMhCDnkux/gm0674mg==
 
 "@types/jss@^9.5.6":
   version "9.5.8"
