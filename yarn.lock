@@ -2007,10 +2007,10 @@
   resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.5.7.tgz#fa531dcb2e7fad4de569633e8ee13a57bb0dc9b4"
   integrity sha512-rUf8fcHHPS4XX+2fEcVaYWrt30n0d+0EjeYcvOFFNQx7lgZr8FtwEZBpzUBx/1ysa3saqHmgyHoQMTd6FKtOGg==
 
-"@ffflorian/eslint-config@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.npmjs.org/@ffflorian/eslint-config/-/eslint-config-0.10.1.tgz#1524a8bd3173e6eca0d49b82292c4ebe559a7361"
-  integrity sha512-RweZ3fdUmpKVu9iAbRGTC0GpuVfY1/z1Eb7HZGrVTtRsZtQD/9Z75Ewfz48Fppz/2alnxzn/c2kWfRvHOGR2Lw==
+"@ffflorian/eslint-config@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@ffflorian/eslint-config/-/eslint-config-0.10.2.tgz#2207a502e487d50cdee4c10e2fcffcbb7cc9dfb5"
+  integrity sha512-IjF0x62icGOFp0qejxlHQYRkR93eJ3qbv4hTHfjCm80mz3RrZQ5bYHusSwJyUP96/a7l+C1tPvZRgFemlG+WDQ==
 
 "@ffflorian/prettier-config@0.3.1":
   version "0.3.1"
