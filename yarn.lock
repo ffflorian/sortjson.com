@@ -2002,10 +2002,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@evilmartians/lefthook@1.5.7":
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.5.7.tgz#fa531dcb2e7fad4de569633e8ee13a57bb0dc9b4"
-  integrity sha512-rUf8fcHHPS4XX+2fEcVaYWrt30n0d+0EjeYcvOFFNQx7lgZr8FtwEZBpzUBx/1ysa3saqHmgyHoQMTd6FKtOGg==
+"@evilmartians/lefthook@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.6.0.tgz#ad0191223022d8ba8b00e6074cd618cda6d33431"
+  integrity sha512-vmpQuxYnimUkDEn4UzJsAJ32tNJ5OwQuWG9tX+/5F6OuBFDi62guqOLiflpLBiH7WFVBTOefCQ/DJgubjE8WrA==
 
 "@ffflorian/eslint-config@0.10.2":
   version "0.10.2"
