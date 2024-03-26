@@ -43,7 +43,7 @@
     "prettier": "3.2.5",
     "react-scripts": "4.0.3",
     "rimraf": "5.0.5",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3"
   },
   "engines": {
     "node": ">= 10.9"
