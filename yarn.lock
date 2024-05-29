@@ -2012,10 +2012,10 @@
   resolved "https://registry.yarnpkg.com/@ffflorian/eslint-config/-/eslint-config-0.10.3.tgz#27f9581d7158b802cc0959c2dd0a8bad7b91dc08"
   integrity sha512-gf/vh8ePNuAiBb1pWsc6c//htmUN8XANw2Xo7PomCWBCeevvkZkA9ZH+mR4/sNrA2dbDWgd8gIBz9Yg9WX845Q==
 
-"@ffflorian/prettier-config@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@ffflorian/prettier-config/-/prettier-config-0.3.2.tgz#e20d7ed025214a6a8f7b259ea466c344a4a28ea9"
-  integrity sha512-MnUYE/VX+/myGy/6gKu9NSv7zPo6FPxB5W4qGRhidrIwmDDbYtgHrk7UvA6D2ha/oj85osMO1c4Q4jHI9JYA/A==
+"@ffflorian/prettier-config@0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@ffflorian/prettier-config/-/prettier-config-0.3.3.tgz#003cbad3c5004964e9b3dfc95314e8288d77cb7e"
+  integrity sha512-k7uowVjm6WpL9K6DKIP96cuMnPB9o1VZa8NdkSzKallh8i9RFHSbtw2mjvJ78pXWX6YGntjzSMWXk7cqu3mQOg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
