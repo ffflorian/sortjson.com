@@ -16,7 +16,8 @@ updates:
         versions:
           - '> 47.x'
       - dependency-name: 'rimraf'
-        versions: '> 5.x'
+        versions:
+          - '> 5.x'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
