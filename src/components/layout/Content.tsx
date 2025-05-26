@@ -8,6 +8,8 @@ import {
   WithStyles,
   createStyles,
   withStyles,
+  InputAdornment,
+  Box,
 } from '@material-ui/core';
 import * as json5 from 'json5';
 // @ts-ignore
@@ -31,9 +33,32 @@ const styles = (theme: Theme) => {
     textArea: {
       fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       fontSize: '14px',
+      resize: 'vertical',
     },
     textField: {
       margin: `${theme.spacing.unit}px 0`,
+    },
+    lineNumberBox: {
+      userSelect: 'none',
+      color: theme.palette.text.disabled,
+      fontFamily: 'inherit',
+      fontSize: '14px',
+      textAlign: 'right',
+      paddingRight: theme.spacing.unit,
+      minWidth: 24,
+      background: 'transparent',
+      lineHeight: 1.5,
+      border: 'none',
+    },
+    lineNumberContainer: {
+      display: 'flex',
+      alignItems: 'flex-start',
+      width: '100%',
+    },
+    lineNumberAdornment: {
+      alignSelf: 'stretch',
+      paddingTop: 16,
+      background: 'transparent',
     },
   });
 };
@@ -51,21 +76,36 @@ const formatJSON = (json: string) => {
   }
 };
 
-const JsonTextField = withStyles(styles)((props: TextFieldProps & WithStyles<typeof styles>) => {
-  const {classes} = props;
 
+// Helper to count lines
+const countLines = (value: string) => {
+  return value.split(/\r?\n/).length;
+};
+
+const LineNumberedTextField = withStyles(styles)((props: TextFieldProps & WithStyles<typeof styles> & { lineCount: number }) => {
+  const { classes, lineCount, ...rest } = props;
+  const lines = Array.from({ length: lineCount }, (_, i) => i + 1);
   return (
-    <TextField
-      {...props}
-      fullWidth
-      multiline
-      rows={4}
-      rowsMax={Infinity}
-      variant="outlined"
-      InputProps={{
-        className: classes.textArea,
-      }}
-    />
+    <Box className={classes.lineNumberContainer}>
+      <Box className={classes.lineNumberAdornment} component="pre">
+        <Box className={classes.lineNumberBox} component="span">
+          {lines.map((n) => (
+            <span key={n}>{n}<br /></span>
+          ))}
+        </Box>
+      </Box>
+      <TextField
+        {...rest}
+        fullWidth
+        multiline
+        rows={Math.max(4, lineCount)}
+        variant="outlined"
+        InputProps={{
+          className: classes.textArea,
+          style: { paddingLeft: 0 },
+        }}
+      />
+    </Box>
   );
 });
 
@@ -76,6 +116,10 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
 
   useEffect(() => setOutput(input ? formatJSON(input) : ''), [input]);
 
+  // For line numbers, always show at least 4 lines
+  const inputLineCount = Math.max(4, countLines(input || showPlaceholder ? demoJson : ''));
+  const outputLineCount = Math.max(4, countLines(output || (showPlaceholder ? formatJSON(demoJson) : '')));
+
   return (
     <Grid container spacing={16} className={classes.grid}>
       <Grid item xs={12} sm={6} className={classes.gridItem}>
@@ -83,13 +127,14 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
           <Typography variant="h5" component="h3">
             Input
           </Typography>
-          <JsonTextField
+          <LineNumberedTextField
             onChange={({target: {value}}) => setInput(value)}
             onFocus={() => setShowPlaceholder(false)}
             onBlur={() => setShowPlaceholder(true)}
             placeholder={showPlaceholder ? demoJson : ''}
             value={input}
             className={classes.textField}
+            lineCount={inputLineCount}
           />
           {hasClipboardSupport() && (
             <Button onClick={() => readFromClipboard().then(setInput)} color="inherit" variant="contained">
@@ -103,11 +148,12 @@ export const Content = ({classes}: WithStyles<typeof styles>) => {
           <Typography variant="h5" component="h3">
             Output
           </Typography>
-          <JsonTextField
+          <LineNumberedTextField
             disabled
             value={output}
             placeholder={showPlaceholder ? formatJSON(demoJson) : ''}
             className={classes.textField}
+            lineCount={outputLineCount}
           />
           {hasClipboardSupport() && (
             <Button onClick={() => copyToClipboard(output)} color="inherit" variant="contained">
