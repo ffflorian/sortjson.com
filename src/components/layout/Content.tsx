@@ -9,7 +9,6 @@ import {
   createStyles,
   withStyles,
   InputAdornment,
-  Box,
 } from '@material-ui/core';
 import * as json5 from 'json5';
 // @ts-ignore
@@ -86,14 +85,14 @@ const LineNumberedTextField = withStyles(styles)((props: TextFieldProps & WithSt
   const { classes, lineCount, ...rest } = props;
   const lines = Array.from({ length: lineCount }, (_, i) => i + 1);
   return (
-    <Box className={classes.lineNumberContainer}>
-      <Box className={classes.lineNumberAdornment} component="pre">
-        <Box className={classes.lineNumberBox} component="span">
+    <div className={classes.lineNumberContainer}>
+      <pre className={classes.lineNumberAdornment}>
+        <span className={classes.lineNumberBox}>
           {lines.map((n) => (
             <span key={n}>{n}<br /></span>
           ))}
-        </Box>
-      </Box>
+        </span>
+      </pre>
       <TextField
         {...rest}
         fullWidth
@@ -105,7 +104,7 @@ const LineNumberedTextField = withStyles(styles)((props: TextFieldProps & WithSt
           style: { paddingLeft: 0 },
         }}
       />
-    </Box>
+    </div>
   );
 });
 
