@@ -18,6 +18,9 @@ updates:
       - dependency-name: 'rimraf'
         versions:
           - '> 5.x'
+      - dependency-name: '@types/jest'
+        versions:
+          - '> 29.x'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
