@@ -14,23 +14,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Skip CI check
-        uses: mstachniuk/ci-skip@v1
-
       - name: Set up Node.js
-        if: env.CI_SKIP == 'false'
         uses: actions/setup-node@v5
         with:
           node-version: 16.x
           cache: yarn
 
       - name: Build, lint and test
-        if: env.CI_SKIP == 'false'
         run: |
-          yarn
+          yarn --frozen-lockfile
           yarn lint
           yarn test
-          yarn dist
+          yarn build:site
 
       - name: Deploy
         if: |
