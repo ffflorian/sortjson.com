@@ -15,6 +15,9 @@ updates:
       - dependency-name: 'eslint-plugin-jsdoc'
         versions:
           - '> 47.x'
+      - dependency-name: 'eslint-plugin-react-hooks'
+        versions:
+          - '> 5.x'
       - dependency-name: 'rimraf'
         versions:
           - '> 5.x'
