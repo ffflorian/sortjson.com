@@ -1,4 +1,4 @@
-# Sort JSON
+# ![Sort JSON logo](./public/favicon.png) Sort JSON
 
 Simple Vite + React + TypeScript app that sorts JSON keys recursively and displays a formatted output.
 
@@ -14,3 +14,5 @@ yarn run dev
 ```bash
 yarn run test
 ```
+
+Thanks to @AndyLnd for the logo!

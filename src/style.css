@@ -69,6 +69,13 @@ body {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.site-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
 .header h1 {
   margin: 0;
   font-size: 1.35rem;

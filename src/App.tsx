@@ -54,6 +54,7 @@ export default function App(): ReactElement {
     <main className="container">
       <header className="header">
         <div className="title-row">
+          <img src="/favicon.png" alt="Sort JSON logo" className="site-logo" width="28" height="28" />
           <h1>Sort JSON</h1>
           <a
             className="github-link"
