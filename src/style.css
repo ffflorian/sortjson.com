@@ -48,6 +48,27 @@ body {
   margin-bottom: 16px;
 }
 
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.github-link {
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.github-link:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .header h1 {
   margin: 0;
   font-size: 1.35rem;
