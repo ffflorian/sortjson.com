@@ -1,0 +1,39 @@
+{
+  "author": "Florian Imdahl <git@ffflorian.de>",
+  "dependencies": {
+    "json5": "2.2.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "description": "Sort JSON keys automatically and display formatted output.",
+  "devDependencies": {
+    "@ffflorian/prettier-config": "0.4.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.1",
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.2",
+    "jsdom": "27.4.0",
+    "lefthook": "2.0.15",
+    "oxlint": "1.41.0",
+    "prettier": "3.8.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vitest": "4.0.17"
+  },
+  "license": "GPL-3.0",
+  "name": "sortjson.com",
+  "prettier": "@ffflorian/prettier-config",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "oxlint .",
+    "test": "vitest",
+    "format": "prettier --write ."
+  },
+  "version": "2.0.0",
+  "packageManager": "yarn@4.12.0"
+}
