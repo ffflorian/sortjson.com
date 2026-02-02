@@ -7,7 +7,7 @@
   },
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
-    "@ffflorian/prettier-config": "0.4.1",
+    "@ffflorian/prettier-config": "0.5.4",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
