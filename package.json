@@ -17,7 +17,7 @@
     "@vitejs/plugin-react": "5.1.2",
     "jsdom": "27.4.0",
     "lefthook": "2.0.16",
-    "oxlint": "1.41.0",
+    "oxlint": "1.42.0",
     "prettier": "3.8.0",
     "typescript": "5.9.3",
     "vite": "7.3.1",
