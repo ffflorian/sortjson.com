@@ -3,7 +3,7 @@
   "dependencies": {
     "json5": "2.2.3",
     "react": "19.2.4",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.4"
   },
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
@@ -25,6 +25,7 @@
   },
   "license": "GPL-3.0",
   "name": "sortjson.com",
+  "packageManager": "yarn@4.12.0",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
@@ -34,6 +35,5 @@
     "test": "vitest",
     "format": "prettier --write ."
   },
-  "version": "2.0.0",
-  "packageManager": "yarn@4.12.0"
+  "version": "2.0.0"
 }
