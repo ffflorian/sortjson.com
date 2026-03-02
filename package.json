@@ -16,7 +16,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.4",
     "jsdom": "27.4.0",
-    "lefthook": "2.0.16",
+    "lefthook": "2.1.2",
     "oxlint": "1.50.0",
     "prettier": "3.8.1",
     "typescript": "5.9.3",
