@@ -25,7 +25,7 @@
   },
   "license": "GPL-3.0",
   "name": "sortjson.com",
-  "packageManager": "yarn@4.12.0",
+  "packageManager": "yarn@4.13.0",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
