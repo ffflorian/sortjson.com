@@ -8,6 +8,11 @@ updates:
     assignees:
       - ffflorian
     versioning-strategy: increase
+    ignore:
+      # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
+      - dependency-name: 'eslint'
+        versions:
+          - '>=10'
     cooldown:
       default-days: 5
       exclude:
