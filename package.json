@@ -21,7 +21,7 @@
     "prettier": "3.8.1",
     "typescript": "6.0.2",
     "vite": "8.0.3",
-    "vitest": "4.1.0"
+    "vitest": "4.1.2"
   },
   "license": "GPL-3.0",
   "name": "sortjson.com",
