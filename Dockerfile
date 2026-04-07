@@ -3,12 +3,12 @@ FROM node:24-alpine AS builder
 
 WORKDIR /app
 
-COPY package.json yarn.lock .yarnrc.yml vite.config.ts index.html ./
+COPY package.json yarn.lock .yarnrc.yml vite.config.ts tsconfig.json index.html ./
 COPY src/ src/
+COPY public/ public/
 COPY .yarn/ .yarn/
 
 RUN yarn install --immutable
-
 RUN yarn build
 
 # Serve
