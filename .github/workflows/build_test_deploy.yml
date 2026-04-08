@@ -10,9 +10,15 @@ jobs:
   build_test_deploy:
     name: Build, test and deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
@@ -26,3 +32,9 @@ jobs:
           yarn lint
           yarn test
           yarn build
+
+      - name: Release
+        if: github.event_name == 'push'
+        run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
