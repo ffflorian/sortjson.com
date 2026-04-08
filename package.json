@@ -8,6 +8,9 @@
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
     "@ffflorian/prettier-config": "0.8.2",
+    "@ffflorian/semantic-release-config": "0.12.4",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
@@ -19,6 +22,7 @@
     "lefthook": "2.1.4",
     "oxlint": "1.57.0",
     "prettier": "3.8.1",
+    "semantic-release": "25.0.3",
     "typescript": "6.0.2",
     "vite": "8.0.6",
     "vitest": "4.1.2"
@@ -32,6 +36,7 @@
     "build": "vite build",
     "dev": "vite",
     "lint": "oxlint .",
+    "release": "semantic-release",
     "test": "vitest",
     "format": "prettier --write ."
   },
