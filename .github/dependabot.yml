@@ -1,5 +1,13 @@
 version: 2
 updates:
+  - package-ecosystem: docker
+    directory: '/'
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 99
+    assignees:
+      - ffflorian
+    versioning-strategy: increase
   - package-ecosystem: npm
     directory: '/'
     schedule:
