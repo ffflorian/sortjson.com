@@ -2,7 +2,7 @@
   "author": "Florian Imdahl <git@ffflorian.de>",
   "dependencies": {
     "json5": "2.2.3",
-    "react": "19.2.4",
+    "react": "19.2.5",
     "react-dom": "19.2.4"
   },
   "description": "Sort JSON keys automatically and display formatted output.",
