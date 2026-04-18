@@ -11,7 +11,7 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
-      - uses: ffflorian/actions/git-mirror@baf8fb2e65ebe6564870f56315a09bc01ab7e0f7
+      - uses: ffflorian/actions/git-mirror@1ef841db2bde72ed3537215f668b3f627569cfdd
         with:
           GITLAB_REMOTE: 'git@gitlab.com:ffflorian/sortjson.com.git'
           GITLAB_SECRET: ${{ secrets.GITLAB_SECRET }}

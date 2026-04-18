@@ -17,6 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update yarn
-        uses: ffflorian/actions/yarn-update@baf8fb2e65ebe6564870f56315a09bc01ab7e0f7
+        uses: ffflorian/actions/yarn-update@1ef841db2bde72ed3537215f668b3f627569cfdd
         with:
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
