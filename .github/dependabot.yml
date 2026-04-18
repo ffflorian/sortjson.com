@@ -11,7 +11,6 @@ updates:
       - dependency-name: node
         versions:
           - '>= 25, < 26'
-    versioning-strategy: increase
   - package-ecosystem: npm
     directory: '/'
     schedule:
