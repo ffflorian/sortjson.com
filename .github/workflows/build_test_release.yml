@@ -1,4 +1,4 @@
-name: Build, test, deploy
+name: Build, test, and release
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  build_test_deploy:
-    name: Build, test and deploy
+  build_test_release:
+    name: Build, test and release
     runs-on: ubuntu-latest
     permissions:
       contents: write
