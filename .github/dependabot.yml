@@ -23,7 +23,7 @@ updates:
       # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
       - dependency-name: 'eslint'
         versions:
-          - '>=10'
+          - '>= 10'
     cooldown:
       default-days: 5
       exclude:
@@ -35,3 +35,7 @@ updates:
     open-pull-requests-limit: 99
     assignees:
       - ffflorian
+    cooldown:
+      default-days: 5
+      exclude:
+        - 'ffflorian/*'
