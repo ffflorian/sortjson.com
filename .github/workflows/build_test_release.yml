@@ -1,4 +1,4 @@
-name: Build, test, and deploy
+name: Build, test, and release
 
 permissions: {}
 
@@ -9,13 +9,13 @@ on:
     branches: [main]
 
 jobs:
-  build_test_deploy:
+  build_test_release:
+    name: Build, test and release
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
       pull-requests: write
-    name: Build, test, and deploy
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
