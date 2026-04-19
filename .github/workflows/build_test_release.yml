@@ -1,5 +1,7 @@
 name: Build, test, and release
 
+permissions: {}
+
 on:
   push:
     branches: [main]
@@ -17,8 +19,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-        with:
-          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
@@ -26,7 +26,7 @@ jobs:
           node-version: 24.x
           cache: yarn
 
-      - name: Build, lint and test
+      - name: Build, lint, and test
         run: |
           yarn --immutable
           yarn lint
