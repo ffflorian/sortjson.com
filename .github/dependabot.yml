@@ -21,6 +21,11 @@ updates:
     assignees:
       - ffflorian
     versioning-strategy: increase
+    groups:
+      react:
+        patterns:
+          - 'react*'
+          - 'react-dom*'
     ignore:
       # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
       - dependency-name: 'eslint'
