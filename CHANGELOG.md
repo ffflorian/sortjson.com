@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ffflorian/sortjson.com/compare/v2.0.0...v2.0.1) (2026-05-18)
+
+
+### Bug Fixes
+
+* Install yarn in Dockerfile ([e8e9502](https://github.com/ffflorian/sortjson.com/commit/e8e95023a1b6b189227c8c8cf36ceda906fbaf80))
+
 # [2.0.0](https://github.com/ffflorian/sortjson.com/compare/v1.5.6...v2.0.0) (2026-04-08)
 
 
