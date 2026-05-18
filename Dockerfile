@@ -8,6 +8,7 @@ COPY src/ src/
 COPY public/ public/
 COPY .yarn/ .yarn/
 
+RUN npm install --global yarn@1.22.22
 RUN yarn install --immutable
 RUN yarn build
 
