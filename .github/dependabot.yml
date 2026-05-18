@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: docker
     directory: '/'
     schedule:
-      interval: monthly
+      interval: weekly
     open-pull-requests-limit: 99
     assignees:
       - ffflorian
@@ -16,7 +16,7 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: monthly
+      interval: weekly
     open-pull-requests-limit: 99
     assignees:
       - ffflorian
@@ -33,7 +33,7 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: monthly
+      interval: weekly
     open-pull-requests-limit: 99
     assignees:
       - ffflorian
