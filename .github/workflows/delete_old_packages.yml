@@ -1,0 +1,24 @@
+name: Delete old package versions
+
+permissions: {}
+
+on:
+  schedule:
+    - cron: '0 4 * * 1' # Runs every Monday at 4:00 AM
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  delete_old_packages:
+    name: Delete old package versions
+    permissions:
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55
+        with:
+          package-name: 'sortjson.com'
+          package-type: 'container'
+          min-versions-to-keep: 2
