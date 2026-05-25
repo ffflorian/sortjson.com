@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55
         with:
-          package-name: 'sortjson.com'
+          package-name: ${{ github.event.repository.name }}
           package-type: 'container'
           min-versions-to-keep: 2
