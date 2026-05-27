@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: nginx:1.31.0-alpine@sha256:c22e76a97fe5bacad9d58bad0a96e903480c05f8dee30884b14550530ddd25a9
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
@@ -57,7 +57,7 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
