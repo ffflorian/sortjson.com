@@ -66,3 +66,32 @@ This file explains how coding agents should work in this repository.
 - Lint: `yarn lint`
 - Build: `yarn build`
 - Tests: `yarn test --run`
+
+## Commit Message Patterns (recent history)
+
+- Most updates use conventional prefixes such as `chore:`, `ci:`, `fix:`, and `chore(release):`.
+- Dependency automation commits commonly use `chore(deps):` and `chore(deps-dev):` with explicit version bumps and PR numbers.
+- CI skip flags appear in commit subjects when appropriate (`[ci skip]` or `[skip ci]`).
+- Recent commit themes include enabling PR tests, adding a release workflow, Docker image publishing/deployment, package cleanup workflows, and runtime/toolchain upgrades.
+
+## Project Structure
+
+- Root-level app and build config files:
+  - `/tmp/workspace/ffflorian/sortjson.com/index.html`
+  - `/tmp/workspace/ffflorian/sortjson.com/vite.config.ts`
+  - `/tmp/workspace/ffflorian/sortjson.com/vitest.config.ts`
+  - `/tmp/workspace/ffflorian/sortjson.com/tsconfig.json`
+- Application source code is in `/tmp/workspace/ffflorian/sortjson.com/src`:
+  - Main UI: `App.tsx`, `main.tsx`, `style.css`
+  - Logic: `sortJson.ts`
+  - Tests: `__tests__/` and `setupTests.ts`
+- CI workflows are in `/tmp/workspace/ffflorian/sortjson.com/.github/workflows`.
+
+## Tools Used in This Repository
+
+- Framework/build: React + Vite + TypeScript.
+- Testing: Vitest with JSDOM and Testing Library (`@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`).
+- Linting/formatting: Oxlint and Prettier.
+- Git hooks: Lefthook (pre-commit runs Prettier for `*.json,*.md,*.yml` and Oxlint fixes for `src/**/*.ts`).
+- Release automation: Semantic Release (with changelog and git plugins).
+- CI/security tooling includes GitHub Actions workflows and CodeQL action updates.
