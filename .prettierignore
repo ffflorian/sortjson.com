@@ -6,3 +6,4 @@ coverage
 /.venv
 *.log
 .yarnrc.yml
+CHANGELOG.md
