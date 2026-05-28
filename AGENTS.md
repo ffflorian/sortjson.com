@@ -50,48 +50,68 @@ This file explains how coding agents should work in this repository.
 - Natural language characters (accented letters, CJK, etc.) are fine when the content requires them.
 - Code output must be copy-paste safe.
 
-## Project Overview
+## Tech Stack
 
-- `sortjson.com` is a Vite + React application for formatting and sorting JSON.
-- Package manager: Yarn (`yarn@4.14.1`).
+- **React 19** with **TypeScript 6** (strict mode)
+- **Vite 8** as build tool and dev server
+- **JSON5** for tolerant JSON parsing before deterministic formatting
+- **Vitest 4** + **Testing Library** + **JSDOM** for tests
+- **Oxlint** + **Prettier** for linting and formatting
+- **lefthook** for pre-commit hooks
+- **Semantic Release** for automated versioning and changelogs
+- **Nginx + Docker** for production static hosting
 
-## Local Development
+## Commands
 
-- Install dependencies: `yarn install`
-- Start dev server: `yarn dev`
-- Format code: `yarn format`
+```bash
+yarn install        # install dependencies
+yarn dev            # start dev server (default: http://localhost:5173)
+yarn build          # production build
+yarn lint           # run oxlint across the repository
+yarn test           # run vitest in watch mode
+yarn test --run     # run tests once (CI style)
+yarn format         # format repository with Prettier
+yarn release        # semantic-release (CI/release context)
+```
 
-## Validation Commands
+Always use `yarn`, not `npm`, for all package management and script execution.
 
-- Lint: `yarn lint`
-- Build: `yarn build`
-- Tests: `yarn test --run`
+## Key Architecture Decisions
 
-## Commit Message Patterns (recent history)
+- **Sorting behavior**: parse input with `JSON5.parse`, recursively sort object keys via `localeCompare`, and stringify with two-space indentation plus trailing newline.
+- **Array semantics**: arrays preserve original element order; only object keys are sorted.
+- **UI update model**: input processing is debounced by 200ms to reduce churn while typing.
+- **Error handling**: parse/sort failures are surfaced in the output pane as a visible error state.
+- **Theme persistence**: theme defaults from system preference, then persists user choice in `localStorage` under `theme`.
+- **Copy UX**: clipboard write is guarded by current validity and shows a temporary "Copied" badge on success.
+- **Deployment runtime**: static Vite output is served by nginx on port `8080` with SPA fallback (`try_files $uri $uri/ /index.html`).
 
-- Most updates use conventional prefixes such as `chore:`, `ci:`, `fix:`, and `chore(release):`.
-- Dependency automation commits commonly use `chore(deps):` and `chore(deps-dev):` with explicit version bumps and PR numbers.
-- CI skip flags appear in commit subjects when appropriate (`[ci skip]` or `[skip ci]`).
-- Recent commit themes include enabling PR tests, adding a release workflow, Docker image publishing/deployment, package cleanup workflows, and runtime/toolchain upgrades.
+## Conventions
 
-## Project Structure
+- **Package manager**: use `yarn` only.
+- **Commits**: Conventional Commits are used (`fix:`, `chore:`, `ci:`, `chore(release):`, etc.).
+- **Versioning**: automated via Semantic Release on pushes to `main`.
+- **Branching**: use descriptive branch names and keep CI-focused changes scoped.
+- **Code style**: keep existing formatting and avoid broad rewrites unrelated to the task.
+- **TypeScript**: strict mode is enabled; avoid introducing `any` unless unavoidable.
 
-- Root-level app and build config files:
-  - `/tmp/workspace/ffflorian/sortjson.com/index.html`
-  - `/tmp/workspace/ffflorian/sortjson.com/vite.config.ts`
-  - `/tmp/workspace/ffflorian/sortjson.com/vitest.config.ts`
-  - `/tmp/workspace/ffflorian/sortjson.com/tsconfig.json`
-- Application source code is in `/tmp/workspace/ffflorian/sortjson.com/src`:
-  - Main UI: `App.tsx`, `main.tsx`, `style.css`
-  - Logic: `sortJson.ts`
-  - Tests: `__tests__/` and `setupTests.ts`
-- CI workflows are in `/tmp/workspace/ffflorian/sortjson.com/.github/workflows`.
+## CI/CD
 
-## Tools Used in This Repository
+- **lint_test_publish.yml**:
+  - On push/PR to `main`, runs dependency install, lint, tests, and build.
+  - Validates nginx config in a containerized nginx job.
+  - Lints Dockerfile with hadolint.
+  - On push to `main`, runs release/image publish and conditionally deploys.
+- **codeql.yml**: scheduled and push/PR security analysis.
+- **git_mirror.yml**: mirrors `main` to GitLab and Codeberg.
+- **delete_old_packages.yml**: scheduled cleanup of old container package versions.
+- **yarn_update.yml**: scheduled workflow for yarn update automation.
 
-- Framework/build: React + Vite + TypeScript.
-- Testing: Vitest with JSDOM and Testing Library (`@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`).
-- Linting/formatting: Oxlint and Prettier.
-- Git hooks: Lefthook (pre-commit runs Prettier for `*.json,*.md,*.yml` and Oxlint fixes for `src/**/*.ts`).
-- Release automation: Semantic Release (with changelog and git plugins).
-- CI/security tooling includes GitHub Actions workflows and CodeQL action updates.
+## Pre-commit Hooks (lefthook)
+
+Runs sequentially on staged files:
+
+1. Prettier - formats `*.json`, `*.md`, `*.yml`
+2. oxlint - runs autofix for `src/**/*.ts`
+
+If hooks fail, run `yarn format` and `yarn lint`, then restage files.
