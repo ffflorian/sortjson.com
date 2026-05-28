@@ -7,3 +7,4 @@ coverage
 *.log
 .yarnrc.yml
 CHANGELOG.md
+CLAUDE.md
