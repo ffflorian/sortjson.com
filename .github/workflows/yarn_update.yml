@@ -30,3 +30,4 @@ jobs:
         with:
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
           release_cooldown_days: '5'
+          assignee: 'ffflorian'
