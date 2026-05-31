@@ -20,3 +20,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
+          assets:
+            - 'CHANGELOG.md'
+            - 'package.json'
