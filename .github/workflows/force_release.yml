@@ -9,17 +9,17 @@ jobs:
   force-release:
     name: Force release
     permissions:
-      contents: write
       issues: write
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - uses: ffflorian/actions/force-release@3c7c457eb4a6b2858cd12bd87c4d076b5ca1c22f
+      - uses: ffflorian/actions/force-release@395dd69a8fe27cbaaf9ee09ebfaeefaf92dfdda5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_authorship: 'Florian Imdahl <git@ffflorian.de>'
-          assets:
-            - 'CHANGELOG.md'
-            - 'package.json'
+          assets: |
+            CHANGELOG.md
+            package.json
