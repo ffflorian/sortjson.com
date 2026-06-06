@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/ffflorian/sortjson.com/compare/v2.0.2...v2.1.0) (2026-06-06)
+
+
+### Features
+
+* add VERSION and COMMIT build args to Dockerfile and meta tags to index.html ([#1656](https://github.com/ffflorian/sortjson.com/issues/1656)) ([a974842](https://github.com/ffflorian/sortjson.com/commit/a9748427c7c7f4bb76e1c3ff2bd6c4f95c06ee27))
+
 ## [2.0.2](https://github.com/ffflorian/sortjson.com/compare/v2.0.1...v2.0.2) (2026-05-31)
 
 ## [2.0.1](https://github.com/ffflorian/sortjson.com/compare/v2.0.0...v2.0.1) (2026-05-18)
