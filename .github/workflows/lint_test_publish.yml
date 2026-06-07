@@ -84,7 +84,7 @@ jobs:
 
       - name: Publish Release and Docker image
         id: publish_release
-        uses: ffflorian/actions/docker-image-release@bac55801ce13998bfa3e797f210c418e509a519e
+        uses: ffflorian/actions/docker-image-release@ab061ffdaad5753c96129a0784cc23e9f1b18350
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_author: 'ffflorian'
