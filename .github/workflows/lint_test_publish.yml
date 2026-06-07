@@ -7,6 +7,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   lint_test_typescript:
@@ -89,3 +90,26 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_author: 'ffflorian'
           git_email: 'git@ffflorian.de'
+
+  # Deploy is part of this workflow because GitHub does not fire release events
+  # when a release is created by a workflow using GITHUB_TOKEN, so a separate
+  # deploy.yml listening on release:published would never be triggered.
+  deploy:
+    name: Deploy latest image
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    if: |
+      always() && (
+        github.event_name == 'workflow_dispatch' ||
+        (needs.publish.result == 'success' && needs.publish.outputs.new_release_published == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main')
+      )
+    steps:
+      - name: Deploy
+        uses: ffflorian/actions/coolify-deploy@9c7842ec0251a5890f0ca9ef22deed8dbc4ea9fa
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          domain: ${{ secrets.COOLIFY_DOMAIN }}
+          token: ${{ secrets.COOLIFY_TOKEN }}
+          uuid: ${{ secrets.COOLIFY_UUID }}
