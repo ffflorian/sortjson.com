@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/ffflorian/sortjson.com/compare/v2.1.0...v2.1.1) (2026-06-11)
+
+
+### Bug Fixes
+
+* **deps:** bump the react group across 1 directory with 2 updates ([#1662](https://github.com/ffflorian/sortjson.com/issues/1662)) ([57520d3](https://github.com/ffflorian/sortjson.com/commit/57520d302609b9f10a91489fda892a664ceec3c4))
+
 # [2.1.0](https://github.com/ffflorian/sortjson.com/compare/v2.0.2...v2.1.0) (2026-06-06)
 
 
