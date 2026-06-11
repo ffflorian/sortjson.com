@@ -2,8 +2,8 @@
   "author": "Florian Imdahl <git@ffflorian.de>",
   "dependencies": {
     "json5": "2.2.3",
-    "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
@@ -15,7 +15,7 @@
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.1",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "jsdom": "29.1.1",
