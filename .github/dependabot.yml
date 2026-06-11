@@ -1,48 +1,57 @@
-version: 2
 updates:
-  - package-ecosystem: docker
-    directory: '/'
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 99
-    assignees:
+  - assignees:
       - ffflorian
+    commit-message:
+      prefix: fix(deps)
     cooldown:
       default-days: 5
+      exclude:
+        - node
+        - nginx
+    directory: /
     ignore:
       - dependency-name: node
         versions:
           - '> 26'
-  - package-ecosystem: npm
-    directory: '/'
+    open-pull-requests-limit: 99
+    package-ecosystem: docker
     schedule:
       interval: weekly
-    open-pull-requests-limit: 99
-    assignees:
+  - assignees:
       - ffflorian
-    versioning-strategy: increase
-    groups:
-      react:
-        patterns:
-          - 'react*'
-          - 'react-dom*'
-    ignore:
-      # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
-      - dependency-name: 'eslint'
-        versions:
-          - '>= 10'
+    commit-message:
+      prefix: fix(deps)
+      prefix-development: chore(deps-dev)
     cooldown:
       default-days: 5
       exclude:
         - '@ffflorian/*'
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+    directory: /
+    groups:
+      react:
+        patterns:
+          - react*
+    ignore:
+      # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
+      - dependency-name: eslint
+        versions:
+          - '> 9'
+    open-pull-requests-limit: 99
+    package-ecosystem: npm
     schedule:
       interval: weekly
-    open-pull-requests-limit: 99
-    assignees:
+    versioning-strategy: increase
+  - assignees:
       - ffflorian
+    commit-message:
+      prefix: ci(deps)
     cooldown:
       default-days: 5
       exclude:
-        - 'ffflorian/*'
+        - ffflorian/*
+    directory: /
+    open-pull-requests-limit: 99
+    package-ecosystem: github-actions
+    schedule:
+      interval: weekly
+version: 2
