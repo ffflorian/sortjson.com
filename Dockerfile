@@ -10,13 +10,14 @@ ENV VITE_VERSION=$VERSION
 
 WORKDIR /app
 
+# hadolint ignore=DL3018
+RUN apk add --no-cache yarn
+
 COPY package.json yarn.lock .yarnrc.yml vite.config.ts tsconfig.json index.html ./
 COPY src/ src/
 COPY public/ public/
 COPY .yarn/ .yarn/
 
-RUN npm install --global yarn@1.22.22
-# hadolint ignore=DL3059
 RUN yarn install --immutable && yarn cache clean
 # hadolint ignore=DL3059
 RUN yarn build
