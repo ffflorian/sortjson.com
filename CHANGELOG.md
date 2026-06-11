@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/ffflorian/sortjson.com/compare/v2.1.1...v2.1.2) (2026-06-11)
+
+
+### Bug Fixes
+
+* Install yarn with apk ([#1666](https://github.com/ffflorian/sortjson.com/issues/1666)) ([28556ca](https://github.com/ffflorian/sortjson.com/commit/28556ca0caf481cbfca307744a3f5e9d2a2540c5))
+
 ## [2.1.1](https://github.com/ffflorian/sortjson.com/compare/v2.1.0...v2.1.1) (2026-06-11)
 
 
