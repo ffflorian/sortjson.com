@@ -11,8 +11,8 @@ updates:
     directory: /
     ignore:
       - dependency-name: node
-        versions:
-          - '> 26'
+        update-types:
+          - version-update:semver-major
     open-pull-requests-limit: 99
     package-ecosystem: docker
     schedule:
@@ -34,8 +34,8 @@ updates:
     ignore:
       # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
       - dependency-name: eslint
-        versions:
-          - '> 9'
+        update-types:
+          - version-update:semver-major
     open-pull-requests-limit: 99
     package-ecosystem: npm
     schedule:
