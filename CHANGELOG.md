@@ -1,3 +1,14 @@
+## [2.1.3](https://github.com/ffflorian/sortjson.com/compare/v2.1.2...v2.1.3) (2026-06-18)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.1.1 to 4.2.0 ([#1676](https://github.com/ffflorian/sortjson.com/issues/1676)) [ci skip] ([72a6890](https://github.com/ffflorian/sortjson.com/commit/72a68907ac55188fdc2342c8f7b3a1b878b5e9bf))
+* **deps:** bump nginx from 1.31.1-alpine to 1.31.2-alpine ([#1669](https://github.com/ffflorian/sortjson.com/issues/1669)) [ci skip] ([c590af3](https://github.com/ffflorian/sortjson.com/commit/c590af3c97a29992c87cfc41cb834ac5d9c74f31))
+* **deps:** bump node from 26.2.0-alpine to 26.3.1-alpine ([#1670](https://github.com/ffflorian/sortjson.com/issues/1670)) ([a593af2](https://github.com/ffflorian/sortjson.com/commit/a593af26bf6ff138f2bdc1054089a10af239404c))
+* **deps:** bump tar from 7.5.11 to 7.5.16 ([#1675](https://github.com/ffflorian/sortjson.com/issues/1675)) [ci skip] ([8310712](https://github.com/ffflorian/sortjson.com/commit/8310712d3a0d3d93391f4395f012a76485f308b5))
+* **deps:** bump undici from 6.24.1 to 6.27.0 ([#1677](https://github.com/ffflorian/sortjson.com/issues/1677)) [ci skip] ([c48b46c](https://github.com/ffflorian/sortjson.com/commit/c48b46cfd99232aa72ad4fb53a49f203d29ca79d))
+
 ## [2.1.2](https://github.com/ffflorian/sortjson.com/compare/v2.1.1...v2.1.2) (2026-06-11)
 
 
