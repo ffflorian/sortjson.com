@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/ffflorian/sortjson.com/compare/v2.1.3...v2.1.4) (2026-06-24)
+
+
+### Bug Fixes
+
+* **deps:** Bump undici to 7.28.0 ([9353416](https://github.com/ffflorian/sortjson.com/commit/9353416151d424b8f273b4af37002e38193f04c9))
+
 ## [2.1.3](https://github.com/ffflorian/sortjson.com/compare/v2.1.2...v2.1.3) (2026-06-18)
 
 
