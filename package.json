@@ -7,7 +7,7 @@
   },
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
-    "@ffflorian/prettier-config": "0.8.2",
+    "@ffflorian/prettier-config": "1.0.0",
     "@ffflorian/semantic-release-config": "1.0.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
