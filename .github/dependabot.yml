@@ -53,7 +53,7 @@ updates:
     groups:
       ffflorian:
         patterns:
-          - ffflorian/*
+          - ffflorian/actions/*
     open-pull-requests-limit: 99
     package-ecosystem: github-actions
     schedule:
