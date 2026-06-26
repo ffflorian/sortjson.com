@@ -1,3 +1,11 @@
+## [2.1.5](https://github.com/ffflorian/sortjson.com/compare/v2.1.4...v2.1.5) (2026-06-26)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from `81595dd` to `54f2a90` ([#1686](https://github.com/ffflorian/sortjson.com/issues/1686)) [ci skip] ([b78f018](https://github.com/ffflorian/sortjson.com/commit/b78f018c87c5c6988f3550140ec819f8f200ee93))
+* **deps:** bump node from 26.3.1-alpine to 26.4.0-alpine ([#1688](https://github.com/ffflorian/sortjson.com/issues/1688)) ([9da748e](https://github.com/ffflorian/sortjson.com/commit/9da748e6523d9d6b035a238836f483f8153ffe32))
+
 ## [2.1.4](https://github.com/ffflorian/sortjson.com/compare/v2.1.3...v2.1.4) (2026-06-24)
 
 
