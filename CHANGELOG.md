@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/ffflorian/sortjson.com/compare/v2.1.5...v2.1.6) (2026-06-28)
+
+
+### Bug Fixes
+
+* **deps:** bump @sigstore/core from 3.2.0 to 3.2.1 ([#1692](https://github.com/ffflorian/sortjson.com/issues/1692)) ([6ebefe0](https://github.com/ffflorian/sortjson.com/commit/6ebefe0a2e92ee7cb5b0e12c6e5bc7d08209f208))
+
 ## [2.1.5](https://github.com/ffflorian/sortjson.com/compare/v2.1.4...v2.1.5) (2026-06-26)
 
 
