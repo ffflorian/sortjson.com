@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/ffflorian/sortjson.com/compare/v2.1.6...v2.1.7) (2026-06-30)
+
+
+### Bug Fixes
+
+* **deps:** Bump vite to 8.1.1 ([45de67b](https://github.com/ffflorian/sortjson.com/commit/45de67b0cd79b8b42154ec33d67ce10312783b94))
+
 ## [2.1.6](https://github.com/ffflorian/sortjson.com/compare/v2.1.5...v2.1.6) (2026-06-28)
 
 
