@@ -1,3 +1,10 @@
+## [2.1.8](https://github.com/ffflorian/sortjson.com/compare/v2.1.7...v2.1.8) (2026-07-02)
+
+
+### Bug Fixes
+
+* **deps:** bump @sigstore/verify from 3.1.0 to 3.1.1 ([#1694](https://github.com/ffflorian/sortjson.com/issues/1694)) ([1c32895](https://github.com/ffflorian/sortjson.com/commit/1c328956dc499c6349a6e57812053fb742ac074e))
+
 ## [2.1.7](https://github.com/ffflorian/sortjson.com/compare/v2.1.6...v2.1.7) (2026-06-30)
 
 
