@@ -1,3 +1,10 @@
+## [2.1.9](https://github.com/ffflorian/sortjson.com/compare/v2.1.8...v2.1.9) (2026-07-02)
+
+
+### Bug Fixes
+
+* **deps:** bump sigstore from 4.1.0 to 4.1.1 ([#1695](https://github.com/ffflorian/sortjson.com/issues/1695)) ([24215d6](https://github.com/ffflorian/sortjson.com/commit/24215d6c1bf9e490aa33294d90d94e2b3ed7e3d8))
+
 ## [2.1.8](https://github.com/ffflorian/sortjson.com/compare/v2.1.7...v2.1.8) (2026-07-02)
 
 
