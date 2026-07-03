@@ -105,7 +105,7 @@ jobs:
 
       - name: Publish Release and Docker image
         id: publish_release
-        uses: ffflorian/actions/docker-image-release@c9a3071b2d17985d88f3bbaeab838871d9b61bdd
+        uses: ffflorian/actions/docker-image-release@8d5ba76e2f78c010614681a5466182daf4388980
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_author: 'ffflorian'
@@ -127,7 +127,7 @@ jobs:
       )
     steps:
       - name: Deploy
-        uses: ffflorian/actions/coolify-deploy@c9a3071b2d17985d88f3bbaeab838871d9b61bdd
+        uses: ffflorian/actions/coolify-deploy@8d5ba76e2f78c010614681a5466182daf4388980
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           domain: ${{ secrets.COOLIFY_DOMAIN }}
