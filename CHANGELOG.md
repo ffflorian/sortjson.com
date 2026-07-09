@@ -1,3 +1,10 @@
+## [2.1.10](https://github.com/ffflorian/sortjson.com/compare/v2.1.9...v2.1.10) (2026-07-09)
+
+
+### Bug Fixes
+
+* **deps:** bump node from 26.4.0-alpine to 26.5.0-alpine ([#1705](https://github.com/ffflorian/sortjson.com/issues/1705)) ([77785ba](https://github.com/ffflorian/sortjson.com/commit/77785ba359e6fbf21849eabebb23931c4d18e084))
+
 ## [2.1.9](https://github.com/ffflorian/sortjson.com/compare/v2.1.8...v2.1.9) (2026-07-02)
 
 
