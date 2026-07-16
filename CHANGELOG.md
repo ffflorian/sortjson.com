@@ -1,3 +1,10 @@
+## [2.1.11](https://github.com/ffflorian/sortjson.com/compare/v2.1.10...v2.1.11) (2026-07-16)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from 1.31.2-alpine to 1.31.3-alpine ([#1709](https://github.com/ffflorian/sortjson.com/issues/1709)) ([5e7c13e](https://github.com/ffflorian/sortjson.com/commit/5e7c13ea5e1f5a17b7e6622ac75d7bf7785208af))
+
 ## [2.1.10](https://github.com/ffflorian/sortjson.com/compare/v2.1.9...v2.1.10) (2026-07-09)
 
 
