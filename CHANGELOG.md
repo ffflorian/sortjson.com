@@ -1,3 +1,10 @@
+## [2.1.13](https://github.com/[secure]/sortjson.com/compare/v2.1.12...v2.1.13) (2026-07-21)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.2.0 to 4.3.0 ([#1714](https://github.com/[secure]/sortjson.com/issues/1714)) ([0fcc1be](https://github.com/[secure]/sortjson.com/commit/0fcc1beee708cdb3d1d24c26b5259e023591aaa0))
+
 ## [2.1.12](https://github.com/[secure]/sortjson.com/compare/v2.1.11...v2.1.12) (2026-07-21)
 
 
