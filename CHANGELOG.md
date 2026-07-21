@@ -1,3 +1,10 @@
+## [2.1.12](https://github.com/[secure]/sortjson.com/compare/v2.1.11...v2.1.12) (2026-07-21)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion from 5.0.5 to 5.0.7 ([#1713](https://github.com/[secure]/sortjson.com/issues/1713)) ([6c14207](https://github.com/[secure]/sortjson.com/commit/6c14207d9d3aeaf15ce3b72f66fee88788021fbe))
+
 ## [2.1.11](https://github.com/ffflorian/sortjson.com/compare/v2.1.10...v2.1.11) (2026-07-16)
 
 
