@@ -1,3 +1,10 @@
+## [2.1.14](https://github.com/[secure]/sortjson.com/compare/v2.1.13...v2.1.14) (2026-07-23)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from `2776cd5` to `4a73073` ([#1721](https://github.com/[secure]/sortjson.com/issues/1721)) ([337ed88](https://github.com/[secure]/sortjson.com/commit/337ed88d14772c41fc400b17fe5ab15468ac3422))
+
 ## [2.1.13](https://github.com/[secure]/sortjson.com/compare/v2.1.12...v2.1.13) (2026-07-21)
 
 
