@@ -1,3 +1,11 @@
+## [2.1.15](https://github.com/[secure]/sortjson.com/compare/v2.1.14...v2.1.15) (2026-07-31)
+
+
+### Bug Fixes
+
+* **deps:** bump tar from 7.5.16 to 7.5.22 ([#1731](https://github.com/[secure]/sortjson.com/issues/1731)) ([90b9933](https://github.com/[secure]/sortjson.com/commit/90b99330494b67578bb8fb70574c70bae597b77d))
+* **deps:** bump the react group across 1 directory with 2 updates ([#1723](https://github.com/[secure]/sortjson.com/issues/1723)) [ci skip] ([d7f0453](https://github.com/[secure]/sortjson.com/commit/d7f0453453f3871bbcb8822569fb01f13b994de5))
+
 ## [2.1.14](https://github.com/[secure]/sortjson.com/compare/v2.1.13...v2.1.14) (2026-07-23)
 
 
