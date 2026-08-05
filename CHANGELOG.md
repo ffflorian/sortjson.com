@@ -1,3 +1,12 @@
+## [2.1.16](https://github.com/[secure]/sortjson.com/compare/v2.1.15...v2.1.16) (2026-08-05)
+
+
+### Bug Fixes
+
+* **deps:** bump ip-address from 10.2.0 to 10.4.0 ([#1733](https://github.com/[secure]/sortjson.com/issues/1733)) [ci skip] ([23a0d4f](https://github.com/[secure]/sortjson.com/commit/23a0d4f9941a77366cec4b39b09166be1c3fccc5))
+* **deps:** bump postcss from 8.5.16 to 8.5.25 ([#1732](https://github.com/[secure]/sortjson.com/issues/1732)) [ci skip] ([d0067ee](https://github.com/[secure]/sortjson.com/commit/d0067ee75be0951d458027ed749ab89f3d57f7a6))
+* **deps:** bump undici from 6.27.0 to 6.28.0 ([#1734](https://github.com/[secure]/sortjson.com/issues/1734)) ([e9a65ef](https://github.com/[secure]/sortjson.com/commit/e9a65efed5c9545cc30ef94ca92ba4a9c4c2652d))
+
 ## [2.1.15](https://github.com/[secure]/sortjson.com/compare/v2.1.14...v2.1.15) (2026-07-31)
 
 
