@@ -1,3 +1,10 @@
+## [2.1.19](https://github.com/[secure]/sortjson.com/compare/v2.1.18...v2.1.19) (2026-08-21)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from 1.31.3-alpine to 1.31.4-alpine ([#1753](https://github.com/[secure]/sortjson.com/issues/1753)) ([a42733f](https://github.com/[secure]/sortjson.com/commit/a42733f43ec90b101245c48cf933b3945aee6884))
+
 ## [2.1.18](https://github.com/[secure]/sortjson.com/compare/v2.1.17...v2.1.18) (2026-08-14)
 
 
