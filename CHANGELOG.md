@@ -1,3 +1,10 @@
+## [2.1.20](https://github.com/[secure]/sortjson.com/compare/v2.1.19...v2.1.20) (2026-08-27)
+
+
+### Bug Fixes
+
+* **deps:** bump node from 26.7.0-alpine to 26.8.1-alpine ([#1761](https://github.com/[secure]/sortjson.com/issues/1761)) ([7edc955](https://github.com/[secure]/sortjson.com/commit/7edc955e399a63382d0d2593a9289b1c029fa82f))
+
 ## [2.1.19](https://github.com/[secure]/sortjson.com/compare/v2.1.18...v2.1.19) (2026-08-21)
 
 
