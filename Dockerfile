@@ -1,5 +1,5 @@
 # Build
-FROM node:26.7.0-alpine@sha256:aadf416b2cdce311a8811ba3f0608a61b77dbf997500e2eafe781b51f6a0b019 AS builder
+FROM node:26.8.1-alpine@sha256:21dfe16f83cea461b3c23b5af6c97791309b6298c6e076c722a82b1e19c3a23b AS builder
 
 ARG VERSION
 ARG COMMIT
