@@ -1,3 +1,10 @@
+## [2.1.21](https://github.com/[secure]/sortjson.com/compare/v2.1.20...v2.1.21) (2026-09-02)
+
+
+### Bug Fixes
+
+* **deps:** bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1762](https://github.com/[secure]/sortjson.com/issues/1762)) ([eaeb752](https://github.com/[secure]/sortjson.com/commit/eaeb7527bd913a941b44e2faf0cbba83a7586046))
+
 ## [2.1.20](https://github.com/[secure]/sortjson.com/compare/v2.1.19...v2.1.20) (2026-08-27)
 
 
