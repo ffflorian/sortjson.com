@@ -1,3 +1,12 @@
+## [2.1.23](https://github.com/[secure]/sortjson.com/compare/v2.1.22...v2.1.23) (2026-09-11)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.3.1 to 4.3.2 ([#1779](https://github.com/[secure]/sortjson.com/issues/1779)) [ci skip] ([e86a788](https://github.com/[secure]/sortjson.com/commit/e86a7883091687dcb1b47ab610f3910175710749))
+* **deps:** bump nginx from `34f4047` to `72ba65e` ([#1774](https://github.com/[secure]/sortjson.com/issues/1774)) [ci skip] ([41accac](https://github.com/[secure]/sortjson.com/commit/41accac987c1ac45aba67d22f03a2d86e9f6181a))
+* **deps:** bump node from 26.8.1-alpine to 26.8.2-alpine ([#1775](https://github.com/[secure]/sortjson.com/issues/1775)) ([a08d793](https://github.com/[secure]/sortjson.com/commit/a08d793b2db02ddbb40377534c88ab3d50da77df))
+
 ## [2.1.22](https://github.com/[secure]/sortjson.com/compare/v2.1.21...v2.1.22) (2026-09-03)
 
 
