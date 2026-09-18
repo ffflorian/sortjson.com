@@ -1,3 +1,12 @@
+## [2.1.24](https://github.com/[secure]/sortjson.com/compare/v2.1.23...v2.1.24) (2026-09-18)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1781](https://github.com/[secure]/sortjson.com/issues/1781)) [ci skip] ([13db3e6](https://github.com/[secure]/sortjson.com/commit/13db3e647c55879c88633e7253594d01c7a93c9f))
+* **deps:** bump node from 26.8.2-alpine to 26.9.0-alpine ([#1780](https://github.com/[secure]/sortjson.com/issues/1780)) ([402db58](https://github.com/[secure]/sortjson.com/commit/402db582dd891fbbd8798d7cb45352c385f9bedf))
+* **deps:** bump the react group across 1 directory with 2 updates ([#1782](https://github.com/[secure]/sortjson.com/issues/1782)) [ci skip] ([3d734a9](https://github.com/[secure]/sortjson.com/commit/3d734a96f13a7c5eb3f3090801537e91f2358770))
+
 ## [2.1.23](https://github.com/[secure]/sortjson.com/compare/v2.1.22...v2.1.23) (2026-09-11)
 
 
