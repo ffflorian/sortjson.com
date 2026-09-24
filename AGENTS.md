@@ -53,13 +53,13 @@ This file explains how coding agents should work in this repository.
 ## Tech Stack
 
 - **React 19** with **TypeScript 6** (strict mode)
-- **Vite 8** as build tool and dev server
+- **vite 8** as build tool and dev server
 - **JSON5** for tolerant JSON parsing before deterministic formatting
-- **Vitest 4** + **Testing Library** + **JSDOM** for tests
-- **Oxlint** + **Prettier** for linting and formatting
+- **vitest 4** + **Testing Library** + **JSDOM** for tests
+- **oxlint** + **oxfmt** for linting and formatting
 - **lefthook** for pre-commit hooks
 - **Semantic Release** for automated versioning and changelogs
-- **Nginx + Docker** for production static hosting
+- **nginx + Docker** for production static hosting
 
 ## Commands
 
@@ -70,7 +70,7 @@ yarn build          # production build
 yarn lint           # run oxlint across the repository
 yarn test           # run vitest in watch mode
 yarn test --run     # run tests once (CI style)
-yarn format         # format repository with Prettier
+yarn format         # format repository with oxfmt
 yarn release        # semantic-release (CI/release context)
 ```
 
@@ -111,7 +111,7 @@ Always use `yarn`, not `npm`, for all package management and script execution.
 
 Runs sequentially on staged files:
 
-1. Prettier - formats `*.json`, `*.md`, `*.yml`
+1. oxfmt - formats `*.json`, `*.md`, `*.yml`
 2. oxlint - runs autofix for `src/**/*.ts`
 
 If hooks fail, run `yarn format` and `yarn lint`, then restage files.

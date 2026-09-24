@@ -7,7 +7,7 @@
   },
   "description": "Sort JSON keys automatically and display formatted output.",
   "devDependencies": {
-    "@ffflorian/prettier-config": "1.0.3",
+    "@ffflorian/oxfmt-config": "1.2.1",
     "@ffflorian/semantic-release-config": "1.0.3",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
@@ -20,8 +20,8 @@
     "@vitejs/plugin-react": "6.1.1",
     "jsdom": "30.0.1",
     "lefthook": "2.1.12",
+    "oxfmt": "0.70.0",
     "oxlint": "1.82.0",
-    "prettier": "3.9.6",
     "semantic-release": "25.0.9",
     "typescript": "6.0.3",
     "vite": "8.3.0",
@@ -30,15 +30,16 @@
   "license": "GPL-3.0",
   "name": "sortjson.com",
   "packageManager": "yarn@4.18.0",
-  "prettier": "@ffflorian/prettier-config",
   "private": true,
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "lint": "yarn lint:ts && yarn lint:other",
+    "lint:ts": "oxlint .",
+    "lint:other": "yarn format --check",
     "release": "semantic-release",
-    "test": "vitest",
-    "format": "prettier --write ."
+    "test": "vitest"
   },
   "version": "2.0.2"
 }
