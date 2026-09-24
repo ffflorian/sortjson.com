@@ -1,11 +1,11 @@
 pre-commit:
   parallel: false
   commands:
-    prettier:
+    format:
       exclude:
         - CLAUDE.md
-      glob: '*.{json,md,yml}'
-      run: npx --no prettier -- --write {staged_files} && git add {staged_files}
+      glob: '*.{json,md,yml,js,ts,yaml}'
+      run: npx --no oxfmt {staged_files} && git add {staged_files}
     oxlint:
-      glob: 'src/**/*.ts'
+      glob: '*.ts'
       run: npx --no oxlint -- --fix {staged_files} && git add {staged_files}
