@@ -21,7 +21,7 @@
     "jsdom": "30.0.1",
     "lefthook": "2.1.12",
     "oxfmt": "0.70.0",
-    "oxlint": "1.82.0",
+    "oxlint": "1.83.0",
     "semantic-release": "25.0.9",
     "typescript": "6.0.3",
     "vite": "8.3.0",
