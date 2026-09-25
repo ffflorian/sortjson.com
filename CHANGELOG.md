@@ -1,3 +1,11 @@
+## [2.1.25](https://github.com/[secure]/sortjson.com/compare/v2.1.24...v2.1.25) (2026-09-25)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from `d0a6faa` to `d10753d` ([#1792](https://github.com/[secure]/sortjson.com/issues/1792)) [ci skip] ([99c8dbb](https://github.com/[secure]/sortjson.com/commit/99c8dbb2b04f5069f80571a7d3c5b76fd9ef0b5e))
+* **deps:** bump node from 26.9.0-alpine to 26.10.0-alpine ([#1791](https://github.com/[secure]/sortjson.com/issues/1791)) ([2c4748b](https://github.com/[secure]/sortjson.com/commit/2c4748be85e99b8f4b4ffc18a384f1dbbed01f72))
+
 ## [2.1.24](https://github.com/[secure]/sortjson.com/compare/v2.1.23...v2.1.24) (2026-09-18)
 
 
