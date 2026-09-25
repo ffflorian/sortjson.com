@@ -19,7 +19,7 @@
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.1",
     "jsdom": "30.1.0",
-    "lefthook": "2.1.12",
+    "lefthook": "2.1.14",
     "oxfmt": "0.70.0",
     "oxlint": "1.83.0",
     "semantic-release": "25.0.9",
