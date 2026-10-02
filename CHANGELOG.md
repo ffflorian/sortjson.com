@@ -1,3 +1,13 @@
+## [2.1.26](https://github.com/[secure]/sortjson.com/compare/v2.1.25...v2.1.26) (2026-10-02)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion from 5.0.7 to 5.0.12 ([#1807](https://github.com/[secure]/sortjson.com/issues/1807)) ([49c7d4d](https://github.com/[secure]/sortjson.com/commit/49c7d4debeff72c14868eadc397a3902e0b56743))
+* **deps:** bump ip-address from 10.4.0 to 10.7.3 ([#1806](https://github.com/[secure]/sortjson.com/issues/1806)) [ci skip] ([92acd52](https://github.com/[secure]/sortjson.com/commit/92acd522d2bcb1d09633b9ad11c27ce97a2db527))
+* **deps:** bump nginx from `d10753d` to `df221db` ([#1804](https://github.com/[secure]/sortjson.com/issues/1804)) [ci skip] ([d452d08](https://github.com/[secure]/sortjson.com/commit/d452d088cc66981079f1f8b369335b950676c84b))
+* **deps:** bump undici from 6.28.0 to 6.29.0 ([#1805](https://github.com/[secure]/sortjson.com/issues/1805)) [ci skip] ([b4f643a](https://github.com/[secure]/sortjson.com/commit/b4f643a75f21557b827be03ac064ccafcebf6d4d))
+
 ## [2.1.25](https://github.com/[secure]/sortjson.com/compare/v2.1.24...v2.1.25) (2026-09-25)
 
 
