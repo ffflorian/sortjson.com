@@ -28,6 +28,10 @@ updates:
         - '@ffflorian/*'
     directory: /
     groups:
+      oxc:
+        patterns:
+          - oxfmt
+          - oxlint
       react:
         patterns:
           - react*
