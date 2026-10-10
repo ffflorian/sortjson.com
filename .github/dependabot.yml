@@ -35,11 +35,6 @@ updates:
       react:
         patterns:
           - react*
-    ignore:
-      # see https://github.com/jsx-eslint/eslint-plugin-react/issues/3977
-      - dependency-name: eslint
-        update-types:
-          - version-update:semver-major
     open-pull-requests-limit: 99
     package-ecosystem: npm
     schedule:
