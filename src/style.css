@@ -21,13 +21,7 @@ body,
 
 body {
   margin: 0;
-  font-family:
-    Roboto,
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI';
+  font-family: Roboto, Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI';
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   color: var(--text);
   padding: 24px;
