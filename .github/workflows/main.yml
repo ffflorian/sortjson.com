@@ -108,7 +108,7 @@ jobs:
         uses: ffflorian/actions/docker-image-release@8b90b42e4d82d2d73c873e8cb10d04beb8647fde
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          git_author: 'ffflorian'
+          git_author: 'Florian Imdahl'
           git_email: 'git@ffflorian.de'
 
   # Deploy is part of this workflow because GitHub does not fire release events
