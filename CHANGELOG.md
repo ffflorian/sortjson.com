@@ -1,3 +1,14 @@
+## [2.1.27](https://github.com/[secure]/sortjson.com/compare/v2.1.26...v2.1.27) (2026-10-11)
+
+
+### Bug Fixes
+
+* **deps:** bump handlebars from 4.7.9 to 4.7.10 ([#1822](https://github.com/[secure]/sortjson.com/issues/1822)) [ci skip] ([538158d](https://github.com/[secure]/sortjson.com/commit/538158db19d4263c7c491abc345e2b2760c06397))
+* **deps:** bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1815](https://github.com/[secure]/sortjson.com/issues/1815)) [ci skip] ([ea1c0b0](https://github.com/[secure]/sortjson.com/commit/ea1c0b0e76c04dedaaedef72d9019920afa2b7f4))
+* **deps:** bump node from 26.10.0-alpine to 26.11.1-alpine ([#1817](https://github.com/[secure]/sortjson.com/issues/1817)) ([f837902](https://github.com/[secure]/sortjson.com/commit/f837902831dd315f0ac7c0f8cceca28e6d37a32a))
+* **deps:** bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1814](https://github.com/[secure]/sortjson.com/issues/1814)) [ci skip] ([f14f77d](https://github.com/[secure]/sortjson.com/commit/f14f77d0597fc54bd638bd939d23ad5539337429))
+* **deps:** bump source-map-js from 1.2.1 to 1.2.2 ([#1816](https://github.com/[secure]/sortjson.com/issues/1816)) [ci skip] ([9f66245](https://github.com/[secure]/sortjson.com/commit/9f662450e0eabdd2a2eae434dd7e355461605d82))
+
 ## [2.1.26](https://github.com/[secure]/sortjson.com/compare/v2.1.25...v2.1.26) (2026-10-02)
 
 
