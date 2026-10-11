@@ -1,130 +1,130 @@
-## [2.1.27](https://github.com/[secure]/sortjson.com/compare/v2.1.26...v2.1.27) (2026-10-11)
+## [2.1.27](https://github.com/ffflorian/sortjson.com/compare/v2.1.26...v2.1.27) (2026-10-11)
 
 
 ### Bug Fixes
 
-* **deps:** bump handlebars from 4.7.9 to 4.7.10 ([#1822](https://github.com/[secure]/sortjson.com/issues/1822)) [ci skip] ([538158d](https://github.com/[secure]/sortjson.com/commit/538158db19d4263c7c491abc345e2b2760c06397))
-* **deps:** bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1815](https://github.com/[secure]/sortjson.com/issues/1815)) [ci skip] ([ea1c0b0](https://github.com/[secure]/sortjson.com/commit/ea1c0b0e76c04dedaaedef72d9019920afa2b7f4))
-* **deps:** bump node from 26.10.0-alpine to 26.11.1-alpine ([#1817](https://github.com/[secure]/sortjson.com/issues/1817)) ([f837902](https://github.com/[secure]/sortjson.com/commit/f837902831dd315f0ac7c0f8cceca28e6d37a32a))
-* **deps:** bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1814](https://github.com/[secure]/sortjson.com/issues/1814)) [ci skip] ([f14f77d](https://github.com/[secure]/sortjson.com/commit/f14f77d0597fc54bd638bd939d23ad5539337429))
-* **deps:** bump source-map-js from 1.2.1 to 1.2.2 ([#1816](https://github.com/[secure]/sortjson.com/issues/1816)) [ci skip] ([9f66245](https://github.com/[secure]/sortjson.com/commit/9f662450e0eabdd2a2eae434dd7e355461605d82))
+* **deps:** bump handlebars from 4.7.9 to 4.7.10 ([#1822](https://github.com/ffflorian/sortjson.com/issues/1822)) [ci skip] ([538158d](https://github.com/ffflorian/sortjson.com/commit/538158db19d4263c7c491abc345e2b2760c06397))
+* **deps:** bump http-cache-semantics from 4.2.0 to 4.3.0 ([#1815](https://github.com/ffflorian/sortjson.com/issues/1815)) [ci skip] ([ea1c0b0](https://github.com/ffflorian/sortjson.com/commit/ea1c0b0e76c04dedaaedef72d9019920afa2b7f4))
+* **deps:** bump node from 26.10.0-alpine to 26.11.1-alpine ([#1817](https://github.com/ffflorian/sortjson.com/issues/1817)) ([f837902](https://github.com/ffflorian/sortjson.com/commit/f837902831dd315f0ac7c0f8cceca28e6d37a32a))
+* **deps:** bump postcss-selector-parser from 7.1.5 to 7.1.6 ([#1814](https://github.com/ffflorian/sortjson.com/issues/1814)) [ci skip] ([f14f77d](https://github.com/ffflorian/sortjson.com/commit/f14f77d0597fc54bd638bd939d23ad5539337429))
+* **deps:** bump source-map-js from 1.2.1 to 1.2.2 ([#1816](https://github.com/ffflorian/sortjson.com/issues/1816)) [ci skip] ([9f66245](https://github.com/ffflorian/sortjson.com/commit/9f662450e0eabdd2a2eae434dd7e355461605d82))
 
-## [2.1.26](https://github.com/[secure]/sortjson.com/compare/v2.1.25...v2.1.26) (2026-10-02)
-
-
-### Bug Fixes
-
-* **deps:** bump brace-expansion from 5.0.7 to 5.0.12 ([#1807](https://github.com/[secure]/sortjson.com/issues/1807)) ([49c7d4d](https://github.com/[secure]/sortjson.com/commit/49c7d4debeff72c14868eadc397a3902e0b56743))
-* **deps:** bump ip-address from 10.4.0 to 10.7.3 ([#1806](https://github.com/[secure]/sortjson.com/issues/1806)) [ci skip] ([92acd52](https://github.com/[secure]/sortjson.com/commit/92acd522d2bcb1d09633b9ad11c27ce97a2db527))
-* **deps:** bump nginx from `d10753d` to `df221db` ([#1804](https://github.com/[secure]/sortjson.com/issues/1804)) [ci skip] ([d452d08](https://github.com/[secure]/sortjson.com/commit/d452d088cc66981079f1f8b369335b950676c84b))
-* **deps:** bump undici from 6.28.0 to 6.29.0 ([#1805](https://github.com/[secure]/sortjson.com/issues/1805)) [ci skip] ([b4f643a](https://github.com/[secure]/sortjson.com/commit/b4f643a75f21557b827be03ac064ccafcebf6d4d))
-
-## [2.1.25](https://github.com/[secure]/sortjson.com/compare/v2.1.24...v2.1.25) (2026-09-25)
+## [2.1.26](https://github.com/ffflorian/sortjson.com/compare/v2.1.25...v2.1.26) (2026-10-02)
 
 
 ### Bug Fixes
 
-* **deps:** bump nginx from `d0a6faa` to `d10753d` ([#1792](https://github.com/[secure]/sortjson.com/issues/1792)) [ci skip] ([99c8dbb](https://github.com/[secure]/sortjson.com/commit/99c8dbb2b04f5069f80571a7d3c5b76fd9ef0b5e))
-* **deps:** bump node from 26.9.0-alpine to 26.10.0-alpine ([#1791](https://github.com/[secure]/sortjson.com/issues/1791)) ([2c4748b](https://github.com/[secure]/sortjson.com/commit/2c4748be85e99b8f4b4ffc18a384f1dbbed01f72))
+* **deps:** bump brace-expansion from 5.0.7 to 5.0.12 ([#1807](https://github.com/ffflorian/sortjson.com/issues/1807)) ([49c7d4d](https://github.com/ffflorian/sortjson.com/commit/49c7d4debeff72c14868eadc397a3902e0b56743))
+* **deps:** bump ip-address from 10.4.0 to 10.7.3 ([#1806](https://github.com/ffflorian/sortjson.com/issues/1806)) [ci skip] ([92acd52](https://github.com/ffflorian/sortjson.com/commit/92acd522d2bcb1d09633b9ad11c27ce97a2db527))
+* **deps:** bump nginx from `d10753d` to `df221db` ([#1804](https://github.com/ffflorian/sortjson.com/issues/1804)) [ci skip] ([d452d08](https://github.com/ffflorian/sortjson.com/commit/d452d088cc66981079f1f8b369335b950676c84b))
+* **deps:** bump undici from 6.28.0 to 6.29.0 ([#1805](https://github.com/ffflorian/sortjson.com/issues/1805)) [ci skip] ([b4f643a](https://github.com/ffflorian/sortjson.com/commit/b4f643a75f21557b827be03ac064ccafcebf6d4d))
 
-## [2.1.24](https://github.com/[secure]/sortjson.com/compare/v2.1.23...v2.1.24) (2026-09-18)
-
-
-### Bug Fixes
-
-* **deps:** bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1781](https://github.com/[secure]/sortjson.com/issues/1781)) [ci skip] ([13db3e6](https://github.com/[secure]/sortjson.com/commit/13db3e647c55879c88633e7253594d01c7a93c9f))
-* **deps:** bump node from 26.8.2-alpine to 26.9.0-alpine ([#1780](https://github.com/[secure]/sortjson.com/issues/1780)) ([402db58](https://github.com/[secure]/sortjson.com/commit/402db582dd891fbbd8798d7cb45352c385f9bedf))
-* **deps:** bump the react group across 1 directory with 2 updates ([#1782](https://github.com/[secure]/sortjson.com/issues/1782)) [ci skip] ([3d734a9](https://github.com/[secure]/sortjson.com/commit/3d734a96f13a7c5eb3f3090801537e91f2358770))
-
-## [2.1.23](https://github.com/[secure]/sortjson.com/compare/v2.1.22...v2.1.23) (2026-09-11)
+## [2.1.25](https://github.com/ffflorian/sortjson.com/compare/v2.1.24...v2.1.25) (2026-09-25)
 
 
 ### Bug Fixes
 
-* **deps:** bump js-yaml from 4.3.1 to 4.3.2 ([#1779](https://github.com/[secure]/sortjson.com/issues/1779)) [ci skip] ([e86a788](https://github.com/[secure]/sortjson.com/commit/e86a7883091687dcb1b47ab610f3910175710749))
-* **deps:** bump nginx from `34f4047` to `72ba65e` ([#1774](https://github.com/[secure]/sortjson.com/issues/1774)) [ci skip] ([41accac](https://github.com/[secure]/sortjson.com/commit/41accac987c1ac45aba67d22f03a2d86e9f6181a))
-* **deps:** bump node from 26.8.1-alpine to 26.8.2-alpine ([#1775](https://github.com/[secure]/sortjson.com/issues/1775)) ([a08d793](https://github.com/[secure]/sortjson.com/commit/a08d793b2db02ddbb40377534c88ab3d50da77df))
+* **deps:** bump nginx from `d0a6faa` to `d10753d` ([#1792](https://github.com/ffflorian/sortjson.com/issues/1792)) [ci skip] ([99c8dbb](https://github.com/ffflorian/sortjson.com/commit/99c8dbb2b04f5069f80571a7d3c5b76fd9ef0b5e))
+* **deps:** bump node from 26.9.0-alpine to 26.10.0-alpine ([#1791](https://github.com/ffflorian/sortjson.com/issues/1791)) ([2c4748b](https://github.com/ffflorian/sortjson.com/commit/2c4748be85e99b8f4b4ffc18a384f1dbbed01f72))
 
-## [2.1.22](https://github.com/[secure]/sortjson.com/compare/v2.1.21...v2.1.22) (2026-09-03)
-
-
-### Bug Fixes
-
-* **deps:** bump nginx from 1.31.4-alpine to 1.31.5-alpine ([#1767](https://github.com/[secure]/sortjson.com/issues/1767)) ([e3e3d60](https://github.com/[secure]/sortjson.com/commit/e3e3d60d43ff33d81f2000e83535d0989a338d11))
-* **deps:** bump node from `21dfe16` to `2d984a1` ([#1768](https://github.com/[secure]/sortjson.com/issues/1768)) [ci skip] ([07dc455](https://github.com/[secure]/sortjson.com/commit/07dc455920fca36d47af1be5350f39eada58c114))
-
-## [2.1.21](https://github.com/[secure]/sortjson.com/compare/v2.1.20...v2.1.21) (2026-09-02)
+## [2.1.24](https://github.com/ffflorian/sortjson.com/compare/v2.1.23...v2.1.24) (2026-09-18)
 
 
 ### Bug Fixes
 
-* **deps:** bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1762](https://github.com/[secure]/sortjson.com/issues/1762)) ([eaeb752](https://github.com/[secure]/sortjson.com/commit/eaeb7527bd913a941b44e2faf0cbba83a7586046))
+* **deps:** bump nginx from 1.31.5-alpine to 1.31.6-alpine ([#1781](https://github.com/ffflorian/sortjson.com/issues/1781)) [ci skip] ([13db3e6](https://github.com/ffflorian/sortjson.com/commit/13db3e647c55879c88633e7253594d01c7a93c9f))
+* **deps:** bump node from 26.8.2-alpine to 26.9.0-alpine ([#1780](https://github.com/ffflorian/sortjson.com/issues/1780)) ([402db58](https://github.com/ffflorian/sortjson.com/commit/402db582dd891fbbd8798d7cb45352c385f9bedf))
+* **deps:** bump the react group across 1 directory with 2 updates ([#1782](https://github.com/ffflorian/sortjson.com/issues/1782)) [ci skip] ([3d734a9](https://github.com/ffflorian/sortjson.com/commit/3d734a96f13a7c5eb3f3090801537e91f2358770))
 
-## [2.1.20](https://github.com/[secure]/sortjson.com/compare/v2.1.19...v2.1.20) (2026-08-27)
-
-
-### Bug Fixes
-
-* **deps:** bump node from 26.7.0-alpine to 26.8.1-alpine ([#1761](https://github.com/[secure]/sortjson.com/issues/1761)) ([7edc955](https://github.com/[secure]/sortjson.com/commit/7edc955e399a63382d0d2593a9289b1c029fa82f))
-
-## [2.1.19](https://github.com/[secure]/sortjson.com/compare/v2.1.18...v2.1.19) (2026-08-21)
+## [2.1.23](https://github.com/ffflorian/sortjson.com/compare/v2.1.22...v2.1.23) (2026-09-11)
 
 
 ### Bug Fixes
 
-* **deps:** bump nginx from 1.31.3-alpine to 1.31.4-alpine ([#1753](https://github.com/[secure]/sortjson.com/issues/1753)) ([a42733f](https://github.com/[secure]/sortjson.com/commit/a42733f43ec90b101245c48cf933b3945aee6884))
+* **deps:** bump js-yaml from 4.3.1 to 4.3.2 ([#1779](https://github.com/ffflorian/sortjson.com/issues/1779)) [ci skip] ([e86a788](https://github.com/ffflorian/sortjson.com/commit/e86a7883091687dcb1b47ab610f3910175710749))
+* **deps:** bump nginx from `34f4047` to `72ba65e` ([#1774](https://github.com/ffflorian/sortjson.com/issues/1774)) [ci skip] ([41accac](https://github.com/ffflorian/sortjson.com/commit/41accac987c1ac45aba67d22f03a2d86e9f6181a))
+* **deps:** bump node from 26.8.1-alpine to 26.8.2-alpine ([#1775](https://github.com/ffflorian/sortjson.com/issues/1775)) ([a08d793](https://github.com/ffflorian/sortjson.com/commit/a08d793b2db02ddbb40377534c88ab3d50da77df))
 
-## [2.1.18](https://github.com/[secure]/sortjson.com/compare/v2.1.17...v2.1.18) (2026-08-14)
-
-
-### Bug Fixes
-
-* **deps:** bump node from 26.5.0-alpine to 26.7.0-alpine ([#1742](https://github.com/[secure]/sortjson.com/issues/1742)) ([0cab5e1](https://github.com/[secure]/sortjson.com/commit/0cab5e1a296f9eaf18e3a76d6bef5a3edbc4a8f2))
-
-## [2.1.17](https://github.com/[secure]/sortjson.com/compare/v2.1.16...v2.1.17) (2026-08-07)
+## [2.1.22](https://github.com/ffflorian/sortjson.com/compare/v2.1.21...v2.1.22) (2026-09-03)
 
 
 ### Bug Fixes
 
-* **deps:** bump js-yaml from 4.3.0 to 4.3.1 ([#1738](https://github.com/[secure]/sortjson.com/issues/1738)) ([fc688ca](https://github.com/[secure]/sortjson.com/commit/fc688ca4bb5de590b734999136e63095f38e8df3))
+* **deps:** bump nginx from 1.31.4-alpine to 1.31.5-alpine ([#1767](https://github.com/ffflorian/sortjson.com/issues/1767)) ([e3e3d60](https://github.com/ffflorian/sortjson.com/commit/e3e3d60d43ff33d81f2000e83535d0989a338d11))
+* **deps:** bump node from `21dfe16` to `2d984a1` ([#1768](https://github.com/ffflorian/sortjson.com/issues/1768)) [ci skip] ([07dc455](https://github.com/ffflorian/sortjson.com/commit/07dc455920fca36d47af1be5350f39eada58c114))
 
-## [2.1.16](https://github.com/[secure]/sortjson.com/compare/v2.1.15...v2.1.16) (2026-08-05)
-
-
-### Bug Fixes
-
-* **deps:** bump ip-address from 10.2.0 to 10.4.0 ([#1733](https://github.com/[secure]/sortjson.com/issues/1733)) [ci skip] ([23a0d4f](https://github.com/[secure]/sortjson.com/commit/23a0d4f9941a77366cec4b39b09166be1c3fccc5))
-* **deps:** bump postcss from 8.5.16 to 8.5.25 ([#1732](https://github.com/[secure]/sortjson.com/issues/1732)) [ci skip] ([d0067ee](https://github.com/[secure]/sortjson.com/commit/d0067ee75be0951d458027ed749ab89f3d57f7a6))
-* **deps:** bump undici from 6.27.0 to 6.28.0 ([#1734](https://github.com/[secure]/sortjson.com/issues/1734)) ([e9a65ef](https://github.com/[secure]/sortjson.com/commit/e9a65efed5c9545cc30ef94ca92ba4a9c4c2652d))
-
-## [2.1.15](https://github.com/[secure]/sortjson.com/compare/v2.1.14...v2.1.15) (2026-07-31)
+## [2.1.21](https://github.com/ffflorian/sortjson.com/compare/v2.1.20...v2.1.21) (2026-09-02)
 
 
 ### Bug Fixes
 
-* **deps:** bump tar from 7.5.16 to 7.5.22 ([#1731](https://github.com/[secure]/sortjson.com/issues/1731)) ([90b9933](https://github.com/[secure]/sortjson.com/commit/90b99330494b67578bb8fb70574c70bae597b77d))
-* **deps:** bump the react group across 1 directory with 2 updates ([#1723](https://github.com/[secure]/sortjson.com/issues/1723)) [ci skip] ([d7f0453](https://github.com/[secure]/sortjson.com/commit/d7f0453453f3871bbcb8822569fb01f13b994de5))
+* **deps:** bump postcss-selector-parser from 7.1.1 to 7.1.5 ([#1762](https://github.com/ffflorian/sortjson.com/issues/1762)) ([eaeb752](https://github.com/ffflorian/sortjson.com/commit/eaeb7527bd913a941b44e2faf0cbba83a7586046))
 
-## [2.1.14](https://github.com/[secure]/sortjson.com/compare/v2.1.13...v2.1.14) (2026-07-23)
-
-
-### Bug Fixes
-
-* **deps:** bump nginx from `2776cd5` to `4a73073` ([#1721](https://github.com/[secure]/sortjson.com/issues/1721)) ([337ed88](https://github.com/[secure]/sortjson.com/commit/337ed88d14772c41fc400b17fe5ab15468ac3422))
-
-## [2.1.13](https://github.com/[secure]/sortjson.com/compare/v2.1.12...v2.1.13) (2026-07-21)
+## [2.1.20](https://github.com/ffflorian/sortjson.com/compare/v2.1.19...v2.1.20) (2026-08-27)
 
 
 ### Bug Fixes
 
-* **deps:** bump js-yaml from 4.2.0 to 4.3.0 ([#1714](https://github.com/[secure]/sortjson.com/issues/1714)) ([0fcc1be](https://github.com/[secure]/sortjson.com/commit/0fcc1beee708cdb3d1d24c26b5259e023591aaa0))
+* **deps:** bump node from 26.7.0-alpine to 26.8.1-alpine ([#1761](https://github.com/ffflorian/sortjson.com/issues/1761)) ([7edc955](https://github.com/ffflorian/sortjson.com/commit/7edc955e399a63382d0d2593a9289b1c029fa82f))
 
-## [2.1.12](https://github.com/[secure]/sortjson.com/compare/v2.1.11...v2.1.12) (2026-07-21)
+## [2.1.19](https://github.com/ffflorian/sortjson.com/compare/v2.1.18...v2.1.19) (2026-08-21)
 
 
 ### Bug Fixes
 
-* **deps:** bump brace-expansion from 5.0.5 to 5.0.7 ([#1713](https://github.com/[secure]/sortjson.com/issues/1713)) ([6c14207](https://github.com/[secure]/sortjson.com/commit/6c14207d9d3aeaf15ce3b72f66fee88788021fbe))
+* **deps:** bump nginx from 1.31.3-alpine to 1.31.4-alpine ([#1753](https://github.com/ffflorian/sortjson.com/issues/1753)) ([a42733f](https://github.com/ffflorian/sortjson.com/commit/a42733f43ec90b101245c48cf933b3945aee6884))
+
+## [2.1.18](https://github.com/ffflorian/sortjson.com/compare/v2.1.17...v2.1.18) (2026-08-14)
+
+
+### Bug Fixes
+
+* **deps:** bump node from 26.5.0-alpine to 26.7.0-alpine ([#1742](https://github.com/ffflorian/sortjson.com/issues/1742)) ([0cab5e1](https://github.com/ffflorian/sortjson.com/commit/0cab5e1a296f9eaf18e3a76d6bef5a3edbc4a8f2))
+
+## [2.1.17](https://github.com/ffflorian/sortjson.com/compare/v2.1.16...v2.1.17) (2026-08-07)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.3.0 to 4.3.1 ([#1738](https://github.com/ffflorian/sortjson.com/issues/1738)) ([fc688ca](https://github.com/ffflorian/sortjson.com/commit/fc688ca4bb5de590b734999136e63095f38e8df3))
+
+## [2.1.16](https://github.com/ffflorian/sortjson.com/compare/v2.1.15...v2.1.16) (2026-08-05)
+
+
+### Bug Fixes
+
+* **deps:** bump ip-address from 10.2.0 to 10.4.0 ([#1733](https://github.com/ffflorian/sortjson.com/issues/1733)) [ci skip] ([23a0d4f](https://github.com/ffflorian/sortjson.com/commit/23a0d4f9941a77366cec4b39b09166be1c3fccc5))
+* **deps:** bump postcss from 8.5.16 to 8.5.25 ([#1732](https://github.com/ffflorian/sortjson.com/issues/1732)) [ci skip] ([d0067ee](https://github.com/ffflorian/sortjson.com/commit/d0067ee75be0951d458027ed749ab89f3d57f7a6))
+* **deps:** bump undici from 6.27.0 to 6.28.0 ([#1734](https://github.com/ffflorian/sortjson.com/issues/1734)) ([e9a65ef](https://github.com/ffflorian/sortjson.com/commit/e9a65efed5c9545cc30ef94ca92ba4a9c4c2652d))
+
+## [2.1.15](https://github.com/ffflorian/sortjson.com/compare/v2.1.14...v2.1.15) (2026-07-31)
+
+
+### Bug Fixes
+
+* **deps:** bump tar from 7.5.16 to 7.5.22 ([#1731](https://github.com/ffflorian/sortjson.com/issues/1731)) ([90b9933](https://github.com/ffflorian/sortjson.com/commit/90b99330494b67578bb8fb70574c70bae597b77d))
+* **deps:** bump the react group across 1 directory with 2 updates ([#1723](https://github.com/ffflorian/sortjson.com/issues/1723)) [ci skip] ([d7f0453](https://github.com/ffflorian/sortjson.com/commit/d7f0453453f3871bbcb8822569fb01f13b994de5))
+
+## [2.1.14](https://github.com/ffflorian/sortjson.com/compare/v2.1.13...v2.1.14) (2026-07-23)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from `2776cd5` to `4a73073` ([#1721](https://github.com/ffflorian/sortjson.com/issues/1721)) ([337ed88](https://github.com/ffflorian/sortjson.com/commit/337ed88d14772c41fc400b17fe5ab15468ac3422))
+
+## [2.1.13](https://github.com/ffflorian/sortjson.com/compare/v2.1.12...v2.1.13) (2026-07-21)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.2.0 to 4.3.0 ([#1714](https://github.com/ffflorian/sortjson.com/issues/1714)) ([0fcc1be](https://github.com/ffflorian/sortjson.com/commit/0fcc1beee708cdb3d1d24c26b5259e023591aaa0))
+
+## [2.1.12](https://github.com/ffflorian/sortjson.com/compare/v2.1.11...v2.1.12) (2026-07-21)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion from 5.0.5 to 5.0.7 ([#1713](https://github.com/ffflorian/sortjson.com/issues/1713)) ([6c14207](https://github.com/ffflorian/sortjson.com/commit/6c14207d9d3aeaf15ce3b72f66fee88788021fbe))
 
 ## [2.1.11](https://github.com/ffflorian/sortjson.com/compare/v2.1.10...v2.1.11) (2026-07-16)
 
