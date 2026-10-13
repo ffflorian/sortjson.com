@@ -1,3 +1,10 @@
+## [2.1.28](https://github.com/ffflorian/sortjson.com/compare/v2.1.27...v2.1.28) (2026-10-13)
+
+
+### Bug Fixes
+
+* Disable absolute redirects in nginx config ([3ca5016](https://github.com/ffflorian/sortjson.com/commit/3ca5016eda455eaa8c41948f3deb7fbf64647b5b))
+
 ## [2.1.27](https://github.com/ffflorian/sortjson.com/compare/v2.1.26...v2.1.27) (2026-10-11)
 
 
