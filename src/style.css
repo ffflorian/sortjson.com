@@ -103,30 +103,66 @@ body {
   margin-bottom: 8px;
 }
 
-.input {
-  width: 100%;
+.editor {
+  display: flex;
   height: 420px;
+  overflow: hidden;
+  resize: vertical;
+  border-radius: 8px;
   background: var(--glass);
   border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.output-pane .editor {
+  background: #071427;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.line-numbers {
+  flex: none;
+  overflow: hidden;
+  white-space: pre;
+  text-align: right;
+  min-width: 3ch;
+  box-sizing: content-box;
+  /* extra bottom padding so the gutter can follow when a horizontal scrollbar is shown */
+  padding: 12px 8px 40px 12px;
+  color: var(--muted);
+  opacity: 0.6;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  border: none;
+  outline: none;
   color: inherit;
   padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  resize: vertical;
+  resize: none;
+  white-space: pre;
 }
 
 .output-pane .output {
-  white-space: pre-wrap;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  white-space: pre;
   overflow: auto;
-  height: 420px;
   padding: 12px;
-  border-radius: 8px;
-  background: #071427;
-  border: 1px solid rgba(255, 255, 255, 0.02);
   font-variant-ligatures: none;
 }
 
+.output-pane .output[data-error='true'] {
+  white-space: pre-wrap;
+}
+
 /* unify code font and sizing for input and output panes */
+.line-numbers,
 .input,
 .output-pane .output {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
@@ -143,8 +179,7 @@ body {
   .grid {
     grid-template-columns: 1fr;
   }
-  .input,
-  .output {
+  .editor {
     height: 320px;
   }
 }
@@ -172,11 +207,17 @@ body {
   cursor: not-allowed;
 }
 
-.output-header {
+.pane-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* match the copy button height so both editors start at the same offset */
+  min-height: 32px;
   margin-bottom: 8px;
+}
+
+.pane-header .label {
+  margin-bottom: 0;
 }
 
 .output-actions {
@@ -203,10 +244,13 @@ body {
   --text: #0b1220;
 }
 
-:root.theme-light .input {
+:root.theme-light .editor {
   background: var(--glass);
-  color: inherit;
   border: 1px solid rgba(11, 18, 32, 0.06);
+}
+
+:root.theme-light .line-numbers {
+  border-right-color: rgba(11, 18, 32, 0.06);
 }
 
 :root.theme-light .pane {
@@ -214,9 +258,13 @@ body {
   box-shadow: 0 6px 18px rgba(11, 18, 32, 0.04);
 }
 
-:root.theme-light .output {
+:root.theme-light .output-pane .editor {
   background: #fbfdff;
   border: 1px solid rgba(11, 18, 32, 0.04);
+}
+
+:root.theme-light .output {
+  background: transparent;
   color: inherit;
 }
 

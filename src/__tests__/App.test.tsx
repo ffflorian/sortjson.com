@@ -18,6 +18,17 @@ describe('App UI', () => {
     await waitFor(() => expect(screen.getByLabelText('Sorted JSON output')).toHaveTextContent('"a": 1'));
   });
 
+  it('shows line numbers for input and output', async () => {
+    const {container} = render(<App />);
+    const input = screen.getByLabelText('Input JSON') as HTMLTextAreaElement;
+    fireEvent.change(input, {target: {value: '{"b":2,\n"a":1}'}});
+    await waitFor(() => {
+      const [inputGutter, outputGutter] = container.querySelectorAll('.line-numbers');
+      expect(inputGutter.textContent).toBe('1\n2');
+      expect(outputGutter.textContent).toBe('1\n2\n3\n4');
+    });
+  });
+
   it('shows error on invalid JSON', async () => {
     render(<App />);
     const input = screen.getByLabelText('Input JSON') as HTMLTextAreaElement;
