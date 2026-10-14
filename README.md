@@ -2,6 +2,8 @@
 
 Simple Vite + React + TypeScript app that sorts JSON keys recursively and displays a formatted output.
 
+![Screenshot](./screenshot.png)
+
 ## Run locally
 
 ```bash
@@ -15,4 +17,4 @@ yarn run dev
 yarn run test
 ```
 
-Thanks to @AndyLnd for the logo!
+Thanks to [@AndyLnd](https://github.com/AndyLnd) for the logo!

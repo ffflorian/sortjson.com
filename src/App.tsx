@@ -1,5 +1,13 @@
-import {ReactElement, useEffect, useState} from 'react';
+import {ReactElement, UIEvent, useEffect, useRef, useState} from 'react';
 import {sortAndFormat} from './sortJson';
+
+function lineNumbers(text: string): string {
+  return Array.from({length: text.split('\n').length}, (_, i) => i + 1).join('\n');
+}
+
+function syncScroll(gutter: HTMLDivElement | null, e: UIEvent<HTMLElement>) {
+  if (gutter) gutter.scrollTop = e.currentTarget.scrollTop;
+}
 
 const DEFAULT = `{
   "z": 1,
@@ -18,6 +26,8 @@ export default function App(): ReactElement {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   });
   const [copied, setCopied] = useState(false);
+  const inputGutter = useRef<HTMLDivElement>(null);
+  const outputGutter = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const t = setTimeout(() => {
@@ -119,19 +129,29 @@ export default function App(): ReactElement {
       </header>
       <section className="grid">
         <div className="pane">
-          <label className="label" htmlFor="input-json">
-            Input JSON
-          </label>
-          <textarea
-            id="input-json"
-            aria-label="Input JSON"
-            className="input"
-            value={input}
-            onChange={e => setInput(e.target.value)}
-          />
+          <div className="pane-header">
+            <label className="label" htmlFor="input-json">
+              Input JSON
+            </label>
+          </div>
+          <div className="editor">
+            <div ref={inputGutter} className="line-numbers" aria-hidden="true">
+              {lineNumbers(input)}
+            </div>
+            <textarea
+              id="input-json"
+              aria-label="Input JSON"
+              className="input"
+              value={input}
+              wrap="off"
+              spellCheck={false}
+              onChange={e => setInput(e.target.value)}
+              onScroll={e => syncScroll(inputGutter.current, e)}
+            />
+          </div>
         </div>
         <div className="pane output-pane">
-          <div className="output-header">
+          <div className="pane-header">
             <label className="label" htmlFor="output-json">
               Sorted JSON output
             </label>
@@ -161,14 +181,22 @@ export default function App(): ReactElement {
               {copied && <span className="copied-badge">Copied</span>}
             </div>
           </div>
-          <pre
-            id="output-json"
-            aria-label="Sorted JSON output"
-            className="output"
-            data-error={error ? 'true' : 'false'}
-          >
-            {error ? `Error: ${error}` : output}
-          </pre>
+          <div className="editor">
+            {!error && (
+              <div ref={outputGutter} className="line-numbers" aria-hidden="true">
+                {lineNumbers(output.replace(/\n$/, ''))}
+              </div>
+            )}
+            <pre
+              id="output-json"
+              aria-label="Sorted JSON output"
+              className="output"
+              data-error={error ? 'true' : 'false'}
+              onScroll={e => syncScroll(outputGutter.current, e)}
+            >
+              {error ? `Error: ${error}` : output}
+            </pre>
+          </div>
         </div>
       </section>
     </main>
