@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/ffflorian/sortjson.com/compare/v2.1.28...v2.2.0) (2026-10-14)
+
+
+### Features
+
+* Line numbers ([#1824](https://github.com/ffflorian/sortjson.com/issues/1824)) ([7402ed3](https://github.com/ffflorian/sortjson.com/commit/7402ed319c4c71bd1af2f041dd6798fe49401329))
+
 ## [2.1.28](https://github.com/ffflorian/sortjson.com/compare/v2.1.27...v2.1.28) (2026-10-13)
 
 
