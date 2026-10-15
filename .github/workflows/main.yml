@@ -18,10 +18,10 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@v7.0.1
 
       - name: Set up Node.js
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        uses: actions/setup-node@v7.0.0
         with:
           node-version: 26
           cache: yarn
@@ -45,7 +45,7 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@v7.0.1
 
       - name: Generate and validate nginx config
         run: |
@@ -60,10 +60,10 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@v7.0.1
 
       - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@06be81baf89a55ffd0e24b8f04a4185738dd3387
+        uses: hadolint/hadolint-action@v3.5.0
 
   build_dockerfile:
     name: Build Docker image
@@ -74,13 +74,13 @@ jobs:
     if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@v7.0.1
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069
+        uses: docker/setup-buildx-action@v4.4.1
 
       - name: Build Docker image
-        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc
+        uses: docker/build-push-action@v7.4.0
         with:
           context: .
           push: false
@@ -101,11 +101,11 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@v7.0.1
 
       - name: Publish Release and Docker image
         id: publish_release
-        uses: ffflorian/actions/docker-image-release@8b90b42e4d82d2d73c873e8cb10d04beb8647fde
+        uses: ffflorian/actions/docker-image-release@v1.30.11
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           git_author: 'Florian Imdahl'
@@ -127,7 +127,7 @@ jobs:
       )
     steps:
       - name: Deploy
-        uses: ffflorian/actions/coolify-deploy@8b90b42e4d82d2d73c873e8cb10d04beb8647fde
+        uses: ffflorian/actions/coolify-deploy@v1.30.11
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           domain: ${{ secrets.COOLIFY_DOMAIN }}
