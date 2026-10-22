@@ -1,3 +1,11 @@
+## [2.2.3](https://github.com/ffflorian/sortjson.com/compare/v2.2.2...v2.2.3) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps:** bump nginx from `e2d97c2` to `1ef7ca9` ([#1834](https://github.com/ffflorian/sortjson.com/issues/1834)) ([0b16e95](https://github.com/ffflorian/sortjson.com/commit/0b16e95b787a9b26661c0c6f0b987c79ace187a2))
+* **deps:** bump the react group across 1 directory with 2 updates ([#1836](https://github.com/ffflorian/sortjson.com/issues/1836)) [ci skip] ([2f87e4b](https://github.com/ffflorian/sortjson.com/commit/2f87e4bda1d234c3fef29b0025689115bb943adf))
+
 ## [2.2.2](https://github.com/ffflorian/sortjson.com/compare/v2.2.1...v2.2.2) (2026-10-22)
 
 
