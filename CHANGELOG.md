@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/ffflorian/sortjson.com/compare/v2.2.4...v2.2.5) (2026-11-09)
+
+
+### Bug Fixes
+
+* **deps:** Bump nginx and run apk upgrade ([5172716](https://github.com/ffflorian/sortjson.com/commit/5172716498b99d86f6e5e065c92daf0d98bdc957))
+
 ## [2.2.4](https://github.com/ffflorian/sortjson.com/compare/v2.2.3...v2.2.4) (2026-10-29)
 
 
