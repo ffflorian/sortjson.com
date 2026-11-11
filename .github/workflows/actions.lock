@@ -7,19 +7,19 @@ workflows:
         - 'actions/delete-package-versions@v5.0.0'
     '.github/workflows/force_release.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.12'
+        - 'ffflorian/actions@v1.30.14'
     '.github/workflows/git_mirror.yml':
-        - 'ffflorian/actions@v1.30.12'
+        - 'ffflorian/actions@v1.30.14'
     '.github/workflows/main.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
         - 'docker/build-push-action@v7.4.0'
         - 'docker/setup-buildx-action@v4.4.1'
-        - 'ffflorian/actions@v1.30.12'
+        - 'ffflorian/actions@v1.30.14'
         - 'hadolint/hadolint-action@v3.5.0'
     '.github/workflows/yarn_update.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.12'
+        - 'ffflorian/actions@v1.30.14'
 dependencies:
     'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd':
         ref: 'v6.0.2'
@@ -91,9 +91,9 @@ dependencies:
         commit: 'sha1-f87e5991a6d7451dcb8d9637bfbc97413f497069'
         owner_id: 5429470
         repo_id: 288485773
-    'ffflorian/actions@v1.30.12':
-        ref: 'v1.30.12'
-        commit: 'sha1-f8070e5f9170b13093aca954db7070e8e241355a'
+    'ffflorian/actions@v1.30.14':
+        ref: 'v1.30.14'
+        commit: 'sha1-83b8d7dce00aa38dea675be1e8174b5d46aae343'
         owner_id: 5497598
         repo_id: 1197109163
         uses:
