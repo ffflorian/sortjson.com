@@ -1,3 +1,23 @@
+## [2.2.6](https://github.com/ffflorian/sortjson.com/compare/v2.2.5...v2.2.6) (2026-11-11)
+
+### Bug Fixes
+
+* **deps:** bump node from `c6ad9e9` to `8996bb5` ([#1847](https://github.com/ffflorian/sortjson.com/issues/1847)) ([b02266d](https://github.com/ffflorian/sortjson.com/commit/b02266ddca3404e8268ba27666cadb5a676d064f))
+
+### Continuous Integration
+
+* **deps:** bump ffflorian/actions from 1.30.12 to 1.30.14 ([#1848](https://github.com/ffflorian/sortjson.com/issues/1848)) [ci skip] ([8feea9f](https://github.com/ffflorian/sortjson.com/commit/8feea9ffb53690f03a2d299c21f126d256b418b9))
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @ffflorian/semantic-release-config ([#1852](https://github.com/ffflorian/sortjson.com/issues/1852)) [ci skip] ([29cd406](https://github.com/ffflorian/sortjson.com/commit/29cd40650360de0ec42cb6334deb49a8d4e6025c))
+* **deps-dev:** bump @vitejs/plugin-react from 6.1.2 to 6.2.1 ([#1851](https://github.com/ffflorian/sortjson.com/issues/1851)) [ci skip] ([390a3fa](https://github.com/ffflorian/sortjson.com/commit/390a3fadd3e9ae84ac34489b576bda6c32c4dfa9))
+* **deps-dev:** bump jsdom from 30.1.3 to 31.0.0 ([#1853](https://github.com/ffflorian/sortjson.com/issues/1853)) [ci skip] ([a33212f](https://github.com/ffflorian/sortjson.com/commit/a33212f4971f18295ba3aff2b4542611c1b84e8d))
+* **deps-dev:** bump the oxc group with 2 updates ([#1849](https://github.com/ffflorian/sortjson.com/issues/1849)) [ci skip] ([1d6ef69](https://github.com/ffflorian/sortjson.com/commit/1d6ef69df1ff8bab8b98418c95e2bb69520b3f12))
+* **deps-dev:** bump vite from 8.3.5 to 8.3.6 ([#1850](https://github.com/ffflorian/sortjson.com/issues/1850)) [ci skip] ([1c6feaf](https://github.com/ffflorian/sortjson.com/commit/1c6feafccc35f807cc1619ba4977ec8b508bad88))
+* **deps-dev:** bump vitest from 5.0.5 to 5.1.0 ([#1854](https://github.com/ffflorian/sortjson.com/issues/1854)) [ci skip] ([a85f905](https://github.com/ffflorian/sortjson.com/commit/a85f9058be946752b6ff62f9ef1c2fcf920fdcbf))
+* Update Docker dependencies daily [ci skip] ([fae83be](https://github.com/ffflorian/sortjson.com/commit/fae83be448d1d0b5c32a2211f3cc40d2738dd6fd))
+
 ## [2.2.5](https://github.com/ffflorian/sortjson.com/compare/v2.2.4...v2.2.5) (2026-11-09)
 
 
