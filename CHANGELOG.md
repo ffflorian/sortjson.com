@@ -1,3 +1,13 @@
+## [2.2.7](https://github.com/ffflorian/sortjson.com/compare/v2.2.6...v2.2.7) (2026-11-14)
+
+### Bug Fixes
+
+* **docker:** use nginx alpine-slim base image ([#1856](https://github.com/ffflorian/sortjson.com/issues/1856)) ([da0240c](https://github.com/ffflorian/sortjson.com/commit/da0240cbd10f6f7d121b391448615f47024423a7))
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the oxc group with 2 updates ([#1855](https://github.com/ffflorian/sortjson.com/issues/1855)) ([95b2b6b](https://github.com/ffflorian/sortjson.com/commit/95b2b6bfa6276d443381642323b7762bb4aa8e19))
+
 ## [2.2.6](https://github.com/ffflorian/sortjson.com/compare/v2.2.5...v2.2.6) (2026-11-11)
 
 ### Bug Fixes
