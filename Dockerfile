@@ -25,7 +25,8 @@ RUN yarn build
 # Serve
 FROM nginx:1.31.8-alpine-slim@sha256:4c734d33ee731135dc9f2349914a34551c920f4451fca8bb05bf5880eb9079e8
 
-RUN apk upgrade --no-cache
+# hadolint ignore=DL3017,DL3018
+RUN apk upgrade --no-cache && apk add --no-cache curl
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
