@@ -1,3 +1,10 @@
+## [2.2.8](https://github.com/ffflorian/sortjson.com/compare/v2.2.7...v2.2.8) (2026-11-15)
+
+### Bug Fixes
+
+* **deps:** bump node from 26.13.0-alpine to 26.13.1-alpine ([#1858](https://github.com/ffflorian/sortjson.com/issues/1858)) ([28dba0d](https://github.com/ffflorian/sortjson.com/commit/28dba0d0a842910c83cfe545d6d2731072c7c51b))
+* **deps:** Update yarn lockfile [ci skip] ([a9dc9bf](https://github.com/ffflorian/sortjson.com/commit/a9dc9bfc7efdb0e5a40d9be2af9935a819f8b07a))
+
 ## [2.2.7](https://github.com/ffflorian/sortjson.com/compare/v2.2.6...v2.2.7) (2026-11-14)
 
 ### Bug Fixes
