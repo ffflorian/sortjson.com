@@ -1,3 +1,9 @@
+## [2.2.9](https://github.com/ffflorian/sortjson.com/compare/v2.2.8...v2.2.9) (2026-11-18)
+
+### Bug Fixes
+
+* **deps:** bump nginx to 1.31.9 ([d4494a0](https://github.com/ffflorian/sortjson.com/commit/d4494a03159f52542b537c373e229269359d0847))
+
 ## [2.2.8](https://github.com/ffflorian/sortjson.com/compare/v2.2.7...v2.2.8) (2026-11-15)
 
 ### Bug Fixes
