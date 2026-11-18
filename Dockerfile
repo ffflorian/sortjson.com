@@ -23,7 +23,7 @@ RUN yarn install --immutable && yarn cache clean
 RUN yarn build
 
 # Serve
-FROM nginx:1.31.8-alpine-slim@sha256:4c734d33ee731135dc9f2349914a34551c920f4451fca8bb05bf5880eb9079e8
+FROM nginx:1.31.9-alpine-slim@sha256:0b98e1db810be4f78a699dd2a98fa1c52b12a71e91872a00a2537b9a8b502be9
 
 RUN apk upgrade --no-cache
 
