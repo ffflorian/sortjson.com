@@ -14,14 +14,19 @@ const DEFAULT = `{
   "a": { "b": 2, "a": 1 }
 }`;
 
+const DEFAULT_OUTPUT = sortAndFormat(DEFAULT);
+
 export default function App(): ReactElement {
   const [input, setInput] = useState(DEFAULT);
-  const [output, setOutput] = useState('');
+  const [output, setOutput] = useState(DEFAULT_OUTPUT);
   const [error, setError] = useState<string | null>(null);
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof document !== 'undefined' && document.documentElement.classList.contains('theme-light')) return 'light';
+    if (typeof window === 'undefined') return 'dark';
     try {
       const val = localStorage.getItem('theme');
       if (val === 'light') return 'light';
+      if (val === 'dark') return 'dark';
     } catch {}
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   });
@@ -97,33 +102,33 @@ export default function App(): ReactElement {
             aria-pressed={theme === 'light'}
             className="icon-button"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            suppressHydrationWarning
           >
-            {theme === 'dark' ? (
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden
-              >
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor" />
-              </svg>
-            ) : (
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden
-              >
-                <path
-                  d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zm7.03-2.03l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM17.24 4.84l1.79-1.79L17.24 1.26l-1.8 1.79 1.8 1.79zM20 11v2h3v-2h-3zM4.22 18.36l-1.79 1.79 1.79 1.79 1.79-1.79-1.79-1.79zM12 6a6 6 0 100 12 6 6 0 000-12z"
-                  fill="currentColor"
-                />
-              </svg>
-            )}
+            <svg
+              className="icon-moon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor" />
+            </svg>
+            <svg
+              className="icon-sun"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zm7.03-2.03l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM17.24 4.84l1.79-1.79L17.24 1.26l-1.8 1.79 1.8 1.79zM20 11v2h3v-2h-3zM4.22 18.36l-1.79 1.79 1.79 1.79 1.79-1.79-1.79-1.79zM12 6a6 6 0 100 12 6 6 0 000-12z"
+                fill="currentColor"
+              />
+            </svg>
           </button>
         </div>
       </header>

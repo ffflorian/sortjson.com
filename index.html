@@ -11,9 +11,16 @@
     <meta name="theme-color" content="#0f1724" />
     <meta name="version" content="%VITE_VERSION%" />
     <meta name="commit" content="%VITE_COMMIT_ID%" />
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || (!t && matchMedia('(prefers-color-scheme: light)').matches))
+          document.documentElement.classList.add('theme-light');
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
