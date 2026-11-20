@@ -279,3 +279,8 @@ body {
   padding: 0;
   margin: -1px;
 }
+
+:root.theme-light .icon-moon,
+:root:not(.theme-light) .icon-sun {
+  display: none;
+}
