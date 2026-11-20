@@ -1,3 +1,19 @@
+## [2.2.10](https://github.com/ffflorian/sortjson.com/compare/v2.2.9...v2.2.10) (2026-11-20)
+
+### Performance Improvements
+
+* prerender page, inline CSS, and enable gzip and asset caching ([#1866](https://github.com/ffflorian/sortjson.com/issues/1866)) ([2fca60f](https://github.com/ffflorian/sortjson.com/commit/2fca60f0712d2d3d1d4a5a3bc027dca6704eabb7))
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @ffflorian/oxfmt-config from 1.3.0 to 1.5.0 ([#1861](https://github.com/ffflorian/sortjson.com/issues/1861)) [ci skip] ([161696f](https://github.com/ffflorian/sortjson.com/commit/161696f5c154895a678419d726b7ce783bf5c9e3))
+* **deps-dev:** bump @ffflorian/semantic-release-config ([#1863](https://github.com/ffflorian/sortjson.com/issues/1863)) [ci skip] ([006d786](https://github.com/ffflorian/sortjson.com/commit/006d786e699585e1ac66acbaa22affcb96305e71))
+* **deps-dev:** bump @testing-library/user-event from 14.6.8 to 14.6.10 ([#1862](https://github.com/ffflorian/sortjson.com/issues/1862)) [ci skip] ([6315355](https://github.com/ffflorian/sortjson.com/commit/63153555fff2c49e173110bcad58b28589b48f30))
+* **deps-dev:** bump @vitejs/plugin-react from 6.2.1 to 6.3.0 ([#1865](https://github.com/ffflorian/sortjson.com/issues/1865)) [ci skip] ([cf1c71e](https://github.com/ffflorian/sortjson.com/commit/cf1c71ed3fe2a1a068b5ac3b03fdaa47e3232423))
+* **deps-dev:** bump jsdom from 31.0.0 to 31.0.1 ([#1864](https://github.com/ffflorian/sortjson.com/issues/1864)) ([e09f2a4](https://github.com/ffflorian/sortjson.com/commit/e09f2a42e93e5bb3f58ec77b2a5e1b6d540991e8))
+* **deps-dev:** bump the oxc group with 2 updates ([#1859](https://github.com/ffflorian/sortjson.com/issues/1859)) [ci skip] ([7ca7a2d](https://github.com/ffflorian/sortjson.com/commit/7ca7a2d3eedfb7c8bc38ad0359c121978e937ba3))
+* **deps-dev:** bump vite from 8.3.6 to 8.3.8 ([#1860](https://github.com/ffflorian/sortjson.com/issues/1860)) [ci skip] ([1708124](https://github.com/ffflorian/sortjson.com/commit/17081240f39cc9aba2e107e728e6b7fd4163c1ea))
+
 ## [2.2.9](https://github.com/ffflorian/sortjson.com/compare/v2.2.8...v2.2.9) (2026-11-18)
 
 ### Bug Fixes
