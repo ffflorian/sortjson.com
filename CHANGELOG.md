@@ -1,3 +1,9 @@
+## [2.2.11](https://github.com/ffflorian/sortjson.com/compare/v2.2.10...v2.2.11) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** bump nginx from `0b98e1d` to `5bfced7` ([#1867](https://github.com/ffflorian/sortjson.com/issues/1867)) ([eb3929b](https://github.com/ffflorian/sortjson.com/commit/eb3929b74e620089dcb982228bd77c233bafe26d))
+
 ## [2.2.10](https://github.com/ffflorian/sortjson.com/compare/v2.2.9...v2.2.10) (2026-11-20)
 
 ### Performance Improvements
