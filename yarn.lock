@@ -150,12 +150,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/oxfmt-config@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@ffflorian/oxfmt-config@npm:1.5.0"
+"@ffflorian/oxfmt-config@npm:1.5.1":
+  version: 1.5.1
+  resolution: "@ffflorian/oxfmt-config@npm:1.5.1"
   peerDependencies:
     oxfmt: ">=0.68.0"
-  checksum: 10c0/d3100cf0511b0240daf5c081d8f05616c1918ba0737e181bc1277c67a2ee664bfebca1978500ef2cea4964102515a7d95d1e776836f5ddfb686a318a0f6529ff
+  checksum: 10c0/646a942d1f50f4a748be661e5c6e0d9cc4a657a2747629ca51aa8cbbd9f257212b9d6a0fbfaf267fcbff98547e4e0dc68975fc2891e4ac5f308e2070fe9cd2dd
   languageName: node
   linkType: hard
 
@@ -5009,7 +5009,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sortjson.com@workspace:."
   dependencies:
-    "@ffflorian/oxfmt-config": "npm:1.5.0"
+    "@ffflorian/oxfmt-config": "npm:1.5.1"
     "@ffflorian/semantic-release-config": "npm:1.2.1"
     "@semantic-release/changelog": "npm:7.0.0"
     "@semantic-release/git": "npm:11.0.1"
