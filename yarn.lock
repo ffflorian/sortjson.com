@@ -159,16 +159,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ffflorian/semantic-release-config@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@ffflorian/semantic-release-config@npm:1.2.0"
+"@ffflorian/semantic-release-config@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@ffflorian/semantic-release-config@npm:1.2.1"
   dependencies:
     conventional-changelog-conventionalcommits: "npm:10.4.1"
   peerDependencies:
     "@semantic-release/changelog": ">= 3.0.0"
     "@semantic-release/git": ">= 7.0.0"
     semantic-release: ">= 15.13.0"
-  checksum: 10c0/326b3e82a0e548836fadfab97da8aa85ca289cd61d30ef846e4734ba3b7675f8e2a44fdee694d069fdf978c3800611694fe0de079abe539f4dcac66b97821656
+  checksum: 10c0/abddd102cf65198d5d22ba470a1119d1e9406f01b85dcdde5001c07f62922efbc171b5269899be6ba310aac080a86359fd3a036e84b5678a0411b4e16ddc60f4
   languageName: node
   linkType: hard
 
@@ -5010,7 +5010,7 @@ __metadata:
   resolution: "sortjson.com@workspace:."
   dependencies:
     "@ffflorian/oxfmt-config": "npm:1.5.0"
-    "@ffflorian/semantic-release-config": "npm:1.2.0"
+    "@ffflorian/semantic-release-config": "npm:1.2.1"
     "@semantic-release/changelog": "npm:7.0.0"
     "@semantic-release/git": "npm:11.0.1"
     "@testing-library/dom": "npm:10.4.2"
